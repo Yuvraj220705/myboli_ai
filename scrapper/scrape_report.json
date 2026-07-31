@@ -1,0 +1,15 @@
+{
+    "timestamp": "2026-07-31 14:17:28",
+    "categories_processed": 106,
+    "total_links_discovered": 1065,
+    "articles_scraped": 422,
+    "articles_inserted": 400,
+    "duplicates_skipped": 22,
+    "failures": 1,
+    "execution_time_seconds": 921.5,
+    "execution_time_formatted": "15m 21s",
+    "failed_urls_count": 1,
+    "failed_urls": [
+        "https://maharashtratimes.com/maharashtra/satara/phaltan-doctor-case-police-traced-psi-gopal-badne-location-in-pandharpur-prashant-bankar/articleshow/124804153.cms"
+    ]
+}

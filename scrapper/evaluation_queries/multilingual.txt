@@ -1,0 +1,22 @@
+# multilingual.txt
+# Purpose: Test retrieval on English and mixed Marathi-English queries.
+# Expected: English keywords in Marathi article titles/content should be matched.
+
+# --- Pure English queries ---
+Sindhudurg
+Vinayak Raut
+Eknath Shinde
+Weather
+Politics
+Rain
+Accident
+Crime
+Agriculture
+Mumbai
+
+# --- Mixed Marathi + English ---
+सिंधुदुर्ग Politics
+Shiv Sena बातमी
+Rain सिंधुदुर्ग
+Crime कोल्हापूर
+Uddhav Thackeray शिवसेना

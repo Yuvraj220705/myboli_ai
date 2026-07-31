@@ -177,7 +177,7 @@ def strip_date_from_query(question: str) -> str:
     # Strip generic Marathi & English question/filler words and punctuation
     # Handles Devanagari anusvara (\u0902), suffixes, and variations
     filler_pattern = (
-        r"(काय|घड[लळ\w\u0900-\u0903]*|झा[लळ\w\u0900-\u0903]*|बातमी|बातम्या|अपडेट[सस्]*|"
+        r"(काय|\bघड[लळ][ाेोीं]*\b|\bझा[लळ][ाेोीं]*\b|बातमी|बातम्या|अपडेट[सस्]*|"
         r"अप्डेट[सस्]*|वृत्त|माहिती|सांगा|\b(on|of|in|the|what|happened|news|updates|latest|cha|chya|la)\b|[?.,!:-])"
     )
     cleaned = re.sub(filler_pattern, "", cleaned, flags=re.IGNORECASE)

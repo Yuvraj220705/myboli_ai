@@ -1,4 +1,4 @@
-"""Flask REST API for Retrieval-Augmented News Chatbot."""
+"""Flask REST API for Maayboli Malvani News Chatbot Microservice."""
 
 import logging
 from typing import Tuple
@@ -24,27 +24,49 @@ def health_check() -> Tuple[Response, int]:
     return jsonify({"status": "ok"}), 200
 
 
-@app.route("/chat", methods=["POST"])
-def chat() -> Tuple[Response, int]:
-    """Chat endpoint to process user questions via Gemini service."""
+@app.route("/chatbot/ask", methods=["POST"])
+def ask() -> Tuple[Response, int]:
+    """Primary chat endpoint for user questions.
+
+    Accepts JSON body:
+    {
+        "question": "...",
+        "session_id": "..." (optional)
+    }
+
+    Returns JSON response:
+    {
+        "answer": "...",
+        "sources": [...]
+    }
+    """
     data = request.get_json(silent=True)
     if not data or not isinstance(data, dict):
-        return jsonify({"error": "Question is required."}), 400
+        return jsonify({"error": "Invalid request payload or non-JSON input."}), 400
 
     question = data.get("question")
     if not question or not isinstance(question, str) or not question.strip():
         return jsonify({"error": "Question is required."}), 400
 
-    question = question.strip()
-    logger.info("Incoming chat request: %s", question[:80])
+    session_id = data.get("session_id")
+    logger.info(
+        "Received question: '%s' (session_id=%s)",
+        question.strip()[:80],
+        session_id,
+    )
 
     try:
-        answer = generate_answer(question)
-        logger.info("Generated response: %s", answer[:80])
-        return jsonify({"answer": answer}), 200
+        result = generate_answer(question.strip())
+        return jsonify(result), 200
     except Exception as e:
-        logger.error("Error processing chat request: %s", e, exc_info=True)
+        logger.error("Unhandled exception in ask endpoint: %s", e, exc_info=True)
         return jsonify({"error": "Internal server error."}), 500
+
+
+@app.route("/chat", methods=["POST"])
+def chat() -> Tuple[Response, int]:
+    """Legacy chat endpoint alias for backward compatibility."""
+    return ask()
 
 
 if __name__ == "__main__":
@@ -53,3 +75,4 @@ if __name__ == "__main__":
         port=5000,
         debug=True,
     )
+

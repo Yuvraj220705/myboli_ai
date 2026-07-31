@@ -1,0 +1,33 @@
+# stress_test.txt
+# Purpose: Test system robustness on edge cases, noise, garbage input, and extremes.
+# Expected: System must not crash. Should return fallback message or empty gracefully.
+
+# --- Garbage / Noise ---
+abc
+12345
+!!!!
+🍕🍕🍕
+xyzabc
+🔥🔥🔥
+@#$%^&*
+   
+.
+,,,,
+
+# --- Extremely long query ---
+सिंधुदुर्ग जिल्ह्यातील सर्व बातम्या विनायक राऊत उदय सामंत पाऊस अपघात हवामान अटक राजकारण शेती क्रीडा मनोरंजन गुन्हे शिक्षण आरोग्य कोल्हापूर रत्नागिरी
+
+# --- Single character ---
+अ
+क
+र
+
+# --- Repeated tokens ---
+पाऊस पाऊस पाऊस
+राजकारण राजकारण
+सिंधुदुर्ग सिंधुदुर्ग सिंधुदुर्ग
+
+# --- Punctuation only ---
+???
+---
+...

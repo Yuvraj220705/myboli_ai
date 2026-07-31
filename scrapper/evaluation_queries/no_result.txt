@@ -1,0 +1,22 @@
+# no_result.txt
+# Purpose: Test retriever and Gemini fallback behavior when no articles match.
+# Expected: System should return NO_ARTICLES_MSG cleanly, never hallucinate.
+
+# --- Completely irrelevant topics ---
+एलियन पृथ्वीवर आले का?
+माझं नाव काय आहे?
+OpenAI बद्दल सांगा.
+Lionel Messi
+Python Programming
+
+# --- Topics not in the news dataset ---
+चंद्रयान-४ प्रक्षेपण
+अंटार्क्टिकामधील बर्फ
+मंगळावर मानव कधी जाणार?
+शेअर बाजार आज कसा आहे?
+अमेरिकेतील निवडणूक निकाल
+
+# --- Hypothetical / Future events ---
+पुढच्या वर्षी काय होणार?
+उद्याचे हवामान काय असेल?
+भविष्यात शेतकऱ्यांना काय मिळणार?

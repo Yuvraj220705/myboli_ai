@@ -1,9 +1,9 @@
-"""Database operations for article storage."""
+"""Database operations and connection management for MySQL Community 8.0."""
 
 import logging
 import os
 from datetime import datetime
-from typing import Optional
+from typing import Any, Dict, Optional
 
 import pymysql
 from dotenv import load_dotenv
@@ -14,35 +14,38 @@ logger = logging.getLogger(__name__)
 
 
 def get_connection() -> pymysql.Connection:
-    """Create a new database connection from environment variables.
+    """Create and return a new MySQL database connection using environment variables.
 
     Returns:
-        A pymysql Connection object.
+        pymysql.Connection: Active database connection with DictCursor.
 
     Raises:
-        pymysql.Error: If the connection cannot be established.
+        pymysql.Error: If the database connection cannot be established.
     """
-    return pymysql.connect(
-        host=os.getenv("DB_HOST", "localhost"),
-        user=os.getenv("DB_USER", "root"),
-        password=os.getenv("DB_PASSWORD", ""),
-        database=os.getenv("DB_NAME", "maayboli_client"),
-        charset="utf8mb4",
-    )
+    try:
+        return pymysql.connect(
+            host=os.getenv("DB_HOST", "localhost"),
+            user=os.getenv("DB_USER", "root"),
+            password=os.getenv("DB_PASSWORD", ""),
+            database=os.getenv("DB_NAME", "maayboli_client"),
+            port=int(os.getenv("DB_PORT", "3306")),
+            charset="utf8mb4",
+            cursorclass=pymysql.cursors.DictCursor,
+        )
+    except pymysql.Error as e:
+        logger.error("Database connection failure: %s", e)
+        raise
 
 
-def insert_article(article: dict) -> bool:
-    """Insert a single article into the database.
+def insert_article(article: Dict[str, Any]) -> bool:
+    """Insert a single article into the posts table.
 
     Args:
         article: Dict with keys: title, body, url, published_at.
 
     Returns:
-        True if inserted successfully, False otherwise.
+        bool: True if inserted successfully, False otherwise.
     """
-    # NOTE: article["url"] is not inserted — the client's posts table has no
-    # article_url column yet. If the schema is updated, add it here.
-
     query = """
         INSERT INTO posts
             (title, content, is_breaking, category_id, viewer_count,
@@ -58,12 +61,13 @@ def insert_article(article: dict) -> bool:
         logger.error("Invalid published_at in article '%s': %s", article.get("title", "?"), e)
         return False
 
-    connection = get_connection()
+    try:
+        connection = get_connection()
+    except pymysql.Error:
+        return False
+
     try:
         with connection.cursor() as cursor:
-            # DEV DEFAULTS: category_id, district_id, and user_id are hardcoded
-            # to 1 for local development. In production, the client's CMS manages
-            # these foreign key relationships with valid referenced records.
             cursor.execute(query, (
                 article["title"],
                 article["body"],
@@ -74,10 +78,10 @@ def insert_article(article: dict) -> bool:
                 1,              # district_id
                 1,              # user_id
                 published_at,   # createdAt
-                published_at,   # updatedAt (same as createdAt on first insert)
+                published_at,   # updatedAt
             ))
         connection.commit()
-        logger.info("Inserted: %s", article["title"][:80])
+        logger.info("Inserted article: %s", article["title"][:80])
         return True
     except pymysql.err.IntegrityError:
         logger.debug("Article already exists: %s", article["title"][:80])

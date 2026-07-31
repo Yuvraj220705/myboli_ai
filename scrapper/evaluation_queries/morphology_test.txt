@@ -1,0 +1,30 @@
+# morphology_test.txt
+# Purpose: Test FULLTEXT index behavior with Marathi morphological word forms.
+# Expected: FULLTEXT should match stem variants; failures indicate tokenizer limitations.
+
+# --- Location Suffixes ---
+सिंधुदुर्गमध्ये
+सिंधुदुर्गातील
+सिंधुदुर्गचा
+सिंधुदुर्ग जिल्हा
+रत्नागिरीमध्ये
+रत्नागिरीतील
+कोल्हापुरातील
+पावसामुळे
+
+# --- Verb Form Variations ---
+घडलं
+घडले
+झालं
+झाले
+सांगितलं
+सांगितले
+अटक झाली
+अटक केली
+
+# --- Name Inflections ---
+शिंदेंनी
+शिंदेंचा
+राऊतांनी
+राऊतांचा
+सामंतांनी

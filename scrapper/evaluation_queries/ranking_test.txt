@@ -1,0 +1,23 @@
+# ranking_test.txt
+# Purpose: Test relevance ranking quality.
+# Expected: Most relevant/recent article should appear at rank 1.
+# Evaluate: Are results ordered by relevance score DESC?
+
+# --- Single ambiguous token (tests IDF weighting) ---
+शिंदे
+राऊत
+पाऊस
+राजकारण
+हवामान
+
+# --- Person + context (tests multi-token ranking) ---
+विनायक राऊत शिवसेना
+उदय सामंत सिंधुदुर्ग
+एकनाथ शिंदे पक्ष
+सचिन अहिर चोरी
+
+# --- High competition topics (tests score separation) ---
+अपघात मृत्यू
+पूर पाऊस नुकसान
+आंदोलन मोर्चा मागणी
+पोलीस अटक गुन्हा

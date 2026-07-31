@@ -1,0 +1,19 @@
+# exact_match.txt
+# Purpose: Test retrieval precision on single exact keyword tokens.
+# Expected: High recall with strong FULLTEXT relevance scores.
+
+विनायक राऊत
+उदय सामंत
+एकनाथ शिंदे
+सिंधुदुर्ग
+रत्नागिरी
+कोल्हापूर
+पाऊस
+अपघात
+शिवसेना
+हवामान
+अटक
+चोरी
+बातमी
+राजकारण
+शेती

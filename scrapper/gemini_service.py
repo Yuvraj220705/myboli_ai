@@ -1,8 +1,8 @@
-"""Gemini AI service for answering questions using retrieved articles."""
+"""Gemini AI service for prompt construction and grounded answer generation."""
 
 import logging
 import os
-from typing import Optional
+from typing import Any, Dict, List, Optional
 
 from dotenv import load_dotenv
 from google import genai
@@ -14,91 +14,141 @@ load_dotenv()
 logger = logging.getLogger(__name__)
 
 GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3-flash-preview")
-NO_ANSWER_MSG = "माझ्याकडे या प्रश्नासंबंधी पुरेशी माहिती उपलब्ध नाही."
+NO_ARTICLES_MSG = "माझ्याकडे या प्रश्नासंबंधी कोणतीही प्रकाशित माहिती उपलब्ध नाही."
+ERROR_MSG = "माहिती मिळवताना तांत्रिक अडचण आली. कृपया नंतर पुन्हा प्रयत्न करा."
 
-client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
+# Initialize Gemini Client safely
+_api_key = os.getenv("GEMINI_API_KEY")
+if not _api_key:
+    logger.warning("GEMINI_API_KEY environment variable is not configured.")
+
+client = None
+if _api_key:
+    try:
+        client = genai.Client(api_key=_api_key)
+    except Exception as e:
+        logger.error("Failed to initialize Gemini Client: %s", e)
 
 
-def build_context(question: str) -> Optional[str]:
-    """Build context string from retrieved articles.
+def build_context(articles: List[Dict[str, Any]]) -> str:
+    """Construct prompt context string strictly using retrieved published articles.
 
     Args:
-        question: The user's question for article retrieval.
+        articles: List of article dicts retrieved from the database.
 
     Returns:
-        A formatted context string, or None if no articles found.
+        str: Formatted context string containing article information.
     """
-    articles = search_articles(question)
-
-    if not articles:
-        return None
-
     parts = []
 
     for i, article in enumerate(articles, start=1):
-        lines = [f"Article {i}", f"Title:\n{article['title']}"]
+        lines = [
+            f"--- Article {i} (ID: {article.get('id')}) ---",
+            f"Title: {article.get('title', '')}",
+        ]
 
         if article.get("category"):
-            lines.append(f"Category:\n{article['category']}")
+            lines.append(f"Category: {article['category']}")
         if article.get("district"):
-            lines.append(f"District:\n{article['district']}")
+            lines.append(f"District: {article['district']}")
         if article.get("createdAt"):
-            lines.append(f"Published:\n{article['createdAt']}")
+            lines.append(f"Published Date: {article['createdAt']}")
 
-        lines.append(f"Content:\n{article['content']}")
-        lines.append("—" * 40)
-
-        parts.append("\n\n".join(lines))
+        lines.append(f"Content: {article.get('content', '')}")
+        parts.append("\n".join(lines))
 
     return "\n\n".join(parts)
 
 
-def generate_answer(question: str) -> str:
-    """Generate an answer to a question using retrieved context and Gemini.
+def generate_answer(question: str, top_k: int = 5) -> Dict[str, Any]:
+    """Generate grounded answer using strictly retrieved articles and Gemini API.
 
     Args:
-        question: The user's question in Marathi or English.
+        question: User query string.
+        top_k: Number of articles to retrieve from database.
 
     Returns:
-        The generated answer string.
+        Dict[str, Any]: Dictionary containing 'answer' (str) and 'sources' (list of article IDs).
     """
     if not question or not question.strip():
-        return NO_ANSWER_MSG
+        return {
+            "answer": "कृपया एक वैध प्रश्न विचार.",
+            "sources": [],
+        }
 
-    context = build_context(question)
+    clean_question = question.strip()
 
-    if context is None:
-        logger.info("No context found for question: %s", question[:80])
-        return NO_ANSWER_MSG
+    # 1. Retrieve articles via retriever
+    try:
+        articles = search_articles(clean_question, top_k=top_k)
+    except Exception as e:
+        logger.error("Retrieval execution error for question '%s': %s", clean_question[:50], e, exc_info=True)
+        return {
+            "answer": ERROR_MSG,
+            "sources": [],
+        }
 
-    prompt = f"""You are a Marathi news assistant for a regional news platform.
+    # 2. Handle empty retrieval result
+    if not articles:
+        logger.info("No matching published articles found for: '%s'", clean_question[:50])
+        return {
+            "answer": NO_ARTICLES_MSG,
+            "sources": [],
+        }
 
-Rules:
-1. Answer ONLY using the retrieved articles provided below.
-2. Do NOT use any external or prior knowledge. Never hallucinate.
-3. If the answer is not available in the articles, reply EXACTLY with: "{NO_ANSWER_MSG}"
-4. If multiple articles answer the question, combine their information into one coherent response.
-5. Mention dates naturally when they are relevant to the answer.
-6. Mention category or district naturally when they help answer the question.
-7. Always answer in Marathi.
-8. Never add assumptions, guesses, or information not present in the articles.
+    # Extract source article IDs
+    source_ids = [article["id"] for article in articles if article.get("id") is not None]
+
+    # 3. Construct prompt with strict grounding constraints
+    context_str = build_context(articles)
+
+    prompt = f"""You are an AI news assistant for Maayboli Malvani News.
+
+STRICT GROUNDING RULES:
+1. Answer the question ONLY using the factual details provided in the retrieved articles below.
+2. Never use any external knowledge, prior training data, or outside facts. Never fabricate or extrapolate information.
+3. If the answer cannot be completely derived from the retrieved articles, respond EXACTLY with: "{NO_ARTICLES_MSG}"
+4. Present the response clearly in Marathi language.
+5. Synthesize details from multiple articles if relevant, but do NOT add unmentioned details.
 
 Retrieved Articles:
-
-{context}
+{context_str}
 
 User Question:
-
-{question}
+{clean_question}
 """
+
+    # 4. Invoke Gemini API model with error handling
+    if client is None:
+        logger.error("Gemini API client is not initialized.")
+        return {
+            "answer": ERROR_MSG,
+            "sources": source_ids,
+        }
 
     try:
         response = client.models.generate_content(
             model=GEMINI_MODEL,
             contents=prompt,
         )
-        logger.info("Gemini response generated for: %s", question[:80])
-        return response.text or NO_ANSWER_MSG
+
+        answer_text = response.text.strip() if response and response.text else NO_ARTICLES_MSG
+
+        # If answer indicates no relevant published info was found, clear source IDs
+        if NO_ARTICLES_MSG in answer_text:
+            return {
+                "answer": NO_ARTICLES_MSG,
+                "sources": [],
+            }
+
+        logger.info("Generated grounded answer for question: '%s'", clean_question[:50])
+        return {
+            "answer": answer_text,
+            "sources": source_ids,
+        }
     except Exception as e:
-        logger.error("Gemini API error: %s", e)
-        return NO_ANSWER_MSG
+        logger.error("Gemini API request failed: %s", e, exc_info=True)
+        return {
+            "answer": ERROR_MSG,
+            "sources": source_ids,
+        }

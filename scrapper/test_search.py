@@ -22,13 +22,16 @@ for article in results:
     print("\nScore:")
     print(article["score"])
 
+    print("\nCategory:")
+    print(article["category"])
+
+    print("\nDistrict:")
+    print(article["district"])
+
     print("\nPublished:")
-    print(article["published_at"])
+    print(article["createdAt"])
 
-    print("\nBody Preview:")
-    print(article["body"][:250])
-
-    print("\nURL:")
-    print(article["article_url"])
+    print("\nContent Preview:")
+    print(article["content"][:250])
 
     print()

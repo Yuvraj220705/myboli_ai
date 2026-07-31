@@ -1,0 +1,55 @@
+{
+  "generated_at": "2026-07-31T15:52:45.617337",
+  "total_queries": 224,
+  "successful_queries": 224,
+  "failed_queries": 0,
+  "zero_result_queries": 45,
+  "avg_execution_ms": 68.98,
+  "max_execution_ms": 260.31,
+  "min_execution_ms": 35.31,
+  "avg_results": 3.59,
+  "max_results": 5,
+  "min_results": 0,
+  "per_file_breakdown": {
+    "exact_match": {
+      "total": 15,
+      "zero_results": 0,
+      "avg_results": 4.67
+    },
+    "final_benchmark": {
+      "total": 114,
+      "zero_results": 16,
+      "avg_results": 3.84
+    },
+    "morphology_test": {
+      "total": 21,
+      "zero_results": 10,
+      "avg_results": 2.29
+    },
+    "multilingual": {
+      "total": 15,
+      "zero_results": 2,
+      "avg_results": 3.67
+    },
+    "no_result": {
+      "total": 13,
+      "zero_results": 2,
+      "avg_results": 3.62
+    },
+    "ranking_test": {
+      "total": 13,
+      "zero_results": 0,
+      "avg_results": 4.92
+    },
+    "semantic_queries": {
+      "total": 14,
+      "zero_results": 1,
+      "avg_results": 4.36
+    },
+    "stress_test": {
+      "total": 19,
+      "zero_results": 14,
+      "avg_results": 1.11
+    }
+  }
+}
