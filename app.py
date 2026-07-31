@@ -1,7 +1,12 @@
 """Flask REST API for Maayboli Malvani News Chatbot Microservice."""
 
 import logging
+import sys
+from pathlib import Path
 from typing import Tuple
+
+# Add src to Python module path
+sys.path.insert(0, str(Path(__file__).resolve().parent / "src"))
 
 from flask import Flask, jsonify, request, Response
 from flask_cors import CORS

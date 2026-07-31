@@ -1,33 +1,22 @@
-# Python
+# Environment & Secret Variables
+.env
+.env.local
+*.pem
+
+# Python Cache & Virtual Environments
 __pycache__/
 *.py[cod]
-*.pyo
-
-# Virtual Environment
+*$py.class
 .venv/
 venv/
-env/
+ENV/
 
-# Environment Variables
-.env
-
-# VS Code
-.vscode/
-
-# Logs
-logs/
-*.log
-
-# OS Files
+# System & OS Files
 .DS_Store
 Thumbs.db
+Desktop.ini
 
-# Pytest
-.pytest_cache/
-
-# Build
-dist/
-build/
-
-# Jupyter
-.ipynb_checkpoints/
+# Logs & Temporary Output Data
+logs/*.log
+*.tmp
+organize_project.py

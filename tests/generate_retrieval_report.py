@@ -6,14 +6,18 @@ import time
 from pathlib import Path
 from typing import Dict, List
 
+# Reconfigure stdout for UTF-8 on Windows
 if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
+# Add src to Python module path
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 
 from query_processor import process_query
 from retriever import search_articles
 from run_retrieval_benchmark import DATASET, classify_status
 
-REPORT_FILE = "retrieval_benchmark_detailed_report.md"
+REPORT_FILE = Path(__file__).resolve().parent.parent / "docs" / "retrieval_benchmark_detailed_report.md"
 
 def generate_report():
     lines: List[str] = []

@@ -1,6 +1,9 @@
-"""Manual test script for FULLTEXT article search."""
-
 import logging
+import sys
+from pathlib import Path
+
+# Add src to Python module path
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 
 from retriever import search_articles
 

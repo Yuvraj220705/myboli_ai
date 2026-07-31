@@ -17,6 +17,9 @@ from typing import Any, Dict, List, Tuple
 if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
+# Add src to Python module path
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
+
 from query_processor import process_query, DISTRICTS, CATEGORY_ALIASES
 from retriever import search_articles
 
@@ -76,7 +79,7 @@ DATASET: Dict[str, List[str]] = {
     ]
 }
 
-OUTPUT_CSV = "retrieval_benchmark_results.csv"
+OUTPUT_CSV = Path(__file__).resolve().parent.parent / "evaluation" / "retrieval_benchmark_results.csv"
 
 def classify_status(num_articles: int, top_score: float) -> str:
     """Classify retrieval status into PASS, PARTIAL, or FAIL.

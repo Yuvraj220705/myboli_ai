@@ -7,10 +7,14 @@ and saves reports to `failed_urls.txt` and `scrape_report.json`.
 
 import json
 import logging
+import sys
 import time
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import List, Optional, Set
+
+# Add src to Python module path
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 
 from collect_links import BASE_URL, collect_links, discover_category_urls
 from db import get_connection, insert_article
