@@ -1,0 +1,597 @@
+{
+    "sprint": "Sprint 1.2.1",
+    "feature": "District Normalization Only",
+    "timestamp": "2026-08-03 17:00:11",
+    "total_district_queries": 40,
+    "successful_matches": 40,
+    "district_normalization_accuracy_percent": 100.0,
+    "avg_latency_ms": 0.074,
+    "category_summary": {
+        "District: Kolhapur": {
+            "total_queries": 10,
+            "successful_matches": 10,
+            "success_rate_percent": 100.0,
+            "avg_latency_ms": 0.133
+        },
+        "District: Nagpur": {
+            "total_queries": 10,
+            "successful_matches": 10,
+            "success_rate_percent": 100.0,
+            "avg_latency_ms": 0.06
+        },
+        "District: Pune": {
+            "total_queries": 10,
+            "successful_matches": 10,
+            "success_rate_percent": 100.0,
+            "avg_latency_ms": 0.048
+        },
+        "District: Sindhudurg": {
+            "total_queries": 10,
+            "successful_matches": 10,
+            "success_rate_percent": 100.0,
+            "avg_latency_ms": 0.056
+        }
+    },
+    "query_details": [
+        {
+            "category": "District: Kolhapur",
+            "original_query": "कोल्हापुर",
+            "normalized_query": "कोल्हापूर",
+            "matched_districts": [
+                {
+                    "canonical_name": "कोल्हापूर",
+                    "original_token": "कोल्हापुर",
+                    "confidence": 94.1,
+                    "was_corrected": true
+                }
+            ],
+            "latency_ms": 0.711
+        },
+        {
+            "category": "District: Kolhapur",
+            "original_query": "कोलापुर",
+            "normalized_query": "कोल्हापूर",
+            "matched_districts": [
+                {
+                    "canonical_name": "कोल्हापूर",
+                    "original_token": "कोलापुर",
+                    "confidence": 100.0,
+                    "was_corrected": true
+                }
+            ],
+            "latency_ms": 0.1
+        },
+        {
+            "category": "District: Kolhapur",
+            "original_query": "कोलहापूर",
+            "normalized_query": "कोल्हापूर",
+            "matched_districts": [
+                {
+                    "canonical_name": "कोल्हापूर",
+                    "original_token": "कोलहापूर",
+                    "confidence": 100.0,
+                    "was_corrected": true
+                }
+            ],
+            "latency_ms": 0.064
+        },
+        {
+            "category": "District: Kolhapur",
+            "original_query": "कोलापूर",
+            "normalized_query": "कोल्हापूर",
+            "matched_districts": [
+                {
+                    "canonical_name": "कोल्हापूर",
+                    "original_token": "कोलापूर",
+                    "confidence": 100.0,
+                    "was_corrected": true
+                }
+            ],
+            "latency_ms": 0.054
+        },
+        {
+            "category": "District: Kolhapur",
+            "original_query": "कोल्हपुर",
+            "normalized_query": "कोल्हापूर",
+            "matched_districts": [
+                {
+                    "canonical_name": "कोल्हापूर",
+                    "original_token": "कोल्हपुर",
+                    "confidence": 100.0,
+                    "was_corrected": true
+                }
+            ],
+            "latency_ms": 0.051
+        },
+        {
+            "category": "District: Kolhapur",
+            "original_query": "कोल्हापुरात",
+            "normalized_query": "कोल्हापूर",
+            "matched_districts": [
+                {
+                    "canonical_name": "कोल्हापूर",
+                    "original_token": "कोल्हापुरात",
+                    "confidence": 94.1,
+                    "was_corrected": true
+                }
+            ],
+            "latency_ms": 0.063
+        },
+        {
+            "category": "District: Kolhapur",
+            "original_query": "कोलापुर पाउस",
+            "normalized_query": "कोल्हापूर पाउस",
+            "matched_districts": [
+                {
+                    "canonical_name": "कोल्हापूर",
+                    "original_token": "कोलापुर",
+                    "confidence": 100.0,
+                    "was_corrected": true
+                }
+            ],
+            "latency_ms": 0.07
+        },
+        {
+            "category": "District: Kolhapur",
+            "original_query": "कोलापुर अपघात",
+            "normalized_query": "कोल्हापूर अपघात",
+            "matched_districts": [
+                {
+                    "canonical_name": "कोल्हापूर",
+                    "original_token": "कोलापुर",
+                    "confidence": 100.0,
+                    "was_corrected": true
+                }
+            ],
+            "latency_ms": 0.068
+        },
+        {
+            "category": "District: Kolhapur",
+            "original_query": "कोल्हापुर बातमी",
+            "normalized_query": "कोल्हापूर बातमी",
+            "matched_districts": [
+                {
+                    "canonical_name": "कोल्हापूर",
+                    "original_token": "कोल्हापुर",
+                    "confidence": 94.1,
+                    "was_corrected": true
+                }
+            ],
+            "latency_ms": 0.07
+        },
+        {
+            "category": "District: Kolhapur",
+            "original_query": "कोलापुर राजकारण",
+            "normalized_query": "कोल्हापूर राजकारण",
+            "matched_districts": [
+                {
+                    "canonical_name": "कोल्हापूर",
+                    "original_token": "कोलापुर",
+                    "confidence": 100.0,
+                    "was_corrected": true
+                }
+            ],
+            "latency_ms": 0.084
+        },
+        {
+            "category": "District: Nagpur",
+            "original_query": "नागपुर",
+            "normalized_query": "नागपूर",
+            "matched_districts": [
+                {
+                    "canonical_name": "नागपूर",
+                    "original_token": "नागपुर",
+                    "confidence": 100.0,
+                    "was_corrected": true
+                }
+            ],
+            "latency_ms": 0.054
+        },
+        {
+            "category": "District: Nagpur",
+            "original_query": "नागपुरा",
+            "normalized_query": "नागपूर",
+            "matched_districts": [
+                {
+                    "canonical_name": "नागपूर",
+                    "original_token": "नागपुरा",
+                    "confidence": 100.0,
+                    "was_corrected": true
+                }
+            ],
+            "latency_ms": 0.05
+        },
+        {
+            "category": "District: Nagpur",
+            "original_query": "नागपुुर",
+            "normalized_query": "नागपूर",
+            "matched_districts": [
+                {
+                    "canonical_name": "नागपूर",
+                    "original_token": "नागपुुर",
+                    "confidence": 100.0,
+                    "was_corrected": true
+                }
+            ],
+            "latency_ms": 0.046
+        },
+        {
+            "category": "District: Nagpur",
+            "original_query": "नागपूरात",
+            "normalized_query": "नागपूर",
+            "matched_districts": [
+                {
+                    "canonical_name": "नागपूर",
+                    "original_token": "नागपूरात",
+                    "confidence": 100.0,
+                    "was_corrected": true
+                }
+            ],
+            "latency_ms": 0.051
+        },
+        {
+            "category": "District: Nagpur",
+            "original_query": "नागपुर पाउस",
+            "normalized_query": "नागपूर पाउस",
+            "matched_districts": [
+                {
+                    "canonical_name": "नागपूर",
+                    "original_token": "नागपुर",
+                    "confidence": 100.0,
+                    "was_corrected": true
+                }
+            ],
+            "latency_ms": 0.062
+        },
+        {
+            "category": "District: Nagpur",
+            "original_query": "नागपुर अपघात",
+            "normalized_query": "नागपूर अपघात",
+            "matched_districts": [
+                {
+                    "canonical_name": "नागपूर",
+                    "original_token": "नागपुर",
+                    "confidence": 100.0,
+                    "was_corrected": true
+                }
+            ],
+            "latency_ms": 0.06
+        },
+        {
+            "category": "District: Nagpur",
+            "original_query": "नागपुर बातमी",
+            "normalized_query": "नागपूर बातमी",
+            "matched_districts": [
+                {
+                    "canonical_name": "नागपूर",
+                    "original_token": "नागपुर",
+                    "confidence": 100.0,
+                    "was_corrected": true
+                }
+            ],
+            "latency_ms": 0.065
+        },
+        {
+            "category": "District: Nagpur",
+            "original_query": "नागपुर राजकारण",
+            "normalized_query": "नागपूर राजकारण",
+            "matched_districts": [
+                {
+                    "canonical_name": "नागपूर",
+                    "original_token": "नागपुर",
+                    "confidence": 100.0,
+                    "was_corrected": true
+                }
+            ],
+            "latency_ms": 0.083
+        },
+        {
+            "category": "District: Nagpur",
+            "original_query": "नागपुर दुर्घटना",
+            "normalized_query": "नागपूर दुर्घटना",
+            "matched_districts": [
+                {
+                    "canonical_name": "नागपूर",
+                    "original_token": "नागपुर",
+                    "confidence": 100.0,
+                    "was_corrected": true
+                }
+            ],
+            "latency_ms": 0.07
+        },
+        {
+            "category": "District: Nagpur",
+            "original_query": "नागपुर हवामान",
+            "normalized_query": "नागपूर हवामान",
+            "matched_districts": [
+                {
+                    "canonical_name": "नागपूर",
+                    "original_token": "नागपुर",
+                    "confidence": 100.0,
+                    "was_corrected": true
+                }
+            ],
+            "latency_ms": 0.06
+        },
+        {
+            "category": "District: Pune",
+            "original_query": "पुने",
+            "normalized_query": "पुणे",
+            "matched_districts": [
+                {
+                    "canonical_name": "पुणे",
+                    "original_token": "पुने",
+                    "confidence": 100.0,
+                    "was_corrected": true
+                }
+            ],
+            "latency_ms": 0.048
+        },
+        {
+            "category": "District: Pune",
+            "original_query": "पूणे",
+            "normalized_query": "पुणे",
+            "matched_districts": [
+                {
+                    "canonical_name": "पुणे",
+                    "original_token": "पूणे",
+                    "confidence": 100.0,
+                    "was_corrected": true
+                }
+            ],
+            "latency_ms": 0.043
+        },
+        {
+            "category": "District: Pune",
+            "original_query": "पुण",
+            "normalized_query": "पुणे",
+            "matched_districts": [
+                {
+                    "canonical_name": "पुणे",
+                    "original_token": "पुण",
+                    "confidence": 100.0,
+                    "was_corrected": true
+                }
+            ],
+            "latency_ms": 0.044
+        },
+        {
+            "category": "District: Pune",
+            "original_query": "पुण्यात",
+            "normalized_query": "पुणे",
+            "matched_districts": [
+                {
+                    "canonical_name": "पुणे",
+                    "original_token": "पुण्यात",
+                    "confidence": 90.9,
+                    "was_corrected": true
+                }
+            ],
+            "latency_ms": 0.052
+        },
+        {
+            "category": "District: Pune",
+            "original_query": "पुने बातमी",
+            "normalized_query": "पुणे बातमी",
+            "matched_districts": [
+                {
+                    "canonical_name": "पुणे",
+                    "original_token": "पुने",
+                    "confidence": 100.0,
+                    "was_corrected": true
+                }
+            ],
+            "latency_ms": 0.064
+        },
+        {
+            "category": "District: Pune",
+            "original_query": "पुने अपघात",
+            "normalized_query": "पुणे अपघात",
+            "matched_districts": [
+                {
+                    "canonical_name": "पुणे",
+                    "original_token": "पुने",
+                    "confidence": 100.0,
+                    "was_corrected": true
+                }
+            ],
+            "latency_ms": 0.067
+        },
+        {
+            "category": "District: Pune",
+            "original_query": "पुणे पाउस",
+            "normalized_query": "पुणे पाउस",
+            "matched_districts": [
+                {
+                    "canonical_name": "पुणे",
+                    "original_token": "पुणे",
+                    "confidence": 100.0,
+                    "was_corrected": false
+                }
+            ],
+            "latency_ms": 0.026
+        },
+        {
+            "category": "District: Pune",
+            "original_query": "पुने राजकारण",
+            "normalized_query": "पुणे राजकारण",
+            "matched_districts": [
+                {
+                    "canonical_name": "पुणे",
+                    "original_token": "पुने",
+                    "confidence": 100.0,
+                    "was_corrected": true
+                }
+            ],
+            "latency_ms": 0.087
+        },
+        {
+            "category": "District: Pune",
+            "original_query": "पुणे हवामान",
+            "normalized_query": "पुणे हवामान",
+            "matched_districts": [
+                {
+                    "canonical_name": "पुणे",
+                    "original_token": "पुणे",
+                    "confidence": 100.0,
+                    "was_corrected": false
+                }
+            ],
+            "latency_ms": 0.026
+        },
+        {
+            "category": "District: Pune",
+            "original_query": "पुणे दौरा",
+            "normalized_query": "पुणे दौरा",
+            "matched_districts": [
+                {
+                    "canonical_name": "पुणे",
+                    "original_token": "पुणे",
+                    "confidence": 100.0,
+                    "was_corrected": false
+                }
+            ],
+            "latency_ms": 0.026
+        },
+        {
+            "category": "District: Sindhudurg",
+            "original_query": "सिंदुदुर्ग",
+            "normalized_query": "सिंधुदुर्ग",
+            "matched_districts": [
+                {
+                    "canonical_name": "सिंधुदुर्ग",
+                    "original_token": "सिंदुदुर्ग",
+                    "confidence": 100.0,
+                    "was_corrected": true
+                }
+            ],
+            "latency_ms": 0.051
+        },
+        {
+            "category": "District: Sindhudurg",
+            "original_query": "सिधुदुर्ग",
+            "normalized_query": "सिंधुदुर्ग",
+            "matched_districts": [
+                {
+                    "canonical_name": "सिंधुदुर्ग",
+                    "original_token": "सिधुदुर्ग",
+                    "confidence": 100.0,
+                    "was_corrected": true
+                }
+            ],
+            "latency_ms": 0.046
+        },
+        {
+            "category": "District: Sindhudurg",
+            "original_query": "सिध्दुदुर्ग",
+            "normalized_query": "सिंधुदुर्ग",
+            "matched_districts": [
+                {
+                    "canonical_name": "सिंधुदुर्ग",
+                    "original_token": "सिध्दुदुर्ग",
+                    "confidence": 100.0,
+                    "was_corrected": true
+                }
+            ],
+            "latency_ms": 0.043
+        },
+        {
+            "category": "District: Sindhudurg",
+            "original_query": "सिंधुदूर्ग",
+            "normalized_query": "सिंधुदुर्ग",
+            "matched_districts": [
+                {
+                    "canonical_name": "सिंधुदुर्ग",
+                    "original_token": "सिंधुदूर्ग",
+                    "confidence": 100.0,
+                    "was_corrected": true
+                }
+            ],
+            "latency_ms": 0.042
+        },
+        {
+            "category": "District: Sindhudurg",
+            "original_query": "सिंदुदुर्गात",
+            "normalized_query": "सिंधुदुर्ग",
+            "matched_districts": [
+                {
+                    "canonical_name": "सिंधुदुर्ग",
+                    "original_token": "सिंदुदुर्गात",
+                    "confidence": 100.0,
+                    "was_corrected": true
+                }
+            ],
+            "latency_ms": 0.046
+        },
+        {
+            "category": "District: Sindhudurg",
+            "original_query": "सिंदुदुर्ग बातमी",
+            "normalized_query": "सिंधुदुर्ग बातमी",
+            "matched_districts": [
+                {
+                    "canonical_name": "सिंधुदुर्ग",
+                    "original_token": "सिंदुदुर्ग",
+                    "confidence": 100.0,
+                    "was_corrected": true
+                }
+            ],
+            "latency_ms": 0.06
+        },
+        {
+            "category": "District: Sindhudurg",
+            "original_query": "सिधुदुर्ग पाउस",
+            "normalized_query": "सिंधुदुर्ग पाउस",
+            "matched_districts": [
+                {
+                    "canonical_name": "सिंधुदुर्ग",
+                    "original_token": "सिधुदुर्ग",
+                    "confidence": 100.0,
+                    "was_corrected": true
+                }
+            ],
+            "latency_ms": 0.063
+        },
+        {
+            "category": "District: Sindhudurg",
+            "original_query": "सिंदुदुर्ग अपघात",
+            "normalized_query": "सिंधुदुर्ग अपघात",
+            "matched_districts": [
+                {
+                    "canonical_name": "सिंधुदुर्ग",
+                    "original_token": "सिंदुदुर्ग",
+                    "confidence": 100.0,
+                    "was_corrected": true
+                }
+            ],
+            "latency_ms": 0.076
+        },
+        {
+            "category": "District: Sindhudurg",
+            "original_query": "सिधुदुर्ग राजकारण",
+            "normalized_query": "सिंधुदुर्ग राजकारण",
+            "matched_districts": [
+                {
+                    "canonical_name": "सिंधुदुर्ग",
+                    "original_token": "सिधुदुर्ग",
+                    "confidence": 100.0,
+                    "was_corrected": true
+                }
+            ],
+            "latency_ms": 0.066
+        },
+        {
+            "category": "District: Sindhudurg",
+            "original_query": "सिंदुदुर्ग हवामान",
+            "normalized_query": "सिंधुदुर्ग हवामान",
+            "matched_districts": [
+                {
+                    "canonical_name": "सिंधुदुर्ग",
+                    "original_token": "सिंदुदुर्ग",
+                    "confidence": 100.0,
+                    "was_corrected": true
+                }
+            ],
+            "latency_ms": 0.064
+        }
+    ]
+}
