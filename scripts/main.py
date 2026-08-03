@@ -32,7 +32,7 @@ logger = logging.getLogger(__name__)
 REQUEST_DELAY_SECONDS: float = 0.5
 FAILED_URLS_FILE: str = "failed_urls.txt"
 SCRAPE_REPORT_FILE: str = "scrape_report.json"
-TARGET_INSERTIONS_DEFAULT: int = 400
+TARGET_INSERTIONS_DEFAULT: int = 1100
 
 # Curated list of default category URLs across Maharashtra districts and news sections
 CATEGORY_URLS: List[str] = [
@@ -265,8 +265,8 @@ def run_ingestion_pipeline(
     process_start_time = time.time()
 
     for idx, link in enumerate(all_discovered_links, start=1):
-        if stats.articles_inserted >= target_insertions:
-            logger.info("Target article insertions limit reached (%d). Stopping pipeline.", target_insertions)
+        if len(existing_titles) >= target_insertions:
+            logger.info("Target total database articles limit reached (%d). Stopping pipeline.", target_insertions)
             break
 
         eta_str = calculate_eta(idx - 1, total_articles, process_start_time)
@@ -342,4 +342,4 @@ def run_ingestion_pipeline(
 
 
 if __name__ == "__main__":
-    run_ingestion_pipeline(auto_discover=True, target_insertions=400)
+    run_ingestion_pipeline(auto_discover=True, target_insertions=1100)
