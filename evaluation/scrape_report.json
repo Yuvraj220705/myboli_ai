@@ -1,15 +1,16 @@
 {
-    "timestamp": "2026-07-31 14:17:28",
-    "categories_processed": 106,
-    "total_links_discovered": 1065,
-    "articles_scraped": 422,
-    "articles_inserted": 400,
-    "duplicates_skipped": 22,
-    "failures": 1,
-    "execution_time_seconds": 921.5,
-    "execution_time_formatted": "15m 21s",
-    "failed_urls_count": 1,
+    "timestamp": "2026-08-03 15:38:04",
+    "categories_processed": 105,
+    "total_links_discovered": 1050,
+    "articles_scraped": 986,
+    "articles_inserted": 666,
+    "duplicates_skipped": 320,
+    "failures": 2,
+    "execution_time_seconds": 1751.78,
+    "execution_time_formatted": "29m 11s",
+    "failed_urls_count": 2,
     "failed_urls": [
-        "https://maharashtratimes.com/maharashtra/satara/phaltan-doctor-case-police-traced-psi-gopal-badne-location-in-pandharpur-prashant-bankar/articleshow/124804153.cms"
+        "https://maharashtratimes.com/maharashtra/satara/phaltan-doctor-case-police-traced-psi-gopal-badne-location-in-pandharpur-prashant-bankar/articleshow/124804153.cms",
+        "https://maharashtratimes.com/maharashtra/jalna/jalna-lady-reel-star-arrested-for-blackmail-and-ransom-over-objectionable-photos/articleshow/132455009.cms"
     ]
 }
