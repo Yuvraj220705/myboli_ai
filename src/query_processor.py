@@ -4,8 +4,9 @@ import logging
 import re
 from dataclasses import dataclass
 from datetime import date
-from typing import Dict, Optional
+from typing import Dict, Optional, Tuple
 
+from entity_normalizer import DistrictNormalizer, MatchedDistrict
 from date_parser import extract_date, strip_date_from_query
 
 logger = logging.getLogger(__name__)
@@ -20,7 +21,10 @@ __all__ = [
 # Constants
 # ----------------------------
 
-# Maps Marathi district name (used in queries) -> English name as stored in the database
+# Instantiate DistrictNormalizer instance for Devanagari district resolution
+_DISTRICT_NORMALIZER = DistrictNormalizer()
+
+# Maps Canonical Marathi district name -> English name as stored in database
 DISTRICTS: Dict[str, str] = {
     "सिंधुदुर्ग": "Sindhudurg",
     "कोल्हापूर": "Kolhapur",
@@ -30,6 +34,33 @@ DISTRICTS: Dict[str, str] = {
     "सांगली": "Sangli",
     "सातारा": "Satara",
     "नाशिक": "Nashik",
+    "नागपूर": "Nagpur",
+    "अहमदनगर": "Ahmednagar",
+    "छत्रपती संभाजीनगर": "Aurangabad",
+    "सोलापूर": "Solapur",
+    "ठाणे": "Thane",
+    "पालघर": "Palghar",
+    "रायगड": "Raigad",
+    "जळगाव": "Jalgaon",
+    "धुळे": "Dhule",
+    "नंदुरबार": "Nandurbar",
+    "जालना": "Jalna",
+    "बीड": "Beed",
+    "लातूर": "Latur",
+    "धाराशिव": "Dharashiv",
+    "नांदेड": "Nanded",
+    "परभणी": "Parbhani",
+    "हिंगोली": "Hingoli",
+    "अमरावती": "Amravati",
+    "अकोला": "Akola",
+    "वाशीम": "Washim",
+    "बुलढाणा": "Buldhana",
+    "यवतमाळ": "Yavatmal",
+    "वर्धा": "Wardha",
+    "भंडारा": "Bhandara",
+    "गोंदिया": "Gondia",
+    "चंद्रपूर": "Chandrapur",
+    "गडचिरोली": "Gadchiroli",
 }
 
 CATEGORY_ALIASES = {
@@ -41,7 +72,7 @@ CATEGORY_ALIASES = {
     "Health": ["आरोग्य"],
 }
 
-# Common Marathi suffix regex for location names (e.g. सिंधुदुर्गमध्ये, सिंधुदुर्गात, सिंधुदुर्गातील, सिंधुदुर्गचा)
+# Common Marathi suffix regex for location names
 _DISTRICT_SUFFIXES = r"(?:मध्ये|मध्येच|ात|तील|चा|ची|च्या|ने|साठी)?"
 
 
@@ -83,22 +114,34 @@ class QueryInfo:
 # Private Helpers
 # ----------------------------
 
-def _detect_district(text: str) -> Optional[str]:
-    """Detect if any known district name is mentioned in the query.
+def _detect_district(text: str) -> Optional[Tuple[str, Optional[MatchedDistrict]]]:
+    """Detect if any district name is mentioned in the query using DistrictNormalizer.
 
-    Handles Marathi location suffixes (e.g. सिंधुदुर्गमध्ये -> सिंधुदुर्ग).
-    Returns the English district name as stored in the database.
+    Handles misspelled Devanagari names and grammatical location suffixes.
 
     Args:
         text: The input text query.
 
     Returns:
-        The English district name matching the database value, or None if no district is found.
+        Tuple of (English DB District Name, MatchedDistrict object) if detected, else None.
     """
+    if not text:
+        return None
+
+    # Step 1: Use DistrictNormalizer to identify district entities
+    result = _DISTRICT_NORMALIZER.normalize_query(text)
+    if result.matched_districts:
+        matched = result.matched_districts[0]
+        english_name = DISTRICTS.get(matched.canonical_name)
+        if english_name:
+            return english_name, matched
+
+    # Step 2: Fallback to exact regex matching if normalizer yields no match
     for marathi_name, english_name in DISTRICTS.items():
         pattern = rf"{re.escape(marathi_name)}{_DISTRICT_SUFFIXES}"
         if re.search(pattern, text, flags=re.IGNORECASE):
-            return english_name
+            return english_name, None
+
     return None
 
 
@@ -123,6 +166,7 @@ def _clean_query(
     question: str,
     detected_district: Optional[str],
     detected_category: Optional[str],
+    matched_district_obj: Optional[MatchedDistrict] = None,
 ) -> str:
     """Construct a clean query string by removing dates, districts, and category words.
 
@@ -130,18 +174,23 @@ def _clean_query(
         question: The raw user question string.
         detected_district: The English DB district name detected, if any.
         detected_category: The English DB canonical category name detected, if any.
+        matched_district_obj: Optional MatchedDistrict object from DistrictNormalizer.
 
     Returns:
         A cleaned, trimmed Marathi query string suitable for FULLTEXT retrieval.
-        Category aliases are removed from the text but the original Marathi term is
-        preserved as the fallback when no other content remains — ensuring FULLTEXT
-        searches Marathi article content while SQL uses the English category filter.
     """
     # Remove date & date-filler words using date_parser
     cleaned = strip_date_from_query(question)
 
-    # Remove the Marathi district name from the query text (reverse lookup from DISTRICTS dict)
+    # Remove the Marathi district name / typo tokens from the query text
     if detected_district:
+        # Strip matched typo token if detected by DistrictNormalizer
+        if matched_district_obj and matched_district_obj.original_token:
+            pattern = rf"{re.escape(matched_district_obj.original_token)}{_DISTRICT_SUFFIXES}"
+            cleaned = re.sub(pattern, "", cleaned, flags=re.IGNORECASE)
+            pattern_canonical = rf"{re.escape(matched_district_obj.canonical_name)}{_DISTRICT_SUFFIXES}"
+            cleaned = re.sub(pattern_canonical, "", cleaned, flags=re.IGNORECASE)
+
         marathi_name = next(
             (k for k, v in DISTRICTS.items() if v == detected_district), None
         )
@@ -150,31 +199,24 @@ def _clean_query(
             cleaned = re.sub(pattern, "", cleaned, flags=re.IGNORECASE)
 
     # Remove category aliases from the query text.
-    # Track the first matched Marathi alias so it can be used as FULLTEXT fallback
-    # instead of the English DB key — Marathi content in articles matches better.
     matched_marathi_alias: Optional[str] = None
     if detected_category:
         aliases = CATEGORY_ALIASES.get(detected_category, [])
         for alias in aliases:
             if matched_marathi_alias is None and alias in cleaned:
                 matched_marathi_alias = alias
-            # Token-based removal: split query into tokens, discard matched alias tokens.
-            # This avoids partial Devanagari character stripping from adjacent words.
             tokens = cleaned.split()
             alias_tokens = alias.split()
             filtered: list = []
             i = 0
             while i < len(tokens):
-                # Check if alias_tokens match starting at position i
                 if tokens[i:i + len(alias_tokens)] == alias_tokens:
-                    i += len(alias_tokens)  # skip matched alias tokens
+                    i += len(alias_tokens)
                 else:
                     filtered.append(tokens[i])
                     i += 1
             cleaned = " ".join(filtered)
 
-        # If stripping emptied the query, fall back to the matched Marathi alias
-        # so FULLTEXT uses "राजकारण" not "Politics" against Marathi article content.
         cleaned = cleaned.strip()
         if not cleaned:
             return matched_marathi_alias or question.strip()
@@ -213,11 +255,17 @@ def process_query(question: str) -> QueryInfo:
     detected_date = extract_date(raw_query)
 
     # Detect district and category
-    detected_district = _detect_district(raw_query)
+    district_res = _detect_district(raw_query)
+    detected_district: Optional[str] = None
+    matched_district_obj: Optional[MatchedDistrict] = None
+
+    if district_res:
+        detected_district, matched_district_obj = district_res
+
     detected_category = _detect_category(raw_query)
 
     # Generate cleaned query string
-    cleaned = _clean_query(raw_query, detected_district, detected_category)
+    cleaned = _clean_query(raw_query, detected_district, detected_category, matched_district_obj)
 
     # Detect if query requests latest news summary
     is_latest_news = any(pattern in raw_query for pattern in LATEST_NEWS_PATTERNS)
