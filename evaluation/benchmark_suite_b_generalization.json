@@ -1,0 +1,1502 @@
+[
+  {
+    "query_id": "BENCH_B_001",
+    "query": "आज पुण्यात काय घडले?",
+    "suite": "Benchmark B (Generalization - Natural User Query)",
+    "difficulty": "Medium",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Natural User Query' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_002",
+    "query": "पुण्यात शहरातील ताज्या घडामोडी सांगा",
+    "suite": "Benchmark B (Generalization - Conversational)",
+    "difficulty": "Medium",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Conversational' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_003",
+    "query": "अमित शाह यांनी पुण्यात बद्दल काय विधान केले?",
+    "suite": "Benchmark B (Generalization - Natural Conversational)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": "Politics",
+    "expected_person": "अमित शाह",
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Natural Conversational' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_004",
+    "query": "पुण्यात weather report today in marathi",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_005",
+    "query": "पुण्यात accident news breaking",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_006",
+    "query": "अमित शाह latest news updates",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Medium",
+    "expected_district": "Pune",
+    "expected_category": "Politics",
+    "expected_person": "अमित शाह",
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_007",
+    "query": "पुण्यात मधील शेती आणि पावसाचा अंदाज",
+    "suite": "Benchmark B (Generalization - Contextual Query)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Contextual Query' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_008",
+    "query": "पुण्यात परिसरातील गुन्हेगारी वृत्त",
+    "suite": "Benchmark B (Generalization - Topic Contextual)",
+    "difficulty": "Medium",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Topic Contextual' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_009",
+    "query": "महाराष्ट्रात क्रीडा बाबत काय नवीन निर्णय झाला?",
+    "suite": "Benchmark B (Generalization - Statewide Conversational)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Statewide Conversational' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_010",
+    "query": "पुण्यात जवळील मुख्य रस्ते आणि ट्रॅफिक अपडेट",
+    "suite": "Benchmark B (Generalization - Local Contextual)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Local Contextual' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_011",
+    "query": "आज पुण्यात काय घडले?",
+    "suite": "Benchmark B (Generalization - Natural User Query)",
+    "difficulty": "Medium",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Natural User Query' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_012",
+    "query": "पुण्यात शहरातील ताज्या घडामोडी सांगा",
+    "suite": "Benchmark B (Generalization - Conversational)",
+    "difficulty": "Medium",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Conversational' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_013",
+    "query": "देवेंद्र फडणवीस यांनी पुण्यात बद्दल काय विधान केले?",
+    "suite": "Benchmark B (Generalization - Natural Conversational)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": "Politics",
+    "expected_person": "देवेंद्र फडणवीस",
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Natural Conversational' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_014",
+    "query": "पुण्यात weather report today in marathi",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_015",
+    "query": "पुण्यात accident news breaking",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_016",
+    "query": "देवेंद्र फडणवीस latest news updates",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Medium",
+    "expected_district": "Pune",
+    "expected_category": "Politics",
+    "expected_person": "देवेंद्र फडणवीस",
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_017",
+    "query": "पुण्यात मधील शेती आणि पावसाचा अंदाज",
+    "suite": "Benchmark B (Generalization - Contextual Query)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Contextual Query' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_018",
+    "query": "पुण्यात परिसरातील गुन्हेगारी वृत्त",
+    "suite": "Benchmark B (Generalization - Topic Contextual)",
+    "difficulty": "Medium",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Topic Contextual' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_019",
+    "query": "महाराष्ट्रात गुन्हे बाबत काय नवीन निर्णय झाला?",
+    "suite": "Benchmark B (Generalization - Statewide Conversational)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Statewide Conversational' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_020",
+    "query": "पुण्यात जवळील मुख्य रस्ते आणि ट्रॅफिक अपडेट",
+    "suite": "Benchmark B (Generalization - Local Contextual)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Local Contextual' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_021",
+    "query": "आज पुण्यात काय घडले?",
+    "suite": "Benchmark B (Generalization - Natural User Query)",
+    "difficulty": "Medium",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Natural User Query' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_022",
+    "query": "पुण्यात शहरातील ताज्या घडामोडी सांगा",
+    "suite": "Benchmark B (Generalization - Conversational)",
+    "difficulty": "Medium",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Conversational' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_023",
+    "query": "अजित पवार यांनी पुण्यात बद्दल काय विधान केले?",
+    "suite": "Benchmark B (Generalization - Natural Conversational)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": "Politics",
+    "expected_person": "अजित पवार",
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Natural Conversational' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_024",
+    "query": "पुण्यात weather report today in marathi",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_025",
+    "query": "पुण्यात accident news breaking",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_026",
+    "query": "अजित पवार latest news updates",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Medium",
+    "expected_district": "Pune",
+    "expected_category": "Politics",
+    "expected_person": "अजित पवार",
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_027",
+    "query": "पुण्यात मधील शेती आणि पावसाचा अंदाज",
+    "suite": "Benchmark B (Generalization - Contextual Query)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Contextual Query' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_028",
+    "query": "पुण्यात परिसरातील गुन्हेगारी वृत्त",
+    "suite": "Benchmark B (Generalization - Topic Contextual)",
+    "difficulty": "Medium",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Topic Contextual' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_029",
+    "query": "महाराष्ट्रात आरोग्य बाबत काय नवीन निर्णय झाला?",
+    "suite": "Benchmark B (Generalization - Statewide Conversational)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Statewide Conversational' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_030",
+    "query": "पुण्यात जवळील मुख्य रस्ते आणि ट्रॅफिक अपडेट",
+    "suite": "Benchmark B (Generalization - Local Contextual)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Local Contextual' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_031",
+    "query": "आज पुण्यात काय घडले?",
+    "suite": "Benchmark B (Generalization - Natural User Query)",
+    "difficulty": "Medium",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Natural User Query' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_032",
+    "query": "पुण्यात शहरातील ताज्या घडामोडी सांगा",
+    "suite": "Benchmark B (Generalization - Conversational)",
+    "difficulty": "Medium",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Conversational' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_033",
+    "query": "उद्धव ठाकरे यांनी पुण्यात बद्दल काय विधान केले?",
+    "suite": "Benchmark B (Generalization - Natural Conversational)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": "Politics",
+    "expected_person": "उद्धव ठाकरे",
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Natural Conversational' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_034",
+    "query": "पुण्यात weather report today in marathi",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_035",
+    "query": "पुण्यात accident news breaking",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_036",
+    "query": "उद्धव ठाकरे latest news updates",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Medium",
+    "expected_district": "Pune",
+    "expected_category": "Politics",
+    "expected_person": "उद्धव ठाकरे",
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_037",
+    "query": "पुण्यात मधील शेती आणि पावसाचा अंदाज",
+    "suite": "Benchmark B (Generalization - Contextual Query)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Contextual Query' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_038",
+    "query": "पुण्यात परिसरातील गुन्हेगारी वृत्त",
+    "suite": "Benchmark B (Generalization - Topic Contextual)",
+    "difficulty": "Medium",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Topic Contextual' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_039",
+    "query": "महाराष्ट्रात हवामान बाबत काय नवीन निर्णय झाला?",
+    "suite": "Benchmark B (Generalization - Statewide Conversational)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Statewide Conversational' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_040",
+    "query": "पुण्यात जवळील मुख्य रस्ते आणि ट्रॅफिक अपडेट",
+    "suite": "Benchmark B (Generalization - Local Contextual)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Local Contextual' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_041",
+    "query": "आज पुण्यात काय घडले?",
+    "suite": "Benchmark B (Generalization - Natural User Query)",
+    "difficulty": "Medium",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Natural User Query' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_042",
+    "query": "पुण्यात शहरातील ताज्या घडामोडी सांगा",
+    "suite": "Benchmark B (Generalization - Conversational)",
+    "difficulty": "Medium",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Conversational' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_043",
+    "query": "विनायक राऊत यांनी पुण्यात बद्दल काय विधान केले?",
+    "suite": "Benchmark B (Generalization - Natural Conversational)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": "Politics",
+    "expected_person": "विनायक राऊत",
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Natural Conversational' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_044",
+    "query": "पुण्यात weather report today in marathi",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_045",
+    "query": "पुण्यात accident news breaking",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_046",
+    "query": "विनायक राऊत latest news updates",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Medium",
+    "expected_district": "Pune",
+    "expected_category": "Politics",
+    "expected_person": "विनायक राऊत",
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_047",
+    "query": "पुण्यात मधील शेती आणि पावसाचा अंदाज",
+    "suite": "Benchmark B (Generalization - Contextual Query)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Contextual Query' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_048",
+    "query": "पुण्यात परिसरातील गुन्हेगारी वृत्त",
+    "suite": "Benchmark B (Generalization - Topic Contextual)",
+    "difficulty": "Medium",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Topic Contextual' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_049",
+    "query": "महाराष्ट्रात शिक्षण बाबत काय नवीन निर्णय झाला?",
+    "suite": "Benchmark B (Generalization - Statewide Conversational)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Statewide Conversational' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_050",
+    "query": "पुण्यात जवळील मुख्य रस्ते आणि ट्रॅफिक अपडेट",
+    "suite": "Benchmark B (Generalization - Local Contextual)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Local Contextual' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_051",
+    "query": "आज मुंबईत काय घडले?",
+    "suite": "Benchmark B (Generalization - Natural User Query)",
+    "difficulty": "Medium",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Natural User Query' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_052",
+    "query": "मुंबईत शहरातील ताज्या घडामोडी सांगा",
+    "suite": "Benchmark B (Generalization - Conversational)",
+    "difficulty": "Medium",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Conversational' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_053",
+    "query": "अमित शाह यांनी मुंबईत बद्दल काय विधान केले?",
+    "suite": "Benchmark B (Generalization - Natural Conversational)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": "Politics",
+    "expected_person": "अमित शाह",
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Natural Conversational' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_054",
+    "query": "मुंबईत weather report today in marathi",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_055",
+    "query": "मुंबईत accident news breaking",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_056",
+    "query": "अमित शाह latest news updates",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Medium",
+    "expected_district": "Mumbai",
+    "expected_category": "Politics",
+    "expected_person": "अमित शाह",
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_057",
+    "query": "मुंबईत मधील शेती आणि पावसाचा अंदाज",
+    "suite": "Benchmark B (Generalization - Contextual Query)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Contextual Query' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_058",
+    "query": "मुंबईत परिसरातील गुन्हेगारी वृत्त",
+    "suite": "Benchmark B (Generalization - Topic Contextual)",
+    "difficulty": "Medium",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Topic Contextual' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_059",
+    "query": "महाराष्ट्रात शेती बाबत काय नवीन निर्णय झाला?",
+    "suite": "Benchmark B (Generalization - Statewide Conversational)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Statewide Conversational' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_060",
+    "query": "मुंबईत जवळील मुख्य रस्ते आणि ट्रॅफिक अपडेट",
+    "suite": "Benchmark B (Generalization - Local Contextual)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Local Contextual' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_061",
+    "query": "आज मुंबईत काय घडले?",
+    "suite": "Benchmark B (Generalization - Natural User Query)",
+    "difficulty": "Medium",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Natural User Query' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_062",
+    "query": "मुंबईत शहरातील ताज्या घडामोडी सांगा",
+    "suite": "Benchmark B (Generalization - Conversational)",
+    "difficulty": "Medium",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Conversational' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_063",
+    "query": "देवेंद्र फडणवीस यांनी मुंबईत बद्दल काय विधान केले?",
+    "suite": "Benchmark B (Generalization - Natural Conversational)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": "Politics",
+    "expected_person": "देवेंद्र फडणवीस",
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Natural Conversational' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_064",
+    "query": "मुंबईत weather report today in marathi",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_065",
+    "query": "मुंबईत accident news breaking",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_066",
+    "query": "देवेंद्र फडणवीस latest news updates",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Medium",
+    "expected_district": "Mumbai",
+    "expected_category": "Politics",
+    "expected_person": "देवेंद्र फडणवीस",
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_067",
+    "query": "मुंबईत मधील शेती आणि पावसाचा अंदाज",
+    "suite": "Benchmark B (Generalization - Contextual Query)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Contextual Query' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_068",
+    "query": "मुंबईत परिसरातील गुन्हेगारी वृत्त",
+    "suite": "Benchmark B (Generalization - Topic Contextual)",
+    "difficulty": "Medium",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Topic Contextual' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_069",
+    "query": "महाराष्ट्रात उद्योग बाबत काय नवीन निर्णय झाला?",
+    "suite": "Benchmark B (Generalization - Statewide Conversational)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Statewide Conversational' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_070",
+    "query": "मुंबईत जवळील मुख्य रस्ते आणि ट्रॅफिक अपडेट",
+    "suite": "Benchmark B (Generalization - Local Contextual)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Local Contextual' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_071",
+    "query": "आज मुंबईत काय घडले?",
+    "suite": "Benchmark B (Generalization - Natural User Query)",
+    "difficulty": "Medium",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Natural User Query' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_072",
+    "query": "मुंबईत शहरातील ताज्या घडामोडी सांगा",
+    "suite": "Benchmark B (Generalization - Conversational)",
+    "difficulty": "Medium",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Conversational' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_073",
+    "query": "अजित पवार यांनी मुंबईत बद्दल काय विधान केले?",
+    "suite": "Benchmark B (Generalization - Natural Conversational)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": "Politics",
+    "expected_person": "अजित पवार",
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Natural Conversational' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_074",
+    "query": "मुंबईत weather report today in marathi",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_075",
+    "query": "मुंबईत accident news breaking",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_076",
+    "query": "अजित पवार latest news updates",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Medium",
+    "expected_district": "Mumbai",
+    "expected_category": "Politics",
+    "expected_person": "अजित पवार",
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_077",
+    "query": "मुंबईत मधील शेती आणि पावसाचा अंदाज",
+    "suite": "Benchmark B (Generalization - Contextual Query)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Contextual Query' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_078",
+    "query": "मुंबईत परिसरातील गुन्हेगारी वृत्त",
+    "suite": "Benchmark B (Generalization - Topic Contextual)",
+    "difficulty": "Medium",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Topic Contextual' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_079",
+    "query": "महाराष्ट्रात क्रीडा बाबत काय नवीन निर्णय झाला?",
+    "suite": "Benchmark B (Generalization - Statewide Conversational)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Statewide Conversational' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_080",
+    "query": "मुंबईत जवळील मुख्य रस्ते आणि ट्रॅफिक अपडेट",
+    "suite": "Benchmark B (Generalization - Local Contextual)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Local Contextual' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_081",
+    "query": "आज मुंबईत काय घडले?",
+    "suite": "Benchmark B (Generalization - Natural User Query)",
+    "difficulty": "Medium",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Natural User Query' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_082",
+    "query": "मुंबईत शहरातील ताज्या घडामोडी सांगा",
+    "suite": "Benchmark B (Generalization - Conversational)",
+    "difficulty": "Medium",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Conversational' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_083",
+    "query": "उद्धव ठाकरे यांनी मुंबईत बद्दल काय विधान केले?",
+    "suite": "Benchmark B (Generalization - Natural Conversational)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": "Politics",
+    "expected_person": "उद्धव ठाकरे",
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Natural Conversational' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_084",
+    "query": "मुंबईत weather report today in marathi",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_085",
+    "query": "मुंबईत accident news breaking",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_086",
+    "query": "उद्धव ठाकरे latest news updates",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Medium",
+    "expected_district": "Mumbai",
+    "expected_category": "Politics",
+    "expected_person": "उद्धव ठाकरे",
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_087",
+    "query": "मुंबईत मधील शेती आणि पावसाचा अंदाज",
+    "suite": "Benchmark B (Generalization - Contextual Query)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Contextual Query' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_088",
+    "query": "मुंबईत परिसरातील गुन्हेगारी वृत्त",
+    "suite": "Benchmark B (Generalization - Topic Contextual)",
+    "difficulty": "Medium",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Topic Contextual' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_089",
+    "query": "महाराष्ट्रात गुन्हे बाबत काय नवीन निर्णय झाला?",
+    "suite": "Benchmark B (Generalization - Statewide Conversational)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Statewide Conversational' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_090",
+    "query": "मुंबईत जवळील मुख्य रस्ते आणि ट्रॅफिक अपडेट",
+    "suite": "Benchmark B (Generalization - Local Contextual)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Local Contextual' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_091",
+    "query": "आज मुंबईत काय घडले?",
+    "suite": "Benchmark B (Generalization - Natural User Query)",
+    "difficulty": "Medium",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Natural User Query' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_092",
+    "query": "मुंबईत शहरातील ताज्या घडामोडी सांगा",
+    "suite": "Benchmark B (Generalization - Conversational)",
+    "difficulty": "Medium",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Conversational' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_093",
+    "query": "विनायक राऊत यांनी मुंबईत बद्दल काय विधान केले?",
+    "suite": "Benchmark B (Generalization - Natural Conversational)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": "Politics",
+    "expected_person": "विनायक राऊत",
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Natural Conversational' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_094",
+    "query": "मुंबईत weather report today in marathi",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_095",
+    "query": "मुंबईत accident news breaking",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_096",
+    "query": "विनायक राऊत latest news updates",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Medium",
+    "expected_district": "Mumbai",
+    "expected_category": "Politics",
+    "expected_person": "विनायक राऊत",
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_097",
+    "query": "मुंबईत मधील शेती आणि पावसाचा अंदाज",
+    "suite": "Benchmark B (Generalization - Contextual Query)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Contextual Query' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_098",
+    "query": "मुंबईत परिसरातील गुन्हेगारी वृत्त",
+    "suite": "Benchmark B (Generalization - Topic Contextual)",
+    "difficulty": "Medium",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Topic Contextual' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_099",
+    "query": "महाराष्ट्रात आरोग्य बाबत काय नवीन निर्णय झाला?",
+    "suite": "Benchmark B (Generalization - Statewide Conversational)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Statewide Conversational' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_100",
+    "query": "मुंबईत जवळील मुख्य रस्ते आणि ट्रॅफिक अपडेट",
+    "suite": "Benchmark B (Generalization - Local Contextual)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Local Contextual' targeting मुंबईत."
+  }
+]

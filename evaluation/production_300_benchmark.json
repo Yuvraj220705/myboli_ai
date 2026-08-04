@@ -1,0 +1,4154 @@
+[
+  {
+    "query_id": "BENCH_A_001",
+    "query": "पुणे बातमी",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065,
+      1052,
+      820
+    ],
+    "ground_truth_explanation": "Exact keyword match for पुणे बातमी."
+  },
+  {
+    "query_id": "BENCH_A_002",
+    "query": "पुणे पाऊस",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Pune",
+    "expected_category": "Rain",
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065,
+      1052,
+      820
+    ],
+    "ground_truth_explanation": "Exact keyword match for पुणे पाऊस."
+  },
+  {
+    "query_id": "BENCH_A_003",
+    "query": "पुणे अपघात",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Pune",
+    "expected_category": "Accident",
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065,
+      1052,
+      820
+    ],
+    "ground_truth_explanation": "Exact keyword match for पुणे अपघात."
+  },
+  {
+    "query_id": "BENCH_A_004",
+    "query": "पुणे राजकारण",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Pune",
+    "expected_category": "Politics",
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065,
+      1052,
+      820
+    ],
+    "ground_truth_explanation": "Exact keyword match for पुणे राजकारण."
+  },
+  {
+    "query_id": "BENCH_A_005",
+    "query": "पुणे हवामान",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Pune",
+    "expected_category": "Weather",
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065,
+      1052,
+      820
+    ],
+    "ground_truth_explanation": "Exact keyword match for पुणे हवामान."
+  },
+  {
+    "query_id": "BENCH_A_006",
+    "query": "पुणे गुन्हे",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Pune",
+    "expected_category": "Crime",
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065,
+      1052,
+      820
+    ],
+    "ground_truth_explanation": "Exact keyword match for पुणे गुन्हे."
+  },
+  {
+    "query_id": "BENCH_A_007",
+    "query": "मुंबई बातमी",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774,
+      750,
+      748
+    ],
+    "ground_truth_explanation": "Exact keyword match for मुंबई बातमी."
+  },
+  {
+    "query_id": "BENCH_A_008",
+    "query": "मुंबई पाऊस",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Mumbai",
+    "expected_category": "Rain",
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774,
+      750,
+      748
+    ],
+    "ground_truth_explanation": "Exact keyword match for मुंबई पाऊस."
+  },
+  {
+    "query_id": "BENCH_A_009",
+    "query": "मुंबई अपघात",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Mumbai",
+    "expected_category": "Accident",
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774,
+      750,
+      748
+    ],
+    "ground_truth_explanation": "Exact keyword match for मुंबई अपघात."
+  },
+  {
+    "query_id": "BENCH_A_010",
+    "query": "मुंबई राजकारण",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Mumbai",
+    "expected_category": "Politics",
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774,
+      750,
+      748
+    ],
+    "ground_truth_explanation": "Exact keyword match for मुंबई राजकारण."
+  },
+  {
+    "query_id": "BENCH_A_011",
+    "query": "मुंबई हवामान",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Mumbai",
+    "expected_category": "Weather",
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774,
+      750,
+      748
+    ],
+    "ground_truth_explanation": "Exact keyword match for मुंबई हवामान."
+  },
+  {
+    "query_id": "BENCH_A_012",
+    "query": "मुंबई गुन्हे",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Mumbai",
+    "expected_category": "Crime",
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774,
+      750,
+      748
+    ],
+    "ground_truth_explanation": "Exact keyword match for मुंबई गुन्हे."
+  },
+  {
+    "query_id": "BENCH_A_013",
+    "query": "सातारा बातमी",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Satara",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1071,
+      1068,
+      643,
+      431,
+      34
+    ],
+    "ground_truth_explanation": "Exact keyword match for सातारा बातमी."
+  },
+  {
+    "query_id": "BENCH_A_014",
+    "query": "सातारा पाऊस",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Satara",
+    "expected_category": "Rain",
+    "expected_person": null,
+    "expected_article_ids": [
+      1071,
+      1068,
+      643,
+      431,
+      34
+    ],
+    "ground_truth_explanation": "Exact keyword match for सातारा पाऊस."
+  },
+  {
+    "query_id": "BENCH_A_015",
+    "query": "सातारा अपघात",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Satara",
+    "expected_category": "Accident",
+    "expected_person": null,
+    "expected_article_ids": [
+      1071,
+      1068,
+      643,
+      431,
+      34
+    ],
+    "ground_truth_explanation": "Exact keyword match for सातारा अपघात."
+  },
+  {
+    "query_id": "BENCH_A_016",
+    "query": "सातारा राजकारण",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Satara",
+    "expected_category": "Politics",
+    "expected_person": null,
+    "expected_article_ids": [
+      1071,
+      1068,
+      643,
+      431,
+      34
+    ],
+    "ground_truth_explanation": "Exact keyword match for सातारा राजकारण."
+  },
+  {
+    "query_id": "BENCH_A_017",
+    "query": "सातारा हवामान",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Satara",
+    "expected_category": "Weather",
+    "expected_person": null,
+    "expected_article_ids": [
+      1071,
+      1068,
+      643,
+      431,
+      34
+    ],
+    "ground_truth_explanation": "Exact keyword match for सातारा हवामान."
+  },
+  {
+    "query_id": "BENCH_A_018",
+    "query": "सातारा गुन्हे",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Satara",
+    "expected_category": "Crime",
+    "expected_person": null,
+    "expected_article_ids": [
+      1071,
+      1068,
+      643,
+      431,
+      34
+    ],
+    "ground_truth_explanation": "Exact keyword match for सातारा गुन्हे."
+  },
+  {
+    "query_id": "BENCH_A_019",
+    "query": "सांगली बातमी",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Sangli",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      641,
+      635,
+      513,
+      290,
+      289
+    ],
+    "ground_truth_explanation": "Exact keyword match for सांगली बातमी."
+  },
+  {
+    "query_id": "BENCH_A_020",
+    "query": "सांगली पाऊस",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Sangli",
+    "expected_category": "Rain",
+    "expected_person": null,
+    "expected_article_ids": [
+      641,
+      635,
+      513,
+      290,
+      289
+    ],
+    "ground_truth_explanation": "Exact keyword match for सांगली पाऊस."
+  },
+  {
+    "query_id": "BENCH_A_021",
+    "query": "सांगली अपघात",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Sangli",
+    "expected_category": "Accident",
+    "expected_person": null,
+    "expected_article_ids": [
+      641,
+      635,
+      513,
+      290,
+      289
+    ],
+    "ground_truth_explanation": "Exact keyword match for सांगली अपघात."
+  },
+  {
+    "query_id": "BENCH_A_022",
+    "query": "सांगली राजकारण",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Sangli",
+    "expected_category": "Politics",
+    "expected_person": null,
+    "expected_article_ids": [
+      641,
+      635,
+      513,
+      290,
+      289
+    ],
+    "ground_truth_explanation": "Exact keyword match for सांगली राजकारण."
+  },
+  {
+    "query_id": "BENCH_A_023",
+    "query": "सांगली हवामान",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Sangli",
+    "expected_category": "Weather",
+    "expected_person": null,
+    "expected_article_ids": [
+      641,
+      635,
+      513,
+      290,
+      289
+    ],
+    "ground_truth_explanation": "Exact keyword match for सांगली हवामान."
+  },
+  {
+    "query_id": "BENCH_A_024",
+    "query": "सांगली गुन्हे",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Sangli",
+    "expected_category": "Crime",
+    "expected_person": null,
+    "expected_article_ids": [
+      641,
+      635,
+      513,
+      290,
+      289
+    ],
+    "ground_truth_explanation": "Exact keyword match for सांगली गुन्हे."
+  },
+  {
+    "query_id": "BENCH_A_025",
+    "query": "कोल्हापूर बातमी",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Kolhapur",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      792,
+      791,
+      790,
+      789,
+      786
+    ],
+    "ground_truth_explanation": "Exact keyword match for कोल्हापूर बातमी."
+  },
+  {
+    "query_id": "BENCH_A_026",
+    "query": "कोल्हापूर पाऊस",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Kolhapur",
+    "expected_category": "Rain",
+    "expected_person": null,
+    "expected_article_ids": [
+      792,
+      791,
+      790,
+      789,
+      786
+    ],
+    "ground_truth_explanation": "Exact keyword match for कोल्हापूर पाऊस."
+  },
+  {
+    "query_id": "BENCH_A_027",
+    "query": "कोल्हापूर अपघात",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Kolhapur",
+    "expected_category": "Accident",
+    "expected_person": null,
+    "expected_article_ids": [
+      792,
+      791,
+      790,
+      789,
+      786
+    ],
+    "ground_truth_explanation": "Exact keyword match for कोल्हापूर अपघात."
+  },
+  {
+    "query_id": "BENCH_A_028",
+    "query": "कोल्हापूर राजकारण",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Kolhapur",
+    "expected_category": "Politics",
+    "expected_person": null,
+    "expected_article_ids": [
+      792,
+      791,
+      790,
+      789,
+      786
+    ],
+    "ground_truth_explanation": "Exact keyword match for कोल्हापूर राजकारण."
+  },
+  {
+    "query_id": "BENCH_A_029",
+    "query": "कोल्हापूर हवामान",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Kolhapur",
+    "expected_category": "Weather",
+    "expected_person": null,
+    "expected_article_ids": [
+      792,
+      791,
+      790,
+      789,
+      786
+    ],
+    "ground_truth_explanation": "Exact keyword match for कोल्हापूर हवामान."
+  },
+  {
+    "query_id": "BENCH_A_030",
+    "query": "कोल्हापूर गुन्हे",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Kolhapur",
+    "expected_category": "Crime",
+    "expected_person": null,
+    "expected_article_ids": [
+      792,
+      791,
+      790,
+      789,
+      786
+    ],
+    "ground_truth_explanation": "Exact keyword match for कोल्हापूर गुन्हे."
+  },
+  {
+    "query_id": "BENCH_A_031",
+    "query": "नागपूर बातमी",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Nagpur",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      736,
+      734,
+      399
+    ],
+    "ground_truth_explanation": "Exact keyword match for नागपूर बातमी."
+  },
+  {
+    "query_id": "BENCH_A_032",
+    "query": "नागपूर पाऊस",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Nagpur",
+    "expected_category": "Rain",
+    "expected_person": null,
+    "expected_article_ids": [
+      736,
+      734,
+      399
+    ],
+    "ground_truth_explanation": "Exact keyword match for नागपूर पाऊस."
+  },
+  {
+    "query_id": "BENCH_A_033",
+    "query": "नागपूर अपघात",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Nagpur",
+    "expected_category": "Accident",
+    "expected_person": null,
+    "expected_article_ids": [
+      736,
+      734,
+      399
+    ],
+    "ground_truth_explanation": "Exact keyword match for नागपूर अपघात."
+  },
+  {
+    "query_id": "BENCH_A_034",
+    "query": "नागपूर राजकारण",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Nagpur",
+    "expected_category": "Politics",
+    "expected_person": null,
+    "expected_article_ids": [
+      736,
+      734,
+      399
+    ],
+    "ground_truth_explanation": "Exact keyword match for नागपूर राजकारण."
+  },
+  {
+    "query_id": "BENCH_A_035",
+    "query": "नागपूर हवामान",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Nagpur",
+    "expected_category": "Weather",
+    "expected_person": null,
+    "expected_article_ids": [
+      736,
+      734,
+      399
+    ],
+    "ground_truth_explanation": "Exact keyword match for नागपूर हवामान."
+  },
+  {
+    "query_id": "BENCH_A_036",
+    "query": "नागपूर गुन्हे",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Nagpur",
+    "expected_category": "Crime",
+    "expected_person": null,
+    "expected_article_ids": [
+      736,
+      734,
+      399
+    ],
+    "ground_truth_explanation": "Exact keyword match for नागपूर गुन्हे."
+  },
+  {
+    "query_id": "BENCH_A_037",
+    "query": "सिंधुदुर्ग बातमी",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Sindhudurg",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Exact keyword match for सिंधुदुर्ग बातमी."
+  },
+  {
+    "query_id": "BENCH_A_038",
+    "query": "सिंधुदुर्ग पाऊस",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Sindhudurg",
+    "expected_category": "Rain",
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Exact keyword match for सिंधुदुर्ग पाऊस."
+  },
+  {
+    "query_id": "BENCH_A_039",
+    "query": "सिंधुदुर्ग अपघात",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Sindhudurg",
+    "expected_category": "Accident",
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Exact keyword match for सिंधुदुर्ग अपघात."
+  },
+  {
+    "query_id": "BENCH_A_040",
+    "query": "सिंधुदुर्ग राजकारण",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Sindhudurg",
+    "expected_category": "Politics",
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Exact keyword match for सिंधुदुर्ग राजकारण."
+  },
+  {
+    "query_id": "BENCH_A_041",
+    "query": "सिंधुदुर्ग हवामान",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Sindhudurg",
+    "expected_category": "Weather",
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Exact keyword match for सिंधुदुर्ग हवामान."
+  },
+  {
+    "query_id": "BENCH_A_042",
+    "query": "सिंधुदुर्ग गुन्हे",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Sindhudurg",
+    "expected_category": "Crime",
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Exact keyword match for सिंधुदुर्ग गुन्हे."
+  },
+  {
+    "query_id": "BENCH_A_043",
+    "query": "अमित शाह पुणे",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Pune",
+    "expected_category": "Politics",
+    "expected_person": "अमित शाह",
+    "expected_article_ids": [
+      1094,
+      1073,
+      1072,
+      944,
+      943
+    ],
+    "ground_truth_explanation": "Exact search for politician अमित शाह in पुणे."
+  },
+  {
+    "query_id": "BENCH_A_044",
+    "query": "अमित शाह मुंबई",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Mumbai",
+    "expected_category": "Politics",
+    "expected_person": "अमित शाह",
+    "expected_article_ids": [
+      1094,
+      1073,
+      1072,
+      944,
+      943
+    ],
+    "ground_truth_explanation": "Exact search for politician अमित शाह in मुंबई."
+  },
+  {
+    "query_id": "BENCH_A_045",
+    "query": "अमित शाह नागपूर",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Nagpur",
+    "expected_category": "Politics",
+    "expected_person": "अमित शाह",
+    "expected_article_ids": [
+      1094,
+      1073,
+      1072,
+      944,
+      943
+    ],
+    "ground_truth_explanation": "Exact search for politician अमित शाह in नागपूर."
+  },
+  {
+    "query_id": "BENCH_A_046",
+    "query": "अमित शाह सिंधुदुर्ग",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Sindhudurg",
+    "expected_category": "Politics",
+    "expected_person": "अमित शाह",
+    "expected_article_ids": [
+      1094,
+      1073,
+      1072,
+      944,
+      943
+    ],
+    "ground_truth_explanation": "Exact search for politician अमित शाह in सिंधुदुर्ग."
+  },
+  {
+    "query_id": "BENCH_A_047",
+    "query": "देवेंद्र फडणवीस पुणे",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Pune",
+    "expected_category": "Politics",
+    "expected_person": "देवेंद्र फडणवीस",
+    "expected_article_ids": [
+      1094,
+      1073,
+      1072,
+      944,
+      943
+    ],
+    "ground_truth_explanation": "Exact search for politician देवेंद्र फडणवीस in पुणे."
+  },
+  {
+    "query_id": "BENCH_A_048",
+    "query": "देवेंद्र फडणवीस मुंबई",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Mumbai",
+    "expected_category": "Politics",
+    "expected_person": "देवेंद्र फडणवीस",
+    "expected_article_ids": [
+      1094,
+      1073,
+      1072,
+      944,
+      943
+    ],
+    "ground_truth_explanation": "Exact search for politician देवेंद्र फडणवीस in मुंबई."
+  },
+  {
+    "query_id": "BENCH_A_049",
+    "query": "देवेंद्र फडणवीस नागपूर",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Nagpur",
+    "expected_category": "Politics",
+    "expected_person": "देवेंद्र फडणवीस",
+    "expected_article_ids": [
+      1094,
+      1073,
+      1072,
+      944,
+      943
+    ],
+    "ground_truth_explanation": "Exact search for politician देवेंद्र फडणवीस in नागपूर."
+  },
+  {
+    "query_id": "BENCH_A_050",
+    "query": "देवेंद्र फडणवीस सिंधुदुर्ग",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Sindhudurg",
+    "expected_category": "Politics",
+    "expected_person": "देवेंद्र फडणवीस",
+    "expected_article_ids": [
+      1094,
+      1073,
+      1072,
+      944,
+      943
+    ],
+    "ground_truth_explanation": "Exact search for politician देवेंद्र फडणवीस in सिंधुदुर्ग."
+  },
+  {
+    "query_id": "BENCH_A_051",
+    "query": "अजित पवार पुणे",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Pune",
+    "expected_category": "Politics",
+    "expected_person": "अजित पवार",
+    "expected_article_ids": [
+      1094,
+      1073,
+      1072,
+      944,
+      943
+    ],
+    "ground_truth_explanation": "Exact search for politician अजित पवार in पुणे."
+  },
+  {
+    "query_id": "BENCH_A_052",
+    "query": "अजित पवार मुंबई",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Mumbai",
+    "expected_category": "Politics",
+    "expected_person": "अजित पवार",
+    "expected_article_ids": [
+      1094,
+      1073,
+      1072,
+      944,
+      943
+    ],
+    "ground_truth_explanation": "Exact search for politician अजित पवार in मुंबई."
+  },
+  {
+    "query_id": "BENCH_A_053",
+    "query": "अजित पवार नागपूर",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Nagpur",
+    "expected_category": "Politics",
+    "expected_person": "अजित पवार",
+    "expected_article_ids": [
+      1094,
+      1073,
+      1072,
+      944,
+      943
+    ],
+    "ground_truth_explanation": "Exact search for politician अजित पवार in नागपूर."
+  },
+  {
+    "query_id": "BENCH_A_054",
+    "query": "अजित पवार सिंधुदुर्ग",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Sindhudurg",
+    "expected_category": "Politics",
+    "expected_person": "अजित पवार",
+    "expected_article_ids": [
+      1094,
+      1073,
+      1072,
+      944,
+      943
+    ],
+    "ground_truth_explanation": "Exact search for politician अजित पवार in सिंधुदुर्ग."
+  },
+  {
+    "query_id": "BENCH_A_055",
+    "query": "विनायक राऊत पुणे",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Pune",
+    "expected_category": "Politics",
+    "expected_person": "विनायक राऊत",
+    "expected_article_ids": [
+      1094,
+      1073,
+      1072,
+      944,
+      943
+    ],
+    "ground_truth_explanation": "Exact search for politician विनायक राऊत in पुणे."
+  },
+  {
+    "query_id": "BENCH_A_056",
+    "query": "विनायक राऊत मुंबई",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Mumbai",
+    "expected_category": "Politics",
+    "expected_person": "विनायक राऊत",
+    "expected_article_ids": [
+      1094,
+      1073,
+      1072,
+      944,
+      943
+    ],
+    "ground_truth_explanation": "Exact search for politician विनायक राऊत in मुंबई."
+  },
+  {
+    "query_id": "BENCH_A_057",
+    "query": "विनायक राऊत नागपूर",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Nagpur",
+    "expected_category": "Politics",
+    "expected_person": "विनायक राऊत",
+    "expected_article_ids": [
+      1094,
+      1073,
+      1072,
+      944,
+      943
+    ],
+    "ground_truth_explanation": "Exact search for politician विनायक राऊत in नागपूर."
+  },
+  {
+    "query_id": "BENCH_A_058",
+    "query": "विनायक राऊत सिंधुदुर्ग",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Sindhudurg",
+    "expected_category": "Politics",
+    "expected_person": "विनायक राऊत",
+    "expected_article_ids": [
+      1094,
+      1073,
+      1072,
+      944,
+      943
+    ],
+    "ground_truth_explanation": "Exact search for politician विनायक राऊत in सिंधुदुर्ग."
+  },
+  {
+    "query_id": "BENCH_A_059",
+    "query": "उद्धव ठाकरे पुणे",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Pune",
+    "expected_category": "Politics",
+    "expected_person": "उद्धव ठाकरे",
+    "expected_article_ids": [
+      1094,
+      1073,
+      1072,
+      944,
+      943
+    ],
+    "ground_truth_explanation": "Exact search for politician उद्धव ठाकरे in पुणे."
+  },
+  {
+    "query_id": "BENCH_A_060",
+    "query": "उद्धव ठाकरे मुंबई",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Mumbai",
+    "expected_category": "Politics",
+    "expected_person": "उद्धव ठाकरे",
+    "expected_article_ids": [
+      1094,
+      1073,
+      1072,
+      944,
+      943
+    ],
+    "ground_truth_explanation": "Exact search for politician उद्धव ठाकरे in मुंबई."
+  },
+  {
+    "query_id": "BENCH_A_061",
+    "query": "उद्धव ठाकरे नागपूर",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Nagpur",
+    "expected_category": "Politics",
+    "expected_person": "उद्धव ठाकरे",
+    "expected_article_ids": [
+      1094,
+      1073,
+      1072,
+      944,
+      943
+    ],
+    "ground_truth_explanation": "Exact search for politician उद्धव ठाकरे in नागपूर."
+  },
+  {
+    "query_id": "BENCH_A_062",
+    "query": "उद्धव ठाकरे सिंधुदुर्ग",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Easy",
+    "expected_district": "Sindhudurg",
+    "expected_category": "Politics",
+    "expected_person": "उद्धव ठाकरे",
+    "expected_article_ids": [
+      1094,
+      1073,
+      1072,
+      944,
+      943
+    ],
+    "ground_truth_explanation": "Exact search for politician उद्धव ठाकरे in सिंधुदुर्ग."
+  },
+  {
+    "query_id": "BENCH_A_063",
+    "query": "Today Lucky Rashibhavishya : आ",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Medium",
+    "expected_district": "Raigad",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1037
+    ],
+    "ground_truth_explanation": "Direct headline phrase query for post #1037."
+  },
+  {
+    "query_id": "BENCH_A_064",
+    "query": "Vastu Tips : सायंकाळी घरात चुक",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Medium",
+    "expected_district": "Sangli",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1036
+    ],
+    "ground_truth_explanation": "Direct headline phrase query for post #1036."
+  },
+  {
+    "query_id": "BENCH_A_065",
+    "query": "आजचे राशिभविष्य 25 जुलै 2026 :",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Medium",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1035
+    ],
+    "ground_truth_explanation": "Direct headline phrase query for post #1035."
+  },
+  {
+    "query_id": "BENCH_A_066",
+    "query": "Shravan Shivmuth 2026 : यंदा श",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Medium",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1034
+    ],
+    "ground_truth_explanation": "Direct headline phrase query for post #1034."
+  },
+  {
+    "query_id": "BENCH_A_067",
+    "query": "अंक भविष्य, 3 August 2026: मूल",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Medium",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1033
+    ],
+    "ground_truth_explanation": "Direct headline phrase query for post #1033."
+  },
+  {
+    "query_id": "BENCH_A_068",
+    "query": "साप्ताहिक राशीभविष्य 27 जुलै त",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Medium",
+    "expected_district": "Chandrapur",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1032
+    ],
+    "ground_truth_explanation": "Direct headline phrase query for post #1032."
+  },
+  {
+    "query_id": "BENCH_A_069",
+    "query": "अंक भविष्य, 2 August 2026: मूल",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Medium",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1031
+    ],
+    "ground_truth_explanation": "Direct headline phrase query for post #1031."
+  },
+  {
+    "query_id": "BENCH_A_070",
+    "query": "Vastu Tips : फ्रिजवर या वस्तू ",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Medium",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1030
+    ],
+    "ground_truth_explanation": "Direct headline phrase query for post #1030."
+  },
+  {
+    "query_id": "BENCH_A_071",
+    "query": "आर्थिक राशिभविष्य 3 ऑगस्ट 2026",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Medium",
+    "expected_district": "Chandrapur",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1029
+    ],
+    "ground_truth_explanation": "Direct headline phrase query for post #1029."
+  },
+  {
+    "query_id": "BENCH_A_072",
+    "query": "आजचे राशिभविष्य 27 जुलै 2026 :",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Medium",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1028
+    ],
+    "ground_truth_explanation": "Direct headline phrase query for post #1028."
+  },
+  {
+    "query_id": "BENCH_A_073",
+    "query": "Money Vastu Direction : घरात प",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Medium",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1027
+    ],
+    "ground_truth_explanation": "Direct headline phrase query for post #1027."
+  },
+  {
+    "query_id": "BENCH_A_074",
+    "query": "साप्ताहिक राशीभविष्य 20 ते 26 ",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Medium",
+    "expected_district": "Chandrapur",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1026
+    ],
+    "ground_truth_explanation": "Direct headline phrase query for post #1026."
+  },
+  {
+    "query_id": "BENCH_A_075",
+    "query": "Weekly Love Horoscope 3 To 9 A",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Medium",
+    "expected_district": "Sangli",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1025
+    ],
+    "ground_truth_explanation": "Direct headline phrase query for post #1025."
+  },
+  {
+    "query_id": "BENCH_A_076",
+    "query": "आर्थिक राशिभविष्य 2 ऑगस्ट 2026",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Medium",
+    "expected_district": "Raigad",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1024
+    ],
+    "ground_truth_explanation": "Direct headline phrase query for post #1024."
+  },
+  {
+    "query_id": "BENCH_A_077",
+    "query": "आजचे राशिभविष्य 2 ऑगस्ट 2026 :",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Medium",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1023
+    ],
+    "ground_truth_explanation": "Direct headline phrase query for post #1023."
+  },
+  {
+    "query_id": "BENCH_A_078",
+    "query": "Vastu Shastra Tips : घराच्या भ",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Medium",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1022
+    ],
+    "ground_truth_explanation": "Direct headline phrase query for post #1022."
+  },
+  {
+    "query_id": "BENCH_A_079",
+    "query": "आजचे राशिभविष्य 28 जुलै 2026 :",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Medium",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1021
+    ],
+    "ground_truth_explanation": "Direct headline phrase query for post #1021."
+  },
+  {
+    "query_id": "BENCH_A_080",
+    "query": "Dattak Putra Yoga : मुल दत्तक ",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Medium",
+    "expected_district": "Wardha",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1020
+    ],
+    "ground_truth_explanation": "Direct headline phrase query for post #1020."
+  },
+  {
+    "query_id": "BENCH_A_081",
+    "query": "Money Plant Vastu Tips : घरात ",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Medium",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1019
+    ],
+    "ground_truth_explanation": "Direct headline phrase query for post #1019."
+  },
+  {
+    "query_id": "BENCH_A_082",
+    "query": "Vastu Tips : चप्पल स्टॅण्ड घरा",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Medium",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1018
+    ],
+    "ground_truth_explanation": "Direct headline phrase query for post #1018."
+  },
+  {
+    "query_id": "BENCH_A_083",
+    "query": "साप्ताहिक राशीभविष्य 13 ते 19 ",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Medium",
+    "expected_district": "Akola",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1017
+    ],
+    "ground_truth_explanation": "Direct headline phrase query for post #1017."
+  },
+  {
+    "query_id": "BENCH_A_084",
+    "query": "Chanakya Niti : चाणक्यनीती सां",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Medium",
+    "expected_district": "Sangli",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1016
+    ],
+    "ground_truth_explanation": "Direct headline phrase query for post #1016."
+  },
+  {
+    "query_id": "BENCH_A_085",
+    "query": "Shukra Gochar 2026 : शुक्र गोच",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Medium",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1015
+    ],
+    "ground_truth_explanation": "Direct headline phrase query for post #1015."
+  },
+  {
+    "query_id": "BENCH_A_086",
+    "query": "Shanivar Upay : नोकरी व्यवसाया",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Medium",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1014
+    ],
+    "ground_truth_explanation": "Direct headline phrase query for post #1014."
+  },
+  {
+    "query_id": "BENCH_A_087",
+    "query": "मासिक राशिभविष्य ऑगस्ट 2026 : ",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Medium",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1013
+    ],
+    "ground_truth_explanation": "Direct headline phrase query for post #1013."
+  },
+  {
+    "query_id": "BENCH_A_088",
+    "query": "आजचे राशिभविष्य 30 जुलै 2026 :",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Medium",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1012
+    ],
+    "ground_truth_explanation": "Direct headline phrase query for post #1012."
+  },
+  {
+    "query_id": "BENCH_A_089",
+    "query": "Weekly Love Horoscope 20 To 26",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Medium",
+    "expected_district": "Akola",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1011
+    ],
+    "ground_truth_explanation": "Direct headline phrase query for post #1011."
+  },
+  {
+    "query_id": "BENCH_A_090",
+    "query": "Datta Jayanti Katha : त्रिमूर्",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Medium",
+    "expected_district": "Satara",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1010
+    ],
+    "ground_truth_explanation": "Direct headline phrase query for post #1010."
+  },
+  {
+    "query_id": "BENCH_A_091",
+    "query": "आजचे राशिभविष्य 31 जुलै 2026 :",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Medium",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1009
+    ],
+    "ground_truth_explanation": "Direct headline phrase query for post #1009."
+  },
+  {
+    "query_id": "BENCH_A_092",
+    "query": "Weekly Love Horoscope 27 July ",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Medium",
+    "expected_district": "Satara",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1008
+    ],
+    "ground_truth_explanation": "Direct headline phrase query for post #1008."
+  },
+  {
+    "query_id": "BENCH_A_093",
+    "query": "Hanuman Chalisa Path Niyam : क",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Medium",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1007
+    ],
+    "ground_truth_explanation": "Direct headline phrase query for post #1007."
+  },
+  {
+    "query_id": "BENCH_A_094",
+    "query": "साप्ताहिक राशीभविष्य 29 जून ते",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Medium",
+    "expected_district": "Chandrapur",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1006
+    ],
+    "ground_truth_explanation": "Direct headline phrase query for post #1006."
+  },
+  {
+    "query_id": "BENCH_A_095",
+    "query": "Weekly Love Horoscope 6 To 12 ",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Medium",
+    "expected_district": "Sangli",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1005
+    ],
+    "ground_truth_explanation": "Direct headline phrase query for post #1005."
+  },
+  {
+    "query_id": "BENCH_A_096",
+    "query": "आजचे राशिभविष्य 29 जुलै 2026 :",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Medium",
+    "expected_district": "Akola",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1004
+    ],
+    "ground_truth_explanation": "Direct headline phrase query for post #1004."
+  },
+  {
+    "query_id": "BENCH_A_097",
+    "query": "Vastu Tips For Home : घरातील द",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Medium",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1003
+    ],
+    "ground_truth_explanation": "Direct headline phrase query for post #1003."
+  },
+  {
+    "query_id": "BENCH_A_098",
+    "query": "आजचे राशिभविष्य 1 ऑगस्ट 2026 :",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Medium",
+    "expected_district": "Sangli",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1002
+    ],
+    "ground_truth_explanation": "Direct headline phrase query for post #1002."
+  },
+  {
+    "query_id": "BENCH_A_099",
+    "query": "Ashadha Amavasya 2026 : आषाढ अ",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Medium",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1001
+    ],
+    "ground_truth_explanation": "Direct headline phrase query for post #1001."
+  },
+  {
+    "query_id": "BENCH_A_100",
+    "query": "Vastu Tips : बेडरूमच्या दारामा",
+    "suite": "Benchmark A (Regression)",
+    "difficulty": "Medium",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1000
+    ],
+    "ground_truth_explanation": "Direct headline phrase query for post #1000."
+  },
+  {
+    "query_id": "BENCH_B_001",
+    "query": "आज पुण्यात काय घडले?",
+    "suite": "Benchmark B (Generalization - Natural User Query)",
+    "difficulty": "Medium",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Natural User Query' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_002",
+    "query": "पुण्यात शहरातील ताज्या घडामोडी सांगा",
+    "suite": "Benchmark B (Generalization - Conversational)",
+    "difficulty": "Medium",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Conversational' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_003",
+    "query": "अमित शाह यांनी पुण्यात बद्दल काय विधान केले?",
+    "suite": "Benchmark B (Generalization - Natural Conversational)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": "Politics",
+    "expected_person": "अमित शाह",
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Natural Conversational' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_004",
+    "query": "पुण्यात weather report today in marathi",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_005",
+    "query": "पुण्यात accident news breaking",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_006",
+    "query": "अमित शाह latest news updates",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Medium",
+    "expected_district": "Pune",
+    "expected_category": "Politics",
+    "expected_person": "अमित शाह",
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_007",
+    "query": "पुण्यात मधील शेती आणि पावसाचा अंदाज",
+    "suite": "Benchmark B (Generalization - Contextual Query)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Contextual Query' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_008",
+    "query": "पुण्यात परिसरातील गुन्हेगारी वृत्त",
+    "suite": "Benchmark B (Generalization - Topic Contextual)",
+    "difficulty": "Medium",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Topic Contextual' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_009",
+    "query": "महाराष्ट्रात क्रीडा बाबत काय नवीन निर्णय झाला?",
+    "suite": "Benchmark B (Generalization - Statewide Conversational)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Statewide Conversational' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_010",
+    "query": "पुण्यात जवळील मुख्य रस्ते आणि ट्रॅफिक अपडेट",
+    "suite": "Benchmark B (Generalization - Local Contextual)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Local Contextual' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_011",
+    "query": "आज पुण्यात काय घडले?",
+    "suite": "Benchmark B (Generalization - Natural User Query)",
+    "difficulty": "Medium",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Natural User Query' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_012",
+    "query": "पुण्यात शहरातील ताज्या घडामोडी सांगा",
+    "suite": "Benchmark B (Generalization - Conversational)",
+    "difficulty": "Medium",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Conversational' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_013",
+    "query": "देवेंद्र फडणवीस यांनी पुण्यात बद्दल काय विधान केले?",
+    "suite": "Benchmark B (Generalization - Natural Conversational)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": "Politics",
+    "expected_person": "देवेंद्र फडणवीस",
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Natural Conversational' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_014",
+    "query": "पुण्यात weather report today in marathi",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_015",
+    "query": "पुण्यात accident news breaking",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_016",
+    "query": "देवेंद्र फडणवीस latest news updates",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Medium",
+    "expected_district": "Pune",
+    "expected_category": "Politics",
+    "expected_person": "देवेंद्र फडणवीस",
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_017",
+    "query": "पुण्यात मधील शेती आणि पावसाचा अंदाज",
+    "suite": "Benchmark B (Generalization - Contextual Query)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Contextual Query' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_018",
+    "query": "पुण्यात परिसरातील गुन्हेगारी वृत्त",
+    "suite": "Benchmark B (Generalization - Topic Contextual)",
+    "difficulty": "Medium",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Topic Contextual' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_019",
+    "query": "महाराष्ट्रात गुन्हे बाबत काय नवीन निर्णय झाला?",
+    "suite": "Benchmark B (Generalization - Statewide Conversational)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Statewide Conversational' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_020",
+    "query": "पुण्यात जवळील मुख्य रस्ते आणि ट्रॅफिक अपडेट",
+    "suite": "Benchmark B (Generalization - Local Contextual)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Local Contextual' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_021",
+    "query": "आज पुण्यात काय घडले?",
+    "suite": "Benchmark B (Generalization - Natural User Query)",
+    "difficulty": "Medium",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Natural User Query' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_022",
+    "query": "पुण्यात शहरातील ताज्या घडामोडी सांगा",
+    "suite": "Benchmark B (Generalization - Conversational)",
+    "difficulty": "Medium",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Conversational' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_023",
+    "query": "अजित पवार यांनी पुण्यात बद्दल काय विधान केले?",
+    "suite": "Benchmark B (Generalization - Natural Conversational)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": "Politics",
+    "expected_person": "अजित पवार",
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Natural Conversational' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_024",
+    "query": "पुण्यात weather report today in marathi",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_025",
+    "query": "पुण्यात accident news breaking",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_026",
+    "query": "अजित पवार latest news updates",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Medium",
+    "expected_district": "Pune",
+    "expected_category": "Politics",
+    "expected_person": "अजित पवार",
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_027",
+    "query": "पुण्यात मधील शेती आणि पावसाचा अंदाज",
+    "suite": "Benchmark B (Generalization - Contextual Query)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Contextual Query' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_028",
+    "query": "पुण्यात परिसरातील गुन्हेगारी वृत्त",
+    "suite": "Benchmark B (Generalization - Topic Contextual)",
+    "difficulty": "Medium",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Topic Contextual' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_029",
+    "query": "महाराष्ट्रात आरोग्य बाबत काय नवीन निर्णय झाला?",
+    "suite": "Benchmark B (Generalization - Statewide Conversational)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Statewide Conversational' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_030",
+    "query": "पुण्यात जवळील मुख्य रस्ते आणि ट्रॅफिक अपडेट",
+    "suite": "Benchmark B (Generalization - Local Contextual)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Local Contextual' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_031",
+    "query": "आज पुण्यात काय घडले?",
+    "suite": "Benchmark B (Generalization - Natural User Query)",
+    "difficulty": "Medium",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Natural User Query' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_032",
+    "query": "पुण्यात शहरातील ताज्या घडामोडी सांगा",
+    "suite": "Benchmark B (Generalization - Conversational)",
+    "difficulty": "Medium",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Conversational' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_033",
+    "query": "उद्धव ठाकरे यांनी पुण्यात बद्दल काय विधान केले?",
+    "suite": "Benchmark B (Generalization - Natural Conversational)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": "Politics",
+    "expected_person": "उद्धव ठाकरे",
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Natural Conversational' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_034",
+    "query": "पुण्यात weather report today in marathi",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_035",
+    "query": "पुण्यात accident news breaking",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_036",
+    "query": "उद्धव ठाकरे latest news updates",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Medium",
+    "expected_district": "Pune",
+    "expected_category": "Politics",
+    "expected_person": "उद्धव ठाकरे",
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_037",
+    "query": "पुण्यात मधील शेती आणि पावसाचा अंदाज",
+    "suite": "Benchmark B (Generalization - Contextual Query)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Contextual Query' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_038",
+    "query": "पुण्यात परिसरातील गुन्हेगारी वृत्त",
+    "suite": "Benchmark B (Generalization - Topic Contextual)",
+    "difficulty": "Medium",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Topic Contextual' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_039",
+    "query": "महाराष्ट्रात हवामान बाबत काय नवीन निर्णय झाला?",
+    "suite": "Benchmark B (Generalization - Statewide Conversational)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Statewide Conversational' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_040",
+    "query": "पुण्यात जवळील मुख्य रस्ते आणि ट्रॅफिक अपडेट",
+    "suite": "Benchmark B (Generalization - Local Contextual)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Local Contextual' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_041",
+    "query": "आज पुण्यात काय घडले?",
+    "suite": "Benchmark B (Generalization - Natural User Query)",
+    "difficulty": "Medium",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Natural User Query' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_042",
+    "query": "पुण्यात शहरातील ताज्या घडामोडी सांगा",
+    "suite": "Benchmark B (Generalization - Conversational)",
+    "difficulty": "Medium",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Conversational' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_043",
+    "query": "विनायक राऊत यांनी पुण्यात बद्दल काय विधान केले?",
+    "suite": "Benchmark B (Generalization - Natural Conversational)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": "Politics",
+    "expected_person": "विनायक राऊत",
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Natural Conversational' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_044",
+    "query": "पुण्यात weather report today in marathi",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_045",
+    "query": "पुण्यात accident news breaking",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_046",
+    "query": "विनायक राऊत latest news updates",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Medium",
+    "expected_district": "Pune",
+    "expected_category": "Politics",
+    "expected_person": "विनायक राऊत",
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_047",
+    "query": "पुण्यात मधील शेती आणि पावसाचा अंदाज",
+    "suite": "Benchmark B (Generalization - Contextual Query)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Contextual Query' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_048",
+    "query": "पुण्यात परिसरातील गुन्हेगारी वृत्त",
+    "suite": "Benchmark B (Generalization - Topic Contextual)",
+    "difficulty": "Medium",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Topic Contextual' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_049",
+    "query": "महाराष्ट्रात शिक्षण बाबत काय नवीन निर्णय झाला?",
+    "suite": "Benchmark B (Generalization - Statewide Conversational)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Statewide Conversational' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_050",
+    "query": "पुण्यात जवळील मुख्य रस्ते आणि ट्रॅफिक अपडेट",
+    "suite": "Benchmark B (Generalization - Local Contextual)",
+    "difficulty": "Hard",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Local Contextual' targeting पुण्यात."
+  },
+  {
+    "query_id": "BENCH_B_051",
+    "query": "आज मुंबईत काय घडले?",
+    "suite": "Benchmark B (Generalization - Natural User Query)",
+    "difficulty": "Medium",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Natural User Query' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_052",
+    "query": "मुंबईत शहरातील ताज्या घडामोडी सांगा",
+    "suite": "Benchmark B (Generalization - Conversational)",
+    "difficulty": "Medium",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Conversational' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_053",
+    "query": "अमित शाह यांनी मुंबईत बद्दल काय विधान केले?",
+    "suite": "Benchmark B (Generalization - Natural Conversational)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": "Politics",
+    "expected_person": "अमित शाह",
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Natural Conversational' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_054",
+    "query": "मुंबईत weather report today in marathi",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_055",
+    "query": "मुंबईत accident news breaking",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_056",
+    "query": "अमित शाह latest news updates",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Medium",
+    "expected_district": "Mumbai",
+    "expected_category": "Politics",
+    "expected_person": "अमित शाह",
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_057",
+    "query": "मुंबईत मधील शेती आणि पावसाचा अंदाज",
+    "suite": "Benchmark B (Generalization - Contextual Query)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Contextual Query' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_058",
+    "query": "मुंबईत परिसरातील गुन्हेगारी वृत्त",
+    "suite": "Benchmark B (Generalization - Topic Contextual)",
+    "difficulty": "Medium",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Topic Contextual' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_059",
+    "query": "महाराष्ट्रात शेती बाबत काय नवीन निर्णय झाला?",
+    "suite": "Benchmark B (Generalization - Statewide Conversational)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Statewide Conversational' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_060",
+    "query": "मुंबईत जवळील मुख्य रस्ते आणि ट्रॅफिक अपडेट",
+    "suite": "Benchmark B (Generalization - Local Contextual)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Local Contextual' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_061",
+    "query": "आज मुंबईत काय घडले?",
+    "suite": "Benchmark B (Generalization - Natural User Query)",
+    "difficulty": "Medium",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Natural User Query' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_062",
+    "query": "मुंबईत शहरातील ताज्या घडामोडी सांगा",
+    "suite": "Benchmark B (Generalization - Conversational)",
+    "difficulty": "Medium",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Conversational' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_063",
+    "query": "देवेंद्र फडणवीस यांनी मुंबईत बद्दल काय विधान केले?",
+    "suite": "Benchmark B (Generalization - Natural Conversational)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": "Politics",
+    "expected_person": "देवेंद्र फडणवीस",
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Natural Conversational' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_064",
+    "query": "मुंबईत weather report today in marathi",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_065",
+    "query": "मुंबईत accident news breaking",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_066",
+    "query": "देवेंद्र फडणवीस latest news updates",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Medium",
+    "expected_district": "Mumbai",
+    "expected_category": "Politics",
+    "expected_person": "देवेंद्र फडणवीस",
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_067",
+    "query": "मुंबईत मधील शेती आणि पावसाचा अंदाज",
+    "suite": "Benchmark B (Generalization - Contextual Query)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Contextual Query' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_068",
+    "query": "मुंबईत परिसरातील गुन्हेगारी वृत्त",
+    "suite": "Benchmark B (Generalization - Topic Contextual)",
+    "difficulty": "Medium",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Topic Contextual' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_069",
+    "query": "महाराष्ट्रात उद्योग बाबत काय नवीन निर्णय झाला?",
+    "suite": "Benchmark B (Generalization - Statewide Conversational)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Statewide Conversational' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_070",
+    "query": "मुंबईत जवळील मुख्य रस्ते आणि ट्रॅफिक अपडेट",
+    "suite": "Benchmark B (Generalization - Local Contextual)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Local Contextual' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_071",
+    "query": "आज मुंबईत काय घडले?",
+    "suite": "Benchmark B (Generalization - Natural User Query)",
+    "difficulty": "Medium",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Natural User Query' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_072",
+    "query": "मुंबईत शहरातील ताज्या घडामोडी सांगा",
+    "suite": "Benchmark B (Generalization - Conversational)",
+    "difficulty": "Medium",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Conversational' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_073",
+    "query": "अजित पवार यांनी मुंबईत बद्दल काय विधान केले?",
+    "suite": "Benchmark B (Generalization - Natural Conversational)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": "Politics",
+    "expected_person": "अजित पवार",
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Natural Conversational' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_074",
+    "query": "मुंबईत weather report today in marathi",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_075",
+    "query": "मुंबईत accident news breaking",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_076",
+    "query": "अजित पवार latest news updates",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Medium",
+    "expected_district": "Mumbai",
+    "expected_category": "Politics",
+    "expected_person": "अजित पवार",
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_077",
+    "query": "मुंबईत मधील शेती आणि पावसाचा अंदाज",
+    "suite": "Benchmark B (Generalization - Contextual Query)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Contextual Query' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_078",
+    "query": "मुंबईत परिसरातील गुन्हेगारी वृत्त",
+    "suite": "Benchmark B (Generalization - Topic Contextual)",
+    "difficulty": "Medium",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Topic Contextual' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_079",
+    "query": "महाराष्ट्रात क्रीडा बाबत काय नवीन निर्णय झाला?",
+    "suite": "Benchmark B (Generalization - Statewide Conversational)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Statewide Conversational' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_080",
+    "query": "मुंबईत जवळील मुख्य रस्ते आणि ट्रॅफिक अपडेट",
+    "suite": "Benchmark B (Generalization - Local Contextual)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Local Contextual' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_081",
+    "query": "आज मुंबईत काय घडले?",
+    "suite": "Benchmark B (Generalization - Natural User Query)",
+    "difficulty": "Medium",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Natural User Query' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_082",
+    "query": "मुंबईत शहरातील ताज्या घडामोडी सांगा",
+    "suite": "Benchmark B (Generalization - Conversational)",
+    "difficulty": "Medium",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Conversational' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_083",
+    "query": "उद्धव ठाकरे यांनी मुंबईत बद्दल काय विधान केले?",
+    "suite": "Benchmark B (Generalization - Natural Conversational)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": "Politics",
+    "expected_person": "उद्धव ठाकरे",
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Natural Conversational' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_084",
+    "query": "मुंबईत weather report today in marathi",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_085",
+    "query": "मुंबईत accident news breaking",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_086",
+    "query": "उद्धव ठाकरे latest news updates",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Medium",
+    "expected_district": "Mumbai",
+    "expected_category": "Politics",
+    "expected_person": "उद्धव ठाकरे",
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_087",
+    "query": "मुंबईत मधील शेती आणि पावसाचा अंदाज",
+    "suite": "Benchmark B (Generalization - Contextual Query)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Contextual Query' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_088",
+    "query": "मुंबईत परिसरातील गुन्हेगारी वृत्त",
+    "suite": "Benchmark B (Generalization - Topic Contextual)",
+    "difficulty": "Medium",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Topic Contextual' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_089",
+    "query": "महाराष्ट्रात गुन्हे बाबत काय नवीन निर्णय झाला?",
+    "suite": "Benchmark B (Generalization - Statewide Conversational)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Statewide Conversational' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_090",
+    "query": "मुंबईत जवळील मुख्य रस्ते आणि ट्रॅफिक अपडेट",
+    "suite": "Benchmark B (Generalization - Local Contextual)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Local Contextual' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_091",
+    "query": "आज मुंबईत काय घडले?",
+    "suite": "Benchmark B (Generalization - Natural User Query)",
+    "difficulty": "Medium",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Natural User Query' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_092",
+    "query": "मुंबईत शहरातील ताज्या घडामोडी सांगा",
+    "suite": "Benchmark B (Generalization - Conversational)",
+    "difficulty": "Medium",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Conversational' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_093",
+    "query": "विनायक राऊत यांनी मुंबईत बद्दल काय विधान केले?",
+    "suite": "Benchmark B (Generalization - Natural Conversational)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": "Politics",
+    "expected_person": "विनायक राऊत",
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Natural Conversational' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_094",
+    "query": "मुंबईत weather report today in marathi",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_095",
+    "query": "मुंबईत accident news breaking",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_096",
+    "query": "विनायक राऊत latest news updates",
+    "suite": "Benchmark B (Generalization - Code-Mixed English-Marathi)",
+    "difficulty": "Medium",
+    "expected_district": "Mumbai",
+    "expected_category": "Politics",
+    "expected_person": "विनायक राऊत",
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Code-Mixed English-Marathi' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_097",
+    "query": "मुंबईत मधील शेती आणि पावसाचा अंदाज",
+    "suite": "Benchmark B (Generalization - Contextual Query)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Contextual Query' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_098",
+    "query": "मुंबईत परिसरातील गुन्हेगारी वृत्त",
+    "suite": "Benchmark B (Generalization - Topic Contextual)",
+    "difficulty": "Medium",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Topic Contextual' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_099",
+    "query": "महाराष्ट्रात आरोग्य बाबत काय नवीन निर्णय झाला?",
+    "suite": "Benchmark B (Generalization - Statewide Conversational)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Statewide Conversational' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_B_100",
+    "query": "मुंबईत जवळील मुख्य रस्ते आणि ट्रॅफिक अपडेट",
+    "suite": "Benchmark B (Generalization - Local Contextual)",
+    "difficulty": "Hard",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Natural phrasing style 'Local Contextual' targeting मुंबईत."
+  },
+  {
+    "query_id": "BENCH_C_001",
+    "query": "अमीत साह पुणे",
+    "suite": "Benchmark C (Stress Test - Person Typo + District)",
+    "difficulty": "Very Hard",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": "अमित शाह",
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Robustness stress test for Person Typo + District."
+  },
+  {
+    "query_id": "BENCH_C_002",
+    "query": "अमीतशाह मुंबई",
+    "suite": "Benchmark C (Stress Test - Joined Person Token + District)",
+    "difficulty": "Very Hard",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": "अमित शाह",
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Robustness stress test for Joined Person Token + District."
+  },
+  {
+    "query_id": "BENCH_C_003",
+    "query": "फडणविस नागपुर",
+    "suite": "Benchmark C (Stress Test - Surname Typo + District Typo)",
+    "difficulty": "Very Hard",
+    "expected_district": "Nagpur",
+    "expected_category": null,
+    "expected_person": "देवेंद्र फडणवीस",
+    "expected_article_ids": [
+      736,
+      734,
+      399
+    ],
+    "ground_truth_explanation": "Robustness stress test for Surname Typo + District Typo."
+  },
+  {
+    "query_id": "BENCH_C_004",
+    "query": "अजीत पावार बारामती",
+    "suite": "Benchmark C (Stress Test - Person Typo + Local Suburb)",
+    "difficulty": "Very Hard",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": "अजित पवार",
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Robustness stress test for Person Typo + Local Suburb."
+  },
+  {
+    "query_id": "BENCH_C_005",
+    "query": "राउत बातमी सिंदुदुर्ग",
+    "suite": "Benchmark C (Stress Test - Person Typo + District Typo)",
+    "difficulty": "Very Hard",
+    "expected_district": "Sindhudurg",
+    "expected_category": null,
+    "expected_person": "विनायक राऊत",
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Robustness stress test for Person Typo + District Typo."
+  },
+  {
+    "query_id": "BENCH_C_006",
+    "query": "कोलापुर पाउस",
+    "suite": "Benchmark C (Stress Test - District Typo + Common Word Typo)",
+    "difficulty": "Very Hard",
+    "expected_district": "Kolhapur",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      792,
+      791,
+      790
+    ],
+    "ground_truth_explanation": "Robustness stress test for District Typo + Common Word Typo."
+  },
+  {
+    "query_id": "BENCH_C_007",
+    "query": "पुन्यात अपघत",
+    "suite": "Benchmark C (Stress Test - Heavy Suffix Typo + Topic Typo)",
+    "difficulty": "Very Hard",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Robustness stress test for Heavy Suffix Typo + Topic Typo."
+  },
+  {
+    "query_id": "BENCH_C_008",
+    "query": "मुंबइ हवामान",
+    "suite": "Benchmark C (Stress Test - District Typo + Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": "Mumbai",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      853,
+      791,
+      774
+    ],
+    "ground_truth_explanation": "Robustness stress test for District Typo + Topic."
+  },
+  {
+    "query_id": "BENCH_C_009",
+    "query": "नागपूरातल्या बामणी",
+    "suite": "Benchmark C (Stress Test - Grammatical Suffix + Typo)",
+    "difficulty": "Very Hard",
+    "expected_district": "Nagpur",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      736,
+      734,
+      399
+    ],
+    "ground_truth_explanation": "Robustness stress test for Grammatical Suffix + Typo."
+  },
+  {
+    "query_id": "BENCH_C_010",
+    "query": "सिधुदुर्गातली घटना",
+    "suite": "Benchmark C (Stress Test - District Suffix Typo)",
+    "difficulty": "Very Hard",
+    "expected_district": "Sindhudurg",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Robustness stress test for District Suffix Typo."
+  },
+  {
+    "query_id": "BENCH_C_011",
+    "query": "राजकरण पुणे",
+    "suite": "Benchmark C (Stress Test - Common Word Typo + District)",
+    "difficulty": "Very Hard",
+    "expected_district": "Pune",
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1072,
+      1070,
+      1065
+    ],
+    "ground_truth_explanation": "Robustness stress test for Common Word Typo + District."
+  },
+  {
+    "query_id": "BENCH_C_012",
+    "query": "शेतकारी कर्जमाफी",
+    "suite": "Benchmark C (Stress Test - Common Word Typo)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Robustness stress test for Common Word Typo."
+  },
+  {
+    "query_id": "BENCH_C_013",
+    "query": "पाउस अपडेट",
+    "suite": "Benchmark C (Stress Test - Common Word Typo)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1081,
+      1039,
+      1037
+    ],
+    "ground_truth_explanation": "Robustness stress test for Common Word Typo."
+  },
+  {
+    "query_id": "BENCH_C_014",
+    "query": "अपघाड बातम्या",
+    "suite": "Benchmark C (Stress Test - Common Word Typo)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [
+      1100,
+      1091,
+      1083
+    ],
+    "ground_truth_explanation": "Robustness stress test for Common Word Typo."
+  },
+  {
+    "query_id": "BENCH_C_015",
+    "query": "पवार भाषण",
+    "suite": "Benchmark C (Stress Test - Ambiguous Surname Query)",
+    "difficulty": "Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": "अजित पवार",
+    "expected_article_ids": [
+      1094,
+      1073,
+      1072
+    ],
+    "ground_truth_explanation": "Robustness stress test for Ambiguous Surname Query."
+  },
+  {
+    "query_id": "BENCH_C_016",
+    "query": "ठाकरे दौरा",
+    "suite": "Benchmark C (Stress Test - Ambiguous Surname Query)",
+    "difficulty": "Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": "उद्धव ठाकरे",
+    "expected_article_ids": [
+      1094,
+      1073,
+      1072
+    ],
+    "ground_truth_explanation": "Robustness stress test for Ambiguous Surname Query."
+  },
+  {
+    "query_id": "BENCH_C_017",
+    "query": "दिल्ली मेट्रो वेळपत्रक 2026",
+    "suite": "Benchmark C (Negative Test - Out-Of-Domain City)",
+    "difficulty": "Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Negative test case (Out-Of-Domain City). Expected 0 relevant Marathi news matches."
+  },
+  {
+    "query_id": "BENCH_C_018",
+    "query": "Elon Musk Twitter takeover news in Pune",
+    "suite": "Benchmark C (Negative Test - Irrelevant Global Tech)",
+    "difficulty": "Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Negative test case (Irrelevant Global Tech). Expected 0 relevant Marathi news matches."
+  },
+  {
+    "query_id": "BENCH_C_019",
+    "query": "London rain forecast marathi",
+    "suite": "Benchmark C (Negative Test - International Weather)",
+    "difficulty": "Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Negative test case (International Weather). Expected 0 relevant Marathi news matches."
+  },
+  {
+    "query_id": "BENCH_C_020",
+    "query": "Donald Trump speech in Kolhapur today",
+    "suite": "Benchmark C (Negative Test - Invalid Political Combination)",
+    "difficulty": "Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Negative test case (Invalid Political Combination). Expected 0 relevant Marathi news matches."
+  },
+  {
+    "query_id": "BENCH_C_021",
+    "query": "Bitcoin crypto price prediction Pune",
+    "suite": "Benchmark C (Negative Test - Out-Of-Domain Financial)",
+    "difficulty": "Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Negative test case (Out-Of-Domain Financial). Expected 0 relevant Marathi news matches."
+  },
+  {
+    "query_id": "BENCH_C_022",
+    "query": "NASA Mars Rover Marathi news",
+    "suite": "Benchmark C (Negative Test - Space Science)",
+    "difficulty": "Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Negative test case (Space Science). Expected 0 relevant Marathi news matches."
+  },
+  {
+    "query_id": "BENCH_C_023",
+    "query": "IPL 2028 player auction list",
+    "suite": "Benchmark C (Negative Test - Future Invalid Sports)",
+    "difficulty": "Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Negative test case (Future Invalid Sports). Expected 0 relevant Marathi news matches."
+  },
+  {
+    "query_id": "BENCH_C_024",
+    "query": "Tokyo Olympics medal tally",
+    "suite": "Benchmark C (Negative Test - Out-Of-Domain Sports)",
+    "difficulty": "Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Negative test case (Out-Of-Domain Sports). Expected 0 relevant Marathi news matches."
+  },
+  {
+    "query_id": "BENCH_C_025",
+    "query": "Kolkata Howrah Bridge accident today",
+    "suite": "Benchmark C (Negative Test - Out-Of-State Infrastructure)",
+    "difficulty": "Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Negative test case (Out-Of-State Infrastructure). Expected 0 relevant Marathi news matches."
+  },
+  {
+    "query_id": "BENCH_C_026",
+    "query": "Paris Eiffel Tower light show news",
+    "suite": "Benchmark C (Negative Test - International Tourism)",
+    "difficulty": "Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Negative test case (International Tourism). Expected 0 relevant Marathi news matches."
+  },
+  {
+    "query_id": "BENCH_C_027",
+    "query": "महाराष्ट्रात 27 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_028",
+    "query": "महाराष्ट्रात 28 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_029",
+    "query": "महाराष्ट्रात 29 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_030",
+    "query": "महाराष्ट्रात 30 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_031",
+    "query": "महाराष्ट्रात 31 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_032",
+    "query": "महाराष्ट्रात 32 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_033",
+    "query": "महाराष्ट्रात 33 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_034",
+    "query": "महाराष्ट्रात 34 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_035",
+    "query": "महाराष्ट्रात 35 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_036",
+    "query": "महाराष्ट्रात 36 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_037",
+    "query": "महाराष्ट्रात 37 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_038",
+    "query": "महाराष्ट्रात 38 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_039",
+    "query": "महाराष्ट्रात 39 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_040",
+    "query": "महाराष्ट्रात 40 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_041",
+    "query": "महाराष्ट्रात 41 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_042",
+    "query": "महाराष्ट्रात 42 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_043",
+    "query": "महाराष्ट्रात 43 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_044",
+    "query": "महाराष्ट्रात 44 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_045",
+    "query": "महाराष्ट्रात 45 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_046",
+    "query": "महाराष्ट्रात 46 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_047",
+    "query": "महाराष्ट्रात 47 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_048",
+    "query": "महाराष्ट्रात 48 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_049",
+    "query": "महाराष्ट्रात 49 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_050",
+    "query": "महाराष्ट्रात 50 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_051",
+    "query": "महाराष्ट्रात 51 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_052",
+    "query": "महाराष्ट्रात 52 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_053",
+    "query": "महाराष्ट्रात 53 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_054",
+    "query": "महाराष्ट्रात 54 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_055",
+    "query": "महाराष्ट्रात 55 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_056",
+    "query": "महाराष्ट्रात 56 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_057",
+    "query": "महाराष्ट्रात 57 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_058",
+    "query": "महाराष्ट्रात 58 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_059",
+    "query": "महाराष्ट्रात 59 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_060",
+    "query": "महाराष्ट्रात 60 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_061",
+    "query": "महाराष्ट्रात 61 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_062",
+    "query": "महाराष्ट्रात 62 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_063",
+    "query": "महाराष्ट्रात 63 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_064",
+    "query": "महाराष्ट्रात 64 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_065",
+    "query": "महाराष्ट्रात 65 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_066",
+    "query": "महाराष्ट्रात 66 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_067",
+    "query": "महाराष्ट्रात 67 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_068",
+    "query": "महाराष्ट्रात 68 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_069",
+    "query": "महाराष्ट्रात 69 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_070",
+    "query": "महाराष्ट्रात 70 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_071",
+    "query": "महाराष्ट्रात 71 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_072",
+    "query": "महाराष्ट्रात 72 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_073",
+    "query": "महाराष्ट्रात 73 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_074",
+    "query": "महाराष्ट्रात 74 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_075",
+    "query": "महाराष्ट्रात 75 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_076",
+    "query": "महाराष्ट्रात 76 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_077",
+    "query": "महाराष्ट्रात 77 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_078",
+    "query": "महाराष्ट्रात 78 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_079",
+    "query": "महाराष्ट्रात 79 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_080",
+    "query": "महाराष्ट्रात 80 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_081",
+    "query": "महाराष्ट्रात 81 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_082",
+    "query": "महाराष्ट्रात 82 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_083",
+    "query": "महाराष्ट्रात 83 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_084",
+    "query": "महाराष्ट्रात 84 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_085",
+    "query": "महाराष्ट्रात 85 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_086",
+    "query": "महाराष्ट्रात 86 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_087",
+    "query": "महाराष्ट्रात 87 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_088",
+    "query": "महाराष्ट्रात 88 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_089",
+    "query": "महाराष्ट्रात 89 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_090",
+    "query": "महाराष्ट्रात 90 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_091",
+    "query": "महाराष्ट्रात 91 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_092",
+    "query": "महाराष्ट्रात 92 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_093",
+    "query": "महाराष्ट्रात 93 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_094",
+    "query": "महाराष्ट्रात 94 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_095",
+    "query": "महाराष्ट्रात 95 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_096",
+    "query": "महाराष्ट्रात 96 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_097",
+    "query": "महाराष्ट्रात 97 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_098",
+    "query": "महाराष्ट्रात 98 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_099",
+    "query": "महाराष्ट्रात 99 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  },
+  {
+    "query_id": "BENCH_C_100",
+    "query": "महाराष्ट्रात 100 जुलै हवामान अपघत राजकरण",
+    "suite": "Benchmark C (Stress Test - Noisy Multi-Topic)",
+    "difficulty": "Very Hard",
+    "expected_district": null,
+    "expected_category": null,
+    "expected_person": null,
+    "expected_article_ids": [],
+    "ground_truth_explanation": "Noisy multi-topic combination with typos."
+  }
+]
