@@ -6,7 +6,12 @@ from dataclasses import dataclass
 from datetime import date
 from typing import Dict, Optional, Tuple
 
-from entity_normalizer import DistrictNormalizer, MatchedDistrict
+from entity_normalizer import (
+    DistrictNormalizer,
+    MatchedDistrict,
+    MatchedPerson,
+    PersonNormalizer,
+)
 from date_parser import extract_date, strip_date_from_query
 
 logger = logging.getLogger(__name__)
@@ -21,8 +26,9 @@ __all__ = [
 # Constants
 # ----------------------------
 
-# Instantiate DistrictNormalizer instance for Devanagari district resolution
+# Instantiate DistrictNormalizer & PersonNormalizer instances
 _DISTRICT_NORMALIZER = DistrictNormalizer()
+_PERSON_NORMALIZER = PersonNormalizer()
 
 # Maps Canonical Marathi district name -> English name as stored in database
 DISTRICTS: Dict[str, str] = {
@@ -145,6 +151,29 @@ def _detect_district(text: str) -> Optional[Tuple[str, Optional[MatchedDistrict]
     return None
 
 
+def _detect_person(text: str) -> Optional[Tuple[str, Optional[MatchedPerson]]]:
+    """Detect if any person name is mentioned in the query using PersonNormalizer.
+
+    Handles spelling mistakes, joined tokens, surname expansion, and ambiguity detection.
+
+    Args:
+        text: The input text query.
+
+    Returns:
+        Tuple of (Canonical Marathi Person Name, MatchedPerson object) if detected, else None.
+    """
+    if not text:
+        return None
+
+    result = _PERSON_NORMALIZER.normalize_query(text)
+    if result.matched_people:
+        matched = result.matched_people[0]
+        if not matched.ambiguity_detected:
+            return matched.canonical_name, matched
+
+    return None
+
+
 def _detect_category(text: str) -> Optional[str]:
     """Detect if any category or category alias is mentioned in the query.
 
@@ -167,20 +196,27 @@ def _clean_query(
     detected_district: Optional[str],
     detected_category: Optional[str],
     matched_district_obj: Optional[MatchedDistrict] = None,
+    matched_person_obj: Optional[MatchedPerson] = None,
 ) -> str:
-    """Construct a clean query string by removing dates, districts, and category words.
+    """Construct a clean query string by removing dates, districts, category words, and resolving person typos.
 
     Args:
         question: The raw user question string.
         detected_district: The English DB district name detected, if any.
         detected_category: The English DB canonical category name detected, if any.
         matched_district_obj: Optional MatchedDistrict object from DistrictNormalizer.
+        matched_person_obj: Optional MatchedPerson object from PersonNormalizer.
 
     Returns:
         A cleaned, trimmed Marathi query string suitable for FULLTEXT retrieval.
     """
     # Remove date & date-filler words using date_parser
     cleaned = strip_date_from_query(question)
+
+    # Correct person entity typos / joined tokens in query text
+    if matched_person_obj:
+        if matched_person_obj.original_text and matched_person_obj.original_text in cleaned:
+            cleaned = cleaned.replace(matched_person_obj.original_text, matched_person_obj.canonical_name)
 
     # Remove the Marathi district name / typo tokens from the query text
     if detected_district:
@@ -251,10 +287,10 @@ def process_query(question: str) -> QueryInfo:
 
     raw_query = question.strip()
 
-    # Extract date using date_parser
+    # 1. Extract date using date_parser
     detected_date = extract_date(raw_query)
 
-    # Detect district and category
+    # 2. Detect district (District Normalization)
     district_res = _detect_district(raw_query)
     detected_district: Optional[str] = None
     matched_district_obj: Optional[MatchedDistrict] = None
@@ -262,10 +298,23 @@ def process_query(question: str) -> QueryInfo:
     if district_res:
         detected_district, matched_district_obj = district_res
 
+    # 3. Detect person (Person Normalization)
+    person_res = _detect_person(raw_query)
+    matched_person_obj: Optional[MatchedPerson] = None
+    if person_res:
+        _, matched_person_obj = person_res
+
+    # 4. Detect category
     detected_category = _detect_category(raw_query)
 
-    # Generate cleaned query string
-    cleaned = _clean_query(raw_query, detected_district, detected_category, matched_district_obj)
+    # 5. Generate cleaned query string
+    cleaned = _clean_query(
+        raw_query,
+        detected_district,
+        detected_category,
+        matched_district_obj,
+        matched_person_obj,
+    )
 
     # Detect if query requests latest news summary
     is_latest_news = any(pattern in raw_query for pattern in LATEST_NEWS_PATTERNS)

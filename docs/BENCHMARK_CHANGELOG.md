@@ -6,9 +6,9 @@ This document tracks the step-by-step measurable evolution of the Marathi RAG Re
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **v1.0** | Baseline Retriever | Standard MySQL FULLTEXT | **60.0%** (60/100 queries) | 72.8 ms | 🔴 Baseline |
 | **v1.1** | Sprint 1.2.1 | Integrated District Normalizer | **68.0%** (68/100 queries) | 114.2 ms | 🟢 Integrated |
-| **v1.2** | **Incident Recovery** | **Repaired District Metadata DB Migration** | **85.0%** (82 Pass, 3 Partial) | **87.2 ms** | 🟢 **Recovered & Verified** |
-| **v1.3** | Sprint 1.2.2 | Person Normalization ONLY | *Pending* | *Pending* | ⏳ Next Sprint |
-| **v1.4** | Sprint 1.2.3 | Common Word Normalization | *Pending* | *Pending* | ⏳ Scheduled |
+| **v1.2** | Incident Recovery | Repaired District Metadata DB Migration | **85.0%** (82 Pass, 3 Partial) | 87.2 ms | 🟢 Recovered |
+| **v1.3** | **Sprint 1.2.2** | **Person Resolution ONLY** | **91.0%** (89 Pass, 2 Partial) | **86.9 ms** | 🟢 **Integrated & Verified** |
+| **v1.4** | Sprint 1.2.3 | Common Word Normalization | *Pending* | *Pending* | ⏳ Next Sprint |
 
 ---
 
