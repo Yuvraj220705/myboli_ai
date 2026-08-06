@@ -7,6 +7,7 @@ from typing import Any, Dict, List, Optional
 from dotenv import load_dotenv
 from google import genai
 
+from context_builder import ContextBuilder, ContextPackage
 from retriever import search_articles
 
 load_dotenv()
@@ -16,6 +17,9 @@ logger = logging.getLogger(__name__)
 GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3-flash-preview")
 NO_ARTICLES_MSG = "माझ्याकडे या प्रश्नासंबंधी कोणतीही प्रकाशित माहिती उपलब्ध नाही."
 ERROR_MSG = "माहिती मिळवताना तांत्रिक अडचण आली. कृपया नंतर पुन्हा प्रयत्न करा."
+
+# Initialize ContextBuilder instance
+_context_builder = ContextBuilder()
 
 # Initialize Gemini Client safely
 _api_key = os.getenv("GEMINI_API_KEY")
@@ -31,7 +35,7 @@ if _api_key:
 
 
 def build_context(articles: List[Dict[str, Any]]) -> str:
-    """Construct prompt context string strictly using retrieved published articles.
+    """Construct prompt context string strictly using ContextBuilder.
 
     Args:
         articles: List of article dicts retrieved from the database.
@@ -39,25 +43,8 @@ def build_context(articles: List[Dict[str, Any]]) -> str:
     Returns:
         str: Formatted context string containing article information.
     """
-    parts = []
-
-    for i, article in enumerate(articles, start=1):
-        lines = [
-            f"--- Article {i} (ID: {article.get('id')}) ---",
-            f"Title: {article.get('title', '')}",
-        ]
-
-        if article.get("category"):
-            lines.append(f"Category: {article['category']}")
-        if article.get("district"):
-            lines.append(f"District: {article['district']}")
-        if article.get("createdAt"):
-            lines.append(f"Published Date: {article['createdAt']}")
-
-        lines.append(f"Content: {article.get('content', '')}")
-        parts.append("\n".join(lines))
-
-    return "\n\n".join(parts)
+    pkg = _context_builder.build_context(articles)
+    return pkg.formatted_context
 
 
 def generate_answer(question: str, top_k: int = 5) -> Dict[str, Any]:
@@ -96,11 +83,9 @@ def generate_answer(question: str, top_k: int = 5) -> Dict[str, Any]:
             "sources": [],
         }
 
-    # Extract source article IDs
-    source_ids = [article["id"] for article in articles if article.get("id") is not None]
-
-    # 3. Construct prompt with strict grounding constraints
-    context_str = build_context(articles)
+    # 3. Build structured ContextPackage using ContextBuilder
+    context_pkg = _context_builder.build_context(articles)
+    source_ids = [s["id"] for s in context_pkg.sources]
 
     prompt = f"""You are an AI news assistant for Maayboli Malvani News.
 
@@ -112,7 +97,7 @@ STRICT GROUNDING RULES:
 5. Synthesize details from multiple articles if relevant, but do NOT add unmentioned details.
 
 Retrieved Articles:
-{context_str}
+{context_pkg.formatted_context}
 
 User Question:
 {clean_question}
