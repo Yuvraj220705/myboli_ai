@@ -34,16 +34,17 @@ if _api_key:
         logger.error("Failed to initialize Gemini Client: %s", e)
 
 
-def build_context(articles: List[Dict[str, Any]]) -> str:
+def build_context(articles: List[Dict[str, Any]], query: Optional[str] = None) -> str:
     """Construct prompt context string strictly using ContextBuilder.
 
     Args:
         articles: List of article dicts retrieved from the database.
+        query: Optional user question string for query-relevant snippet scoring.
 
     Returns:
         str: Formatted context string containing article information.
     """
-    pkg = _context_builder.build_context(articles)
+    pkg = _context_builder.build_context(articles, query=query)
     return pkg.formatted_context
 
 
@@ -83,8 +84,8 @@ def generate_answer(question: str, top_k: int = 5) -> Dict[str, Any]:
             "sources": [],
         }
 
-    # 3. Build structured ContextPackage using ContextBuilder
-    context_pkg = _context_builder.build_context(articles)
+    # 3. Build structured ContextPackage using Intelligent ContextBuilder
+    context_pkg = _context_builder.build_context(articles, query=clean_question)
     source_ids = [s["id"] for s in context_pkg.sources]
 
     prompt = f"""You are an AI news assistant for Maayboli Malvani News.
