@@ -11,6 +11,7 @@ from entity_normalizer import (
     MatchedDistrict,
     MatchedPerson,
     PersonNormalizer,
+    WordNormalizer,
 )
 from date_parser import extract_date, strip_date_from_query
 
@@ -26,9 +27,10 @@ __all__ = [
 # Constants
 # ----------------------------
 
-# Instantiate DistrictNormalizer & PersonNormalizer instances
+# Instantiate DistrictNormalizer, PersonNormalizer & WordNormalizer instances
 _DISTRICT_NORMALIZER = DistrictNormalizer()
 _PERSON_NORMALIZER = PersonNormalizer()
+_WORD_NORMALIZER = WordNormalizer()
 
 # Maps Canonical Marathi district name -> English name as stored in database
 DISTRICTS: Dict[str, str] = {
@@ -304,12 +306,16 @@ def process_query(question: str) -> QueryInfo:
     if person_res:
         _, matched_person_obj = person_res
 
-    # 4. Detect category
-    detected_category = _detect_category(raw_query)
+    # 4. Word Normalization (Retrieval-Critical Common Marathi Vocabulary)
+    word_norm_res = _WORD_NORMALIZER.normalize_query(raw_query)
+    query_for_cleaning = word_norm_res.normalized_query if word_norm_res.corrections else raw_query
 
-    # 5. Generate cleaned query string
+    # 5. Detect category
+    detected_category = _detect_category(query_for_cleaning)
+
+    # 6. Generate cleaned query string
     cleaned = _clean_query(
-        raw_query,
+        query_for_cleaning,
         detected_district,
         detected_category,
         matched_district_obj,

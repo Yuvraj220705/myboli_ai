@@ -1,10 +1,10 @@
 {
   "total_queries": 300,
-  "pass": 271,
-  "partial": 17,
-  "fail": 12,
-  "overall_accuracy_percent": 96.0,
-  "average_latency_ms": 83.8,
+  "pass": 270,
+  "partial": 20,
+  "fail": 10,
+  "overall_accuracy_percent": 96.67,
+  "average_latency_ms": 70.8,
   "suites": {
     "Benchmark A (Regression)": {
       "total": 100,
@@ -12,7 +12,7 @@
       "partial": 15,
       "fail": 0,
       "accuracy_percent": 100.0,
-      "avg_latency_ms": 83.0
+      "avg_latency_ms": 70.7
     },
     "Benchmark B (Generalization)": {
       "total": 0,

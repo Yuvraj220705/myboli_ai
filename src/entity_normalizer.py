@@ -25,6 +25,10 @@ __all__ = [
     "PersonNormalizationResult",
     "PersonNormalizer",
     "DEFAULT_CANONICAL_PEOPLE",
+    "MatchedWord",
+    "WordNormalizationResult",
+    "WordNormalizer",
+    "DEFAULT_CANONICAL_VOCABULARY",
     "normalize_unicode",
     "strip_district_suffix",
     "tokenize_query",
@@ -606,3 +610,188 @@ class PersonNormalizer:
             corrections=corrections,
             unmatched_tokens=[t for t in tokens if t not in [p.original_text for p in matched_people]],
         )
+
+
+# ======================================================
+# 4. Common Marathi Word Normalizer (Sprint 1.2.3)
+# ======================================================
+
+@dataclass(frozen=True)
+class MatchedWord:
+    """Represents a recognized or corrected canonical vocabulary word.
+
+    Attributes:
+        canonical_word: Standardized Marathi news word (e.g. "राजकारण", "अपघात", "पाऊस").
+        original_token: Raw token input string from user.
+        confidence: Match confidence score normalized between 0.0 and 100.0.
+        was_corrected: True if spelling correction occurred.
+    """
+    canonical_word: str
+    original_token: str
+    confidence: float
+    was_corrected: bool
+
+
+@dataclass
+class WordNormalizationResult:
+    """Structured result object returned after common word normalization.
+
+    Attributes:
+        original_query: Raw user input query string.
+        normalized_query: Query string with corrected vocabulary terms substituted.
+        matched_words: List of recognized/corrected MatchedWord objects.
+        corrections: Subset of matched_words where spelling correction occurred.
+        unmatched_tokens: Tokens that were not matched to the canonical vocabulary.
+    """
+    original_query: str
+    normalized_query: str
+    matched_words: List[MatchedWord] = field(default_factory=list)
+    corrections: List[MatchedWord] = field(default_factory=list)
+    unmatched_tokens: List[str] = field(default_factory=list)
+
+
+DEFAULT_CANONICAL_VOCABULARY: List[str] = [
+    "राजकारण",
+    "अपघात",
+    "पाऊस",
+    "शेतकरी",
+    "निवडणूक",
+    "सरकार",
+    "मंत्री",
+    "महापालिका",
+    "आरोग्य",
+    "शिक्षण",
+    "क्रीडा",
+    "मनोरंजन",
+    "आंदोलन",
+    "हवामान",
+    "महागाई",
+    "गुन्हे",
+    "बातमी",
+    "विकास",
+    "संपादकीय",
+    "घोटाळा",
+    "विधानसभा",
+    "लोकसभा",
+    "मुख्यमंत्री",
+    "गृहमंत्री",
+    "कृषी",
+    "रस्ता",
+    "पाणी",
+    "प्रकल्प",
+    "रोजगार",
+    "परीक्षा",
+    "निकाल",
+    "चित्रपट",
+    "उद्योग",
+]
+
+
+class WordNormalizer:
+    """Normalizes retrieval-critical common Marathi vocabulary using RapidFuzz approximate matching.
+
+    Design Principles:
+    - Maintains a canonical news vocabulary list (`DEFAULT_CANONICAL_VOCABULARY`).
+    - Uses RapidFuzz ratio fuzzy matching against canonical terms.
+    - Normalizes ONLY retrieval-critical news vocabulary; leaves generic stop words unchanged.
+    - Configurable confidence threshold (default: 75.0%).
+    """
+
+    def __init__(
+        self,
+        canonical_vocabulary: Optional[List[str]] = None,
+        min_confidence_threshold: float = 75.0,
+    ):
+        """Initialize WordNormalizer.
+
+        Args:
+            canonical_vocabulary: Optional external list of canonical news terms.
+            min_confidence_threshold: Minimum match score threshold (0-100) to trigger correction.
+        """
+        self.min_confidence_threshold = min_confidence_threshold
+        raw_vocab = canonical_vocabulary if canonical_vocabulary is not None else DEFAULT_CANONICAL_VOCABULARY
+        self.vocabulary = [normalize_unicode(v) for v in raw_vocab]
+
+    def normalize_token(self, token: str) -> Optional[MatchedWord]:
+        """Attempt to match a single token against the canonical vocabulary.
+
+        Args:
+            token: Raw query token string.
+
+        Returns:
+            MatchedWord if confidence >= threshold, else None.
+        """
+        clean = normalize_unicode(token.strip())
+        if not clean or len(clean) < 3:
+            return None
+
+        # Calculate fuzzy similarity scores against canonical vocabulary
+        best_canonical = None
+        best_score = 0.0
+
+        for canonical in self.vocabulary:
+            score = fuzz.ratio(clean, canonical)
+            if score > best_score:
+                best_score = float(score)
+                best_canonical = canonical
+
+        if best_canonical and best_score >= self.min_confidence_threshold:
+            was_corrected = (clean != best_canonical)
+            return MatchedWord(
+                canonical_word=best_canonical,
+                original_token=token,
+                confidence=best_score,
+                was_corrected=was_corrected,
+            )
+
+        return None
+
+    def normalize_query(self, query: str) -> WordNormalizationResult:
+        """Normalize retrieval-critical common words in a user query string.
+
+        Args:
+            query: Input user query string.
+
+        Returns:
+            WordNormalizationResult containing the normalized query string and match metadata.
+        """
+        if not query:
+            return WordNormalizationResult(original_query="", normalized_query="")
+
+        normalized_unicode = normalize_unicode(query)
+        tokens = tokenize_query(normalized_unicode)
+
+        matched_words: List[MatchedWord] = []
+        corrections: List[MatchedWord] = []
+        unmatched_tokens: List[str] = []
+        replaced_tokens: List[str] = []
+
+        for token in tokens:
+            matched = self.normalize_token(token)
+            if matched:
+                matched_words.append(matched)
+                if matched.was_corrected:
+                    corrections.append(matched)
+                    replaced_tokens.append(matched.canonical_word)
+                    logger.info(
+                        "Corrected Word: '%s' -> '%s' (Score: %.1f)",
+                        token,
+                        matched.canonical_word,
+                        matched.confidence,
+                    )
+                else:
+                    replaced_tokens.append(token)
+            else:
+                unmatched_tokens.append(token)
+                replaced_tokens.append(token)
+
+        normalized_query_str = " ".join(replaced_tokens)
+
+        return WordNormalizationResult(
+            original_query=query,
+            normalized_query=normalized_query_str,
+            matched_words=matched_words,
+            corrections=corrections,
+            unmatched_tokens=unmatched_tokens,
+        )
+
