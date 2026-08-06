@@ -8,6 +8,7 @@ from dotenv import load_dotenv
 from google import genai
 
 from context_builder import ContextBuilder, ContextPackage
+from intent_validator import IntentValidator, IntentValidationResult
 from query_processor import process_query
 from retriever import search_articles
 
@@ -19,8 +20,9 @@ GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3-flash-preview")
 NO_ARTICLES_MSG = "माझ्याकडे या प्रश्नासंबंधी कोणतीही प्रकाशित माहिती उपलब्ध नाही."
 ERROR_MSG = "माहिती मिळवताना तांत्रिक अडचण आली. कृपया नंतर पुन्हा प्रयत्न करा."
 
-# Initialize ContextBuilder instance
+# Initialize ContextBuilder and IntentValidator instances
 _context_builder = ContextBuilder()
+_intent_validator = IntentValidator()
 
 # Initialize Gemini Client safely
 _api_key = os.getenv("GEMINI_API_KEY")
@@ -91,6 +93,9 @@ def generate_answer(question: str, top_k: int = 5) -> Dict[str, Any]:
     context_pkg = _context_builder.build_context(articles, query=normalized_query_str)
     source_ids = [s["id"] for s in context_pkg.sources]
 
+    # 5. Run Intent Validation Quality Gate
+    validation_res = _intent_validator.validate(query_info, context_pkg)
+
     prompt = f"""You are an AI news assistant for Maayboli Malvani News.
 
 STRICT GROUNDING RULES:
@@ -100,6 +105,12 @@ STRICT GROUNDING RULES:
 4. Present the response clearly in Marathi language.
 5. Synthesize details from multiple articles if relevant, but do NOT add unmentioned details.
 
+Intent Validation Quality Gate:
+- Status: {validation_res.retrieval_status}
+- Confidence: {validation_res.confidence}
+- Quality Score: {validation_res.overall_match_score}%
+- Validation Reason: {validation_res.validation_reason}
+
 Retrieved Articles:
 {context_pkg.formatted_context}
 
@@ -107,12 +118,13 @@ User Question:
 {clean_question}
 """
 
-    # 4. Invoke Gemini API model with error handling
+    # 6. Invoke Gemini API model with error handling
     if client is None:
         logger.error("Gemini API client is not initialized.")
         return {
             "answer": ERROR_MSG,
             "sources": source_ids,
+            "validation": validation_res,
         }
 
     try:
@@ -128,12 +140,14 @@ User Question:
             return {
                 "answer": NO_ARTICLES_MSG,
                 "sources": [],
+                "validation": validation_res,
             }
 
         logger.info("Generated grounded answer for question: '%s'", clean_question[:50])
         return {
             "answer": answer_text,
             "sources": source_ids,
+            "validation": validation_res,
         }
     except Exception as e:
         logger.error("Gemini API request failed: %s", e, exc_info=True)
