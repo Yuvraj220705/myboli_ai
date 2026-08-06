@@ -9,6 +9,7 @@ from dataclasses import dataclass, field
 import logging
 import re
 from typing import Any, Dict, List, Optional, Set
+from entity_normalizer import normalize_unicode
 
 logger = logging.getLogger(__name__)
 
@@ -147,16 +148,18 @@ def extract_snippets(
         # Article is short enough; return clean joined paragraphs
         return "\n\n".join(paras)
 
-    # Tokenize query keywords
+    # Tokenize and normalize query keywords
     query_tokens: Set[str] = set()
     if query:
-        query_tokens = set(re.findall(r"[\w\u0900-\u097F]+", query.lower()))
+        norm_query = normalize_unicode(query.lower())
+        query_tokens = set(re.findall(r"[\w\u0900-\u097F]+", norm_query))
 
     # Score each paragraph
     scored_paras: List[tuple[int, float]] = []  # (index, score)
 
     for idx, para in enumerate(paras):
-        para_words = set(re.findall(r"[\w\u0900-\u097F]+", para.lower()))
+        norm_para = normalize_unicode(para.lower())
+        para_words = set(re.findall(r"[\w\u0900-\u097F]+", norm_para))
 
         score = 0.0
         # 1. Query Keyword Overlap Score

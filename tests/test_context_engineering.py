@@ -138,6 +138,27 @@ def test_metadata_preservation():
     assert "Published Date: 2026-08-06" in pkg.formatted_context
 
 
+def test_normalized_query_matching():
+    # Text contains canonical normalized spelling 'राजकारण'
+    text = (
+        "हा बातमीचा पहिला परिच्छेद आहे.\n\n"
+        "महाराष्ट्रातील राजकारण तापले असून विविध पक्षांच्या नेत्यांनी वक्तव्ये केली आहेत.\n\n"
+        "हा तिसरा परिच्छेद आहे."
+    )
+    # Query contains raw typo 'राजकरण'
+    builder = ContextBuilder(enable_snippets=True)
+    raw = [
+        {
+            "id": 888,
+            "title": "राजकीय घडामोडी",
+            "content": text,
+        }
+    ]
+    # Pass normalized query 'राजकारण'
+    pkg = builder.build_context(raw, query="राजकारण")
+    assert "महाराष्ट्रातील राजकारण" in pkg.formatted_context
+
+
 if __name__ == "__main__":
     print("Running Intelligent Context Engineering Unit Tests...")
     test_single_keyword_query()
@@ -149,4 +170,5 @@ if __name__ == "__main__":
     test_short_article_handling()
     test_no_keyword_overlap_fallback()
     test_metadata_preservation()
+    test_normalized_query_matching()
     print("✅ All Intelligent Context Engineering Unit Tests Passed Successfully!")

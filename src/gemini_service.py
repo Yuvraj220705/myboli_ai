@@ -8,6 +8,7 @@ from dotenv import load_dotenv
 from google import genai
 
 from context_builder import ContextBuilder, ContextPackage
+from query_processor import process_query
 from retriever import search_articles
 
 load_dotenv()
@@ -64,9 +65,11 @@ def generate_answer(question: str, top_k: int = 5) -> Dict[str, Any]:
             "sources": [],
         }
 
-    clean_question = question.strip()
+    # 1. Process query to extract metadata & normalized query string
+    query_info = process_query(clean_question)
+    normalized_query_str = query_info.clean_query if query_info and query_info.clean_query else clean_question
 
-    # 1. Retrieve articles via retriever
+    # 2. Retrieve articles via retriever
     try:
         articles = search_articles(clean_question, top_k=top_k)
     except Exception as e:
@@ -76,7 +79,7 @@ def generate_answer(question: str, top_k: int = 5) -> Dict[str, Any]:
             "sources": [],
         }
 
-    # 2. Handle empty retrieval result
+    # 3. Handle empty retrieval result
     if not articles:
         logger.info("No matching published articles found for: '%s'", clean_question[:50])
         return {
@@ -84,8 +87,8 @@ def generate_answer(question: str, top_k: int = 5) -> Dict[str, Any]:
             "sources": [],
         }
 
-    # 3. Build structured ContextPackage using Intelligent ContextBuilder
-    context_pkg = _context_builder.build_context(articles, query=clean_question)
+    # 4. Build structured ContextPackage using Intelligent ContextBuilder with NORMALIZED query keywords
+    context_pkg = _context_builder.build_context(articles, query=normalized_query_str)
     source_ids = [s["id"] for s in context_pkg.sources]
 
     prompt = f"""You are an AI news assistant for Maayboli Malvani News.
