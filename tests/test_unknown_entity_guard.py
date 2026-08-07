@@ -98,6 +98,14 @@ class TestUnknownEntityGuard(unittest.TestCase):
         self.assertIsNotNone(info_unsupported.unknown_entity_result)
         self.assertTrue(info_unsupported.unknown_entity_result.should_block)
 
+    def test_multiple_foreign_entities_detected(self):
+        """Verify that multi-entity queries detect ALL foreign entities, not just the first one."""
+        query = "जो बायडेन, डोनाल्ड ट्रम्प आणि इलॉन मस्क यांची भेट होणार का?"
+        res = self.guard.inspect_query(query)
+        self.assertTrue(res.should_block)
+        # Verify multiple critical entities are extracted
+        self.assertGreaterEqual(len(res.critical_entities), 2)
+
     def test_guard_execution_latency(self):
         """Benchmark that guard inspection completes in under 1 millisecond average."""
         sample_query = "अमेरिकेचे अध्यक्ष ज्यो बायडेन भारतात कधी येणार?"

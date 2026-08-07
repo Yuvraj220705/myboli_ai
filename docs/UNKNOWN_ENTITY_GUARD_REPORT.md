@@ -74,9 +74,26 @@ ResponseStrategyEngine (Selects NO_INFORMATION Fast-Path)
 
 ---
 
-## 3. Implementation Details & Single Responsibility
+## 3. Implementation Details & Architecture Refinements
 
-### 3.1 Data Structures (`UnknownEntityResult`)
+### 3.1 Dynamic Config-Driven Architecture
+To prevent python code bloat and enable maintenance without code changes, all foreign entities and generic terms are loaded dynamically from JSON files:
+- **`config/foreign_entities.json`**: Categorized foreign entities (leaders, tech companies, sports, crypto, global locations) and their regex patterns.
+- **`config/supporting_terms.json`**: Generic Marathi titles, actions, and filler terms.
+
+```
+config/
+  ├── foreign_entities.json
+  └── supporting_terms.json
+         │
+         ▼
+  UnknownEntityGuard (load_foreign_entity_patterns & load_supporting_terms)
+```
+
+### 3.2 Multi-Entity Detection (No `break` limit)
+Unlike basic single-match approaches, `UnknownEntityGuard` iterates through **all patterns** without breaking on the first match. If a query mentions multiple out-of-scope entities (e.g., *"जो बायडेन, डोनाल्ड ट्रम्प आणि इलॉन मस्क..."*), **ALL** matched entities are captured in `critical_entities` and `unknown_entities` for enhanced auditability and explainability.
+
+### 3.3 Data Structures (`UnknownEntityResult`)
 ```python
 @dataclass
 class UnknownEntityResult:
@@ -90,7 +107,7 @@ class UnknownEntityResult:
     confidence: str  # "HIGH", "MEDIUM", "LOW"
 ```
 
-### 3.2 Single Responsibility Principle
+### 3.4 Single Responsibility Principle
 `UnknownEntityGuard` answers **EXACTLY ONE QUESTION**:
 > *"Does this query contain unsupported critical entities that fall outside the regional scope of Maharashtra news?"*
 

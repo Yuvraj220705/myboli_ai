@@ -1,17 +1,25 @@
-"""Sprint 4.0.0: Unknown Entity Guardrail for Maayboli AI.
+"""Sprint 4.0.0 Refactored: Dynamic Unknown Entity Guardrail for Maayboli AI.
 
-Provides deterministic detection of unsupported foreign entities, companies, products,
+Provides scalable, config-driven detection of unsupported foreign entities, companies, products,
 and out-of-scope proper nouns to prevent keyword over-matching in MySQL retrieval.
 """
 
 from dataclasses import dataclass, field
+import json
 import logging
+import os
+from pathlib import Path
 import re
-from typing import Any, List, Optional, Set
+from typing import Any, Dict, List, Optional, Set, Tuple
 
 from entity_normalizer import DistrictNormalizer, PersonNormalizer, WordNormalizer
 
 logger = logging.getLogger(__name__)
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+CONFIG_DIR = PROJECT_ROOT / "config"
+FOREIGN_ENTITIES_PATH = CONFIG_DIR / "foreign_entities.json"
+SUPPORTING_TERMS_PATH = CONFIG_DIR / "supporting_terms.json"
 
 __all__ = [
     "UnknownEntityResult",
@@ -43,109 +51,88 @@ class UnknownEntityResult:
     confidence: str = "HIGH"
 
 
-# Generic Supporting Terms (nouns, titles, verbs, query fillers that do NOT form primary entities on their own)
-SUPPORTING_TERMS_SET: Set[str] = {
-    # Titles & Roles
-    "अध्यक्ष", "प्रदेशाध्यक्ष", "पंतप्रधान", "मुख्यमंत्री", "मंत्री", "खासदार", "आमदार", "नेते", "अधिकारी", "पोलिस", "पोलीस",
-    # Actions & Events
-    "दौरा", "भाषण", "सभेत", "सभा", "बैठक", "बैठकीत", "निर्णय", "घोषणा", "विधान", "अपघात", "पाऊस", "हवामान", "वेळापत्रक",
-    "निकालाची", "निकाल", "आरक्षण", "कर्जमाफी", "निवडणूक", "भरती", "आंदोलन", "कुंभमेळा", "सामना", "लिलाव", "खेळाडू",
-    # Geography & General Context
-    "महाराष्ट्र", "महाराष्ट्रातील", "महाराष्ट्रात", "भारत", "भारतात", "भारतातील", "जिल्हा", "जिल्ह्यात", "शहर", "शहरातील",
-    # Conversational & Grammar Fillers
-    "सांगा", "माहिती", "बातमी", "बातम्या", "अपडेट", "काय", "आहे", "नाही", "कधी", "कसे", "कोण", "कशा", "आज", "काल", "आजची",
-    "नवीन", "ताजी", "ताज्या", "विशेष", "सविस्तर", "मला", "त्याबद्दल", "घेऊन", "येणार", "झालं", "झाली", "केले", "होते",
-    "विषयी", "संबंधी", "बद्दल", "उत्तर", "प्रश्न", "दर", "किंमत", "घसरण", "वाढ",
-}
+def load_supporting_terms(config_path: Path = SUPPORTING_TERMS_PATH) -> Set[str]:
+    """Load generic supporting terms set from JSON configuration file."""
+    if config_path.exists():
+        try:
+            with open(config_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                terms = data.get("supporting_terms", [])
+                logger.info("Loaded %d supporting terms from %s", len(terms), config_path.name)
+                return set(terms)
+        except Exception as e:
+            logger.error("Failed to load supporting terms from %s: %s", config_path, e)
 
-# Explicit Foreign / Out-of-Scope Proper Noun Entities (Transliterations & English terms)
-KNOWN_FOREIGN_CRITICAL_PATTERNS: List[re.Pattern] = [
-    # Global Political Leaders & Figures
-    re.compile(r"\b(जो|ज्यो|अध्यक्ष)?\s*(बायडेन|बायडन|biden)\b", re.IGNORECASE),
-    re.compile(r"\b(डोनाल्ड)?\s*(ट्रम्प|trump)\b", re.IGNORECASE),
-    re.compile(r"\b(कमला)?\s*(हॅरिस|harris)\b", re.IGNORECASE),
-    re.compile(r"\b(व्लादिमीर|पुतीन)?\s*(पुतिन|putin)\b", re.IGNORECASE),
-    re.compile(r"\b(व्होलोडिमिर)?\s*(झेलेंस्की|zelenskyy|zelensky)\b", re.IGNORECASE),
-    re.compile(r"\b(ऋषी|रिशी)?\s*(सुनक|sunak)\b", re.IGNORECASE),
-    re.compile(r"\b(इमॅन्युएल)?\s*(मॅक्रॉन|macron)\b", re.IGNORECASE),
-    re.compile(r"\b(बेंजामिन)?\s*(नेतान्याहू|नेतान्याहु|netanyahu)\b", re.IGNORECASE),
-    re.compile(r"\b(जस्टिन)?\s*(ट्रुडो|ट्रूडो|trudeau)\b", re.IGNORECASE),
-    re.compile(r"\b(शी)?\s*(जिनपिंग|jinping)\b", re.IGNORECASE),
-    re.compile(r"\b(इलॉन|एलोन)?\s*(मस्क|musk)\b", re.IGNORECASE),
+    # Hardcoded fallback set if config file is missing
+    return {
+        "अध्यक्ष", "प्रदेशाध्यक्ष", "पंतप्रधान", "मुख्यमंत्री", "मंत्री", "खासदार", "आमदार", "नेते", "अधिकारी", "पोलिस", "पोलीस",
+        "दौरा", "भाषण", "सभेत", "सभा", "बैठक", "बैठकीत", "निर्णय", "घोषणा", "विधान", "अपघात", "पाऊस", "हवामान", "वेळापत्रक",
+        "निकालाची", "निकाल", "आरक्षण", "कर्जमाफी", "निवडणूक", "भरती", "आंदोलन", "कुंभमेळा", "सामना", "लिलाव", "खेळाडू",
+        "महाराष्ट्र", "महाराष्ट्रातील", "महाराष्ट्रात", "भारत", "भारतात", "भारतातील", "जिल्हा", "जिल्ह्यात", "शहर", "शहरातील",
+        "सांगा", "माहिती", "बातमी", "बातम्या", "अपडेट", "काय", "आहे", "नाही", "कधी", "कसे", "कोण", "कशा", "आज", "काल", "आजची",
+        "नवीन", "ताजी", "ताज्या", "विशेष", "सविस्तर", "मला", "त्याबद्दल", "घेऊन", "येणार", "झालं", "झाली", "केले", "होते",
+        "विषयी", "संबंधी", "बद्दल", "उत्तर", "प्रश्न", "दर", "किंमत", "घसरण", "वाढ",
+    }
 
-    # International Countries & Global Cities outside Maharashtra regional scope
-    re.compile(r"\b(अमेरिका|अमेरिकेचे|अमेरिकेत|usa|us|america)\b", re.IGNORECASE),
-    re.compile(r"\b(रशिया|रशियातील|russia)\b", re.IGNORECASE),
-    re.compile(r"\b(युक्रेन|युक्रेनियन|ukraine)\b", re.IGNORECASE),
-    re.compile(r"\b(कॅनडा|कॅनडात|कॅनडातील|canada)\b", re.IGNORECASE),
-    re.compile(r"\b(इस्रायल|इस्राईल|israel)\b", re.IGNORECASE),
-    re.compile(r"\b(टोकियो|tokyo)\b", re.IGNORECASE),
-    re.compile(r"\b(लंडन|लंडनमध्ये|london)\b", re.IGNORECASE),
-    re.compile(r"\b(पॅरिस|paris)\b", re.IGNORECASE),
-    re.compile(r"\b(वॉशिंग्टन|washington)\b", re.IGNORECASE),
-    re.compile(r"\b(दुबई|dubai)\b", re.IGNORECASE),
-    re.compile(r"\b(सिडनी|sydney)\b", re.IGNORECASE),
-    re.compile(r"\b(अँटार्टिका|अंटार्टिका|antarctica)\b", re.IGNORECASE),
-    re.compile(r"\b(चंद्रावर|चंद्र|moon)\b", re.IGNORECASE),
 
-    # Tech Giants, Companies & Products
-    re.compile(r"\b(गुगल|गूगल|google)\s*(gemini)?\b", re.IGNORECASE),
-    re.compile(r"\b(टेस्ला|tesla)\b", re.IGNORECASE),
-    re.compile(r"\b(ओपनएआय|openai|chatgpt)\b", re.IGNORECASE),
-    re.compile(r"\b(ॲपल|अ‍ॅपल|apple)\s*(व्हिजन|vision)?\s*(प्रो|pro)?\b", re.IGNORECASE),
-    re.compile(r"\b(मायक्रोसॉफ्ट|microsoft)\s*(विंडोज|windows)?\b", re.IGNORECASE),
-    re.compile(r"\b(मेटा|meta)\s*(थ्रेड्स|threads)?\b", re.IGNORECASE),
-    re.compile(r"\b(अ‍ॅमेझॉन|ॲमेझॉन|amazon)\s*(एडब्ल्यूएस|aws)?\b", re.IGNORECASE),
-    re.compile(r"\b(स्टारलिंक|starlink)\b", re.IGNORECASE),
-    re.compile(r"\b(स्पेसएक्स|spacex)\b", re.IGNORECASE),
-    re.compile(r"\b(एनव्हिडिया|nvidia)\b", re.IGNORECASE),
-    re.compile(r"\b(सॅमसंग|samsung)\b", re.IGNORECASE),
-    re.compile(r"\b(सोनी|sony)\s*(प्लेस्टेशन|playstation)?\b", re.IGNORECASE),
+def load_foreign_entity_patterns(config_path: Path = FOREIGN_ENTITIES_PATH) -> List[Tuple[str, re.Pattern]]:
+    """Load foreign entity regular expression patterns from JSON configuration file."""
+    compiled_patterns: List[Tuple[str, re.Pattern]] = []
 
-    # Global Sports, Events & Entertainment Awards
-    re.compile(r"\b(क्रिस्टियानो)?\s*(रोनाल्डो|ronaldo)\b", re.IGNORECASE),
-    re.compile(r"\b(लिओनेल)?\s*(मेस्सी|messi)\b", re.IGNORECASE),
-    re.compile(r"\b(नीरज)?\s*(चोप्रा|chopra)\b", re.IGNORECASE),
-    re.compile(r"\b(आयपीएल|ipl)\s*(लिलाव|auction)?\b", re.IGNORECASE),
-    re.compile(r"\b(ऑलिम्पिक|ऑलिंपिक|olympics)\b", re.IGNORECASE),
-    re.compile(r"\b(फीफा|fifa)\s*(वर्ल्ड|world)?\s*(कप|cup)?\b", re.IGNORECASE),
-    re.compile(r"\b(ऑस्कर|oscar)\s*(अवॉर्ड्स|awards)?\b", re.IGNORECASE),
-    re.compile(r"\b(ग्रॅमी|grammy)\s*(अवॉर्ड्स|awards)?\b", re.IGNORECASE),
-    re.compile(r"\b(सुपर\s*बाऊल|super\s*bowl)\b", re.IGNORECASE),
-    re.compile(r"\b(विम्बल्डन|wimbledon)\b", re.IGNORECASE),
-    re.compile(r"\b(फॉर्म्युला\s*१|formula\s*1|f1)\b", re.IGNORECASE),
-    re.compile(r"\b(एनबीए|nba)\b", re.IGNORECASE),
-    re.compile(r"\b(युएफसी|ufc)\b", re.IGNORECASE),
+    if config_path.exists():
+        try:
+            with open(config_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                for category, entity_list in data.items():
+                    if isinstance(entity_list, list):
+                        for entity in entity_list:
+                            name = entity.get("name", "Unknown Entity")
+                            patterns = entity.get("patterns", [])
+                            for pat_str in patterns:
+                                try:
+                                    compiled_patterns.append((name, re.compile(rf"\b{pat_str}\b", re.IGNORECASE)))
+                                except re.error as reg_err:
+                                    logger.error("Invalid regex pattern '%s' for %s: %s", pat_str, name, reg_err)
+                logger.info("Compiled %d foreign entity patterns from %s", len(compiled_patterns), config_path.name)
+                return compiled_patterns
+        except Exception as e:
+            logger.error("Failed to load foreign entity patterns from %s: %s", config_path, e)
 
-    # Crypto, Global Markets & International Orgs
-    re.compile(r"\b(बिटकॉइन|बिटकॉईन|bitcoin|crypto)\b", re.IGNORECASE),
-    re.compile(r"\b(इथेरियम|ethereum)\b", re.IGNORECASE),
-    re.compile(r"\b(फेडरल\s*रिझर्व्ह|federal\s*reserve)\b", re.IGNORECASE),
-    re.compile(r"\b(वॉल\s*स्ट्रीट|wall\s*street)\b", re.IGNORECASE),
-    re.compile(r"\b(नाटो|nato)\b", re.IGNORECASE),
-    re.compile(r"\b(युरोपियन\s*युनियन|european\s*union|eu)\b", re.IGNORECASE),
-    re.compile(r"\b(डब्ल्यूएचओ|who)\b", re.IGNORECASE),
-    re.compile(r"\b(जी२०|g20)\b", re.IGNORECASE),
-    re.compile(r"\b(नासा|nasa)\b", re.IGNORECASE),
-]
+    # Fallback default patterns if config file is missing
+    fallback_raw = [
+        ("Joe Biden", r"(जो|ज्यो|अध्यक्ष)?\s*(बायडेन|बायडन|biden)"),
+        ("Donald Trump", r"(डोनाल्ड)?\s*(ट्रम्प|trump)"),
+        ("Cristiano Ronaldo", r"(क्रिस्टियानो)?\s*(रोनाल्डो|ronaldo)"),
+        ("Elon Musk", r"(इलॉन|एलोन)?\s*(मस्क|musk)"),
+        ("Tesla", r"(टेस्ला|tesla)"),
+        ("OpenAI", r"(ओपनएआय|openai|chatgpt)"),
+        ("Bitcoin", r"(बिटकॉइन|बिटकॉईन|bitcoin|crypto)"),
+    ]
+    return [(name, re.compile(rf"\b{pat}\b", re.IGNORECASE)) for name, pat in fallback_raw]
 
 
 class UnknownEntityGuard:
-    """Deterministic guardrail component that inspects user queries for unsupported entities."""
+    """Config-driven, deterministic guardrail component that inspects user queries for unsupported entities."""
 
     def __init__(
         self,
         district_normalizer: Optional[DistrictNormalizer] = None,
         person_normalizer: Optional[PersonNormalizer] = None,
         word_normalizer: Optional[WordNormalizer] = None,
+        foreign_config_path: Path = FOREIGN_ENTITIES_PATH,
+        supporting_config_path: Path = SUPPORTING_TERMS_PATH,
     ):
-        """Initialize UnknownEntityGuard by reusing existing entity normalizer instances."""
+        """Initialize UnknownEntityGuard with dynamic JSON configuration loading."""
         self.district_normalizer = district_normalizer or DistrictNormalizer()
         self.person_normalizer = person_normalizer or PersonNormalizer()
         self.word_normalizer = word_normalizer or WordNormalizer()
 
+        # Dynamic Config Loading
+        self.foreign_patterns = load_foreign_entity_patterns(foreign_config_path)
+        self.supporting_terms_set = load_supporting_terms(supporting_config_path)
+
     def inspect_query(self, query: str, query_info: Optional[Any] = None) -> UnknownEntityResult:
-        """Inspect query to identify known vs unknown critical entities and determine blocking.
+        """Inspect query to identify ALL known vs unknown critical entities and determine blocking.
 
         Args:
             query: Input user query string.
@@ -174,17 +161,17 @@ class UnknownEntityGuard:
         if person_res and hasattr(person_res, "matched_people") and person_res.matched_people:
             known_entities.append(f"Person: {person_res.matched_people[0].canonical_name}")
 
-        # Step 2: Check explicit Foreign / Out-of-Scope Critical Patterns
-        foreign_match_found = False
-        detected_foreign_entity = ""
-        for pattern in KNOWN_FOREIGN_CRITICAL_PATTERNS:
+        # Step 2: Check ALL Foreign / Out-of-Scope Critical Patterns (Multi-entity detection - NO BREAK!)
+        foreign_matches: List[str] = []
+        for entity_label, pattern in self.foreign_patterns:
             match = pattern.search(clean_q)
             if match:
-                foreign_match_found = True
-                detected_foreign_entity = match.group(0).strip()
-                critical_entities.append(detected_foreign_entity)
-                unknown_entities.append(detected_foreign_entity)
-                break
+                matched_text = match.group(0).strip()
+                entity_desc = f"{entity_label} ('{matched_text}')"
+                if matched_text not in critical_entities and entity_label not in foreign_matches:
+                    foreign_matches.append(entity_label)
+                    critical_entities.append(matched_text)
+                    unknown_entities.append(matched_text)
 
         # Step 3: Classify remaining tokens into Supporting Terms vs Unknown Tokens
         for token in tokens:
@@ -193,41 +180,51 @@ class UnknownEntityGuard:
                 continue
 
             # Check if token is in supporting terms set
-            if token_clean in SUPPORTING_TERMS_SET or any(sup in token_clean for sup in ["बातमी", "पाऊस", "सभा", "दौरा", "अपघात"]):
+            if token_clean in self.supporting_terms_set or any(sup in token_clean for sup in ["बातमी", "पाऊस", "सभा", "दौरा", "अपघात"]):
                 supporting_terms.append(token_clean)
                 continue
 
             # Check English unrecognized words
             if re.match(r"^[a-zA-Z0-9]+$", token_clean):
-                # Common mapped English terms like Pune, rain, politics, news are supported
                 if token_clean.lower() in {"pune", "sindhudurg", "kolhapur", "ratnagiri", "mumbai", "nagpur", "rain", "politics", "news", "status", "update", "visit", "speech"}:
                     known_entities.append(token_clean)
                 else:
-                    critical_entities.append(token_clean)
-                    unknown_entities.append(token_clean)
+                    if token_clean not in critical_entities:
+                        critical_entities.append(token_clean)
+                        unknown_entities.append(token_clean)
+
+        # Helper to preserve list order while removing duplicates
+        def _unique_list(seq: List[str]) -> List[str]:
+            seen = set()
+            return [x for x in seq if not (x in seen or seen.add(x))]
+
+        clean_critical = _unique_list(critical_entities)
+        clean_unknown = _unique_list(unknown_entities)
+        clean_known = _unique_list(known_entities)
+        clean_supporting = _unique_list(supporting_terms)
 
         # Step 4: Decision Logic
-        if foreign_match_found or (len(critical_entities) > 0 and len(known_entities) == 0):
-            primary_entity = critical_entities[0] if critical_entities else "Foreign/Out-of-scope entity"
-            reason = f"Unsupported critical entity detected: '{primary_entity}'. Query is out of Maharashtra regional news scope."
+        if len(foreign_matches) > 0 or (len(clean_critical) > 0 and len(clean_known) == 0):
+            primary_entities_str = ", ".join(clean_critical)
+            reason = f"Unsupported critical entity(ies) detected: [{primary_entities_str}]. Query is out of Maharashtra regional news scope."
             logger.info("BLOCKED by UnknownEntityGuard: query='%s' reason='%s'", clean_q[:50], reason)
             return UnknownEntityResult(
-                unknown_entities=list(set(unknown_entities)),
-                known_entities=list(set(known_entities)),
-                critical_entities=list(set(critical_entities)),
-                supporting_terms=list(set(supporting_terms)),
-                unknown_entity_ratio=1.0 if critical_entities else 0.0,
+                unknown_entities=clean_unknown,
+                known_entities=clean_known,
+                critical_entities=clean_critical,
+                supporting_terms=clean_supporting,
+                unknown_entity_ratio=1.0 if clean_critical else 0.0,
                 should_block=True,
                 reason=reason,
                 confidence="HIGH",
             )
 
-        logger.debug("PASSED UnknownEntityGuard: query='%s' known=%s", clean_q[:50], known_entities)
+        logger.debug("PASSED UnknownEntityGuard: query='%s' known=%s", clean_q[:50], clean_known)
         return UnknownEntityResult(
-            unknown_entities=list(set(unknown_entities)),
-            known_entities=list(set(known_entities)),
-            critical_entities=list(set(critical_entities)),
-            supporting_terms=list(set(supporting_terms)),
+            unknown_entities=clean_unknown,
+            known_entities=clean_known,
+            critical_entities=clean_critical,
+            supporting_terms=clean_supporting,
             unknown_entity_ratio=0.0,
             should_block=False,
             reason="All critical entities are supported within Maharashtra regional scope.",

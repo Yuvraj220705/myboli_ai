@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-07 13:53:09",
+  "timestamp": "2026-08-07 14:58:09",
   "total_supported_queries": 50,
   "total_unsupported_queries": 50,
   "blocked_correctly_tp": 42,
@@ -10,7 +10,7 @@
   "precision_pct": 100.0,
   "recall_pct": 84.0,
   "f1_score": 91.3,
-  "average_latency_ms": 0.3377,
+  "average_latency_ms": 0.3704,
   "detailed_results": [
     {
       "query": "पुण्यात आज पावसाची काय स्थिती आहे?",
@@ -18,7 +18,7 @@
       "should_block": false,
       "status": "TRUE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.5875
+      "latency_ms": 0.5837
     },
     {
       "query": "सिंधुदुर्ग जिल्ह्यात पर्यटन वाढीसाठी कोणते नवीन प्रकल्प सुरू झाले?",
@@ -26,7 +26,7 @@
       "should_block": false,
       "status": "TRUE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.5474
+      "latency_ms": 0.5432
     },
     {
       "query": "कोल्हापूर जिल्ह्यातील पूर परिस्थिती अपडेट सांगा",
@@ -34,7 +34,7 @@
       "should_block": false,
       "status": "TRUE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.3835
+      "latency_ms": 0.3831
     },
     {
       "query": "अमित शाह यांनी नागपूर दौऱ्यात काय घोषणा केल्या?",
@@ -42,7 +42,7 @@
       "should_block": false,
       "status": "TRUE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.4495
+      "latency_ms": 0.3886
     },
     {
       "query": "देवेंद्र फडणवीस आणि एकनाथ शिंदे यांची वर्षा बंगल्यावर बैठक",
@@ -50,7 +50,7 @@
       "should_block": false,
       "status": "TRUE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.4467
+      "latency_ms": 0.4546
     },
     {
       "query": "शरद पवार यांनी बारामतीत पत्रकारांशी काय संवाद साधला?",
@@ -58,7 +58,7 @@
       "should_block": false,
       "status": "TRUE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.447
+      "latency_ms": 0.6125
     },
     {
       "query": "उद्धव ठाकरे यांची मुंबईतील शिवसेना भवन येथे सभा",
@@ -66,7 +66,7 @@
       "should_block": false,
       "status": "TRUE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.3879
+      "latency_ms": 0.4236
     },
     {
       "query": "नितीन गडकरी यांनी समृद्धी महामार्गाबद्दल काय विधान केले?",
@@ -74,7 +74,7 @@
       "should_block": false,
       "status": "TRUE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.5824
+      "latency_ms": 0.4864
     },
     {
       "query": "संजय राऊत यांची आजची पत्रकार परिषद काय होती?",
@@ -82,7 +82,7 @@
       "should_block": false,
       "status": "TRUE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.3995
+      "latency_ms": 0.4082
     },
     {
       "query": "रत्नागिरी जिल्ह्यात काजू बागायतदारांसाठी नवीन योजना",
@@ -90,7 +90,7 @@
       "should_block": false,
       "status": "TRUE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.4086
+      "latency_ms": 0.4074
     },
     {
       "query": "नाशिकमध्ये कुंभमेळा नियोजनाबाबत जिल्हाधिकाऱ्यांची बैठक",
@@ -98,7 +98,7 @@
       "should_block": false,
       "status": "TRUE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.4155
+      "latency_ms": 0.4127
     },
     {
       "query": "महाराष्ट्रातील पुढील ४८ तासांचा हवामान अंदाज",
@@ -106,7 +106,7 @@
       "should_block": false,
       "status": "TRUE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.4029
+      "latency_ms": 0.3744
     },
     {
       "query": "पुण्यातील मेट्रो विस्ताराबाबत महापालिकेचा निर्णय",
@@ -114,7 +114,7 @@
       "should_block": false,
       "status": "TRUE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.4047
+      "latency_ms": 0.3871
     },
     {
       "query": "मुंबई-पुणे एक्सप्रेसवे वरील वाहतूक कोंडी बद्दल बातमी",
@@ -122,7 +122,7 @@
       "should_block": false,
       "status": "TRUE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.4168
+      "latency_ms": 0.4198
     },
     {
       "query": "महाराष्ट्रातील शाळांना दिवाळी सुट्टीचे वेळापत्रक",
@@ -130,7 +130,7 @@
       "should_block": false,
       "status": "TRUE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.4024
+      "latency_ms": 0.389
     },
     {
       "query": "सोलापूर जिल्ह्यात शेतकरी आंदोलनाची सद्यस्थिती",
@@ -138,7 +138,7 @@
       "should_block": false,
       "status": "TRUE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.3523
+      "latency_ms": 0.3518
     },
     {
       "query": "सातारा जिल्ह्यात बाजरी पिकाचे नुकसान",
@@ -146,7 +146,7 @@
       "should_block": false,
       "status": "TRUE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.2857
+      "latency_ms": 0.2887
     },
     {
       "query": "सांगली शहर पाणी पुरवठा योजना अपडेट",
@@ -154,7 +154,7 @@
       "should_block": false,
       "status": "TRUE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.3932
+      "latency_ms": 0.2712
     },
     {
       "query": "ठाणे जिल्ह्यात नवीन उड्डाणपुलाचे उद्घाटन",
@@ -162,7 +162,7 @@
       "should_block": false,
       "status": "TRUE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.3433
+      "latency_ms": 0.3058
     },
     {
       "query": "पालघर जिल्ह्यात आरोग्य सेवा बळकटीकरणासाठी निधी",
@@ -170,7 +170,7 @@
       "should_block": false,
       "status": "TRUE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.3696
+      "latency_ms": 0.4274
     },
     {
       "query": "रायगड जिल्ह्यातील किल्ल्यांच्या संवर्धनासाठी घोषणा",
@@ -178,7 +178,7 @@
       "should_block": false,
       "status": "TRUE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.378
+      "latency_ms": 0.5863
     },
     {
       "query": "जळगाव जिल्ह्यात केळी उत्पादकांसाठी अनुदान",
@@ -186,7 +186,7 @@
       "should_block": false,
       "status": "TRUE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.3108
+      "latency_ms": 0.532
     },
     {
       "query": "धुळे जिल्ह्यात पोलीस भरती प्रक्रिया",
@@ -194,7 +194,7 @@
       "should_block": false,
       "status": "TRUE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.2734
+      "latency_ms": 0.2871
     },
     {
       "query": "नंदुरबार जिल्ह्यातील आदिवासी विकास प्रकल्प",
@@ -202,7 +202,7 @@
       "should_block": false,
       "status": "TRUE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.3386
+      "latency_ms": 0.3279
     },
     {
       "query": "जाडगाव जालना रेल्वे मार्ग अपडेट",
@@ -210,7 +210,7 @@
       "should_block": false,
       "status": "TRUE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.2467
+      "latency_ms": 0.2617
     },
     {
       "query": "बीड जिल्ह्यातील दुष्काळ पाहणी दौरा",
@@ -218,7 +218,7 @@
       "should_block": false,
       "status": "TRUE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.2745
+      "latency_ms": 0.2803
     },
     {
       "query": "लातूर शहरात नवीन वैद्यकीय महाविद्यालय",
@@ -226,7 +226,7 @@
       "should_block": false,
       "status": "TRUE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.286
+      "latency_ms": 0.3217
     },
     {
       "query": "धाराशिव जिल्ह्यातील तुळजापूर मंदिर विकास आराखडा",
@@ -234,7 +234,7 @@
       "should_block": false,
       "status": "TRUE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.366
+      "latency_ms": 0.3742
     },
     {
       "query": "नांदेड जिल्ह्यात गुरुद्वारा परिसरात सुरक्षा व्यवस्था",
@@ -242,7 +242,7 @@
       "should_block": false,
       "status": "TRUE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.3924
+      "latency_ms": 0.3974
     },
     {
       "query": "परभणी कृषी विद्यापीठाचा नवीन संशोधन प्रकल्प",
@@ -250,7 +250,7 @@
       "should_block": false,
       "status": "TRUE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.3259
+      "latency_ms": 0.3293
     },
     {
       "query": "हिंगोली जिल्ह्यात हळद उत्पादनाला चालना",
@@ -258,7 +258,7 @@
       "should_block": false,
       "status": "TRUE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.2967
+      "latency_ms": 0.3002
     },
     {
       "query": "अमरावती जिल्ह्यात नवीन औद्योगिक वसाहत",
@@ -266,7 +266,7 @@
       "should_block": false,
       "status": "TRUE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.2913
+      "latency_ms": 0.2947
     },
     {
       "query": "अकोला शहरात रस्ते रुंदीकरण मोहीम",
@@ -274,7 +274,7 @@
       "should_block": false,
       "status": "TRUE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.2524
+      "latency_ms": 0.256
     },
     {
       "query": "वाशीम जिल्ह्यात सोयाबीन खरेदी केंद्र",
@@ -282,7 +282,7 @@
       "should_block": false,
       "status": "TRUE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.2859
+      "latency_ms": 0.2888
     },
     {
       "query": "बुलढाणा जिल्ह्यात सिंचन प्रकल्पाचे काम वेगाने",
@@ -290,7 +290,7 @@
       "should_block": false,
       "status": "TRUE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.3497
+      "latency_ms": 0.3533
     },
     {
       "query": "यवतमाळ जिल्ह्यात कापूस दराबाबत शेतकरी चिंताग्रस्त",
@@ -298,7 +298,7 @@
       "should_block": false,
       "status": "TRUE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.3736
+      "latency_ms": 0.38
     },
     {
       "query": "वर्धा जिल्ह्यात महात्मा गांधी सेवा आश्रम उपक्रम",
@@ -306,7 +306,7 @@
       "should_block": false,
       "status": "TRUE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.3815
+      "latency_ms": 0.3753
     },
     {
       "query": "भंडारा जिल्ह्यात धान खरेदी प्रक्रिया सुरू",
@@ -314,7 +314,7 @@
       "should_block": false,
       "status": "TRUE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.3264
+      "latency_ms": 0.3304
     },
     {
       "query": "गोंदिया जिल्ह्यात वन्यजीव संरक्षणासाठी उपाययोजना",
@@ -322,7 +322,7 @@
       "should_block": false,
       "status": "TRUE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.3533
+      "latency_ms": 0.3547
     },
     {
       "query": "चंद्रपूर जिल्ह्यात औष्णिक वीज केंद्र प्रकल्प",
@@ -330,7 +330,7 @@
       "should_block": false,
       "status": "TRUE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.3414
+      "latency_ms": 0.3449
     },
     {
       "query": "गडचिरोली जिल्ह्यात नक्षलविरोधी अभियान",
@@ -338,7 +338,7 @@
       "should_block": false,
       "status": "TRUE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.2744
+      "latency_ms": 0.2772
     },
     {
       "query": "महाराष्ट्रातील यंदाचा मान्सून पाऊस कसा राहील?",
@@ -346,7 +346,7 @@
       "should_block": false,
       "status": "TRUE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.3669
+      "latency_ms": 0.3543
     },
     {
       "query": "विधानसभा निवडणुकीच्या पार्श्वभूमीवर राजकीय घडामोडी",
@@ -354,7 +354,7 @@
       "should_block": false,
       "status": "TRUE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.3685
+      "latency_ms": 0.3785
     },
     {
       "query": "महाराष्ट्रात एसटी बस प्रवाशांसाठी नवीन सवलती",
@@ -362,7 +362,7 @@
       "should_block": false,
       "status": "TRUE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.3528
+      "latency_ms": 0.3422
     },
     {
       "query": "कोल्हापुरी चप्पल उद्योगाला प्रोत्साहन देणारा निर्णय",
@@ -370,7 +370,7 @@
       "should_block": false,
       "status": "TRUE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.3881
+      "latency_ms": 0.3884
     },
     {
       "query": "सिंधुदुर्गातील चिपी विमानतळ उड्डाण वेळापत्रक",
@@ -378,7 +378,7 @@
       "should_block": false,
       "status": "TRUE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.3275
+      "latency_ms": 0.3291
     },
     {
       "query": "आज महाराष्ट्रातील ताज्या मुख्य बातम्या कोणत्या?",
@@ -386,7 +386,7 @@
       "should_block": false,
       "status": "TRUE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.3554
+      "latency_ms": 0.3904
     },
     {
       "query": "पुणे विद्यापीठाच्या परीक्षांचे वेळापत्रक जाहीर",
@@ -394,7 +394,7 @@
       "should_block": false,
       "status": "TRUE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.3396
+      "latency_ms": 0.3591
     },
     {
       "query": "मुंबईत लोकल ट्रेन सेवा विस्कळीत",
@@ -402,7 +402,7 @@
       "should_block": false,
       "status": "TRUE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.2659
+      "latency_ms": 0.2596
     },
     {
       "query": "महाराष्ट्रातील मराठा आरक्षण आंदोलनाची बातमी",
@@ -410,135 +410,135 @@
       "should_block": false,
       "status": "TRUE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.3232
+      "latency_ms": 0.3259
     },
     {
       "query": "अमेरिकेचे अध्यक्ष जो बायडेन भारतात कधी येणार?",
       "category": "UNSUPPORTED",
       "should_block": true,
       "status": "TRUE_POSITIVE",
-      "reason": "Unsupported critical entity detected: 'जो बायडेन'. Query is out of Maharashtra regional news scope.",
-      "latency_ms": 0.2324
+      "reason": "Unsupported critical entity(ies) detected: [जो बायडेन]. Query is out of Maharashtra regional news scope.",
+      "latency_ms": 0.3625
     },
     {
       "query": "डोनाल्ड ट्रम्प यांच्या निवडणुकीतील भाषणावर अमेरिकेत काय प्रतिक्रिया आली?",
       "category": "UNSUPPORTED",
       "should_block": true,
       "status": "TRUE_POSITIVE",
-      "reason": "Unsupported critical entity detected: 'डोनाल्ड ट्रम्प'. Query is out of Maharashtra regional news scope.",
-      "latency_ms": 0.3355
+      "reason": "Unsupported critical entity(ies) detected: [डोनाल्ड ट्रम्प, अमेरिकेत]. Query is out of Maharashtra regional news scope.",
+      "latency_ms": 0.5491
     },
     {
       "query": "युक्रेन आणि रशिया युद्धाबाबत संयुक्त राष्ट्रांची आणीबाणी बैठक",
       "category": "UNSUPPORTED",
       "should_block": true,
       "status": "TRUE_POSITIVE",
-      "reason": "Unsupported critical entity detected: 'युक्रेन'. Query is out of Maharashtra regional news scope.",
-      "latency_ms": 0.3472
+      "reason": "Unsupported critical entity(ies) detected: [युक्रेन]. Query is out of Maharashtra regional news scope.",
+      "latency_ms": 0.4729
     },
     {
       "query": "क्रिस्टियानो रोनाल्डोच्या फुटबॉल सामन्याचा निकाल सांगा",
       "category": "UNSUPPORTED",
       "should_block": true,
       "status": "TRUE_POSITIVE",
-      "reason": "Unsupported critical entity detected: 'क्रिस्टियानो रोनाल्डो'. Query is out of Maharashtra regional news scope.",
-      "latency_ms": 0.3517
+      "reason": "Unsupported critical entity(ies) detected: [क्रिस्टियानो रोनाल्डो]. Query is out of Maharashtra regional news scope.",
+      "latency_ms": 0.4733
     },
     {
       "query": "इलॉन मस्क यांच्या टेस्ला कारची भारतात विक्री कधी सुरू होणार?",
       "category": "UNSUPPORTED",
       "should_block": true,
       "status": "TRUE_POSITIVE",
-      "reason": "Unsupported critical entity detected: 'इलॉन मस्क'. Query is out of Maharashtra regional news scope.",
-      "latency_ms": 0.3695
+      "reason": "Unsupported critical entity(ies) detected: [इलॉन मस्क]. Query is out of Maharashtra regional news scope.",
+      "latency_ms": 0.5179
     },
     {
       "query": "गूगल कंपनीची नवी Gemini AI तंत्रज्ञान घोषणा",
       "category": "UNSUPPORTED",
       "should_block": true,
       "status": "TRUE_POSITIVE",
-      "reason": "Unsupported critical entity detected: 'गूगल'. Query is out of Maharashtra regional news scope.",
-      "latency_ms": 0.3598
+      "reason": "Unsupported critical entity(ies) detected: [गूगल, Gemini, AI]. Query is out of Maharashtra regional news scope.",
+      "latency_ms": 0.3644
     },
     {
       "query": "ओपनएआय कडून ChatGPT 5 चे फीचर्स",
       "category": "UNSUPPORTED",
       "should_block": true,
       "status": "TRUE_POSITIVE",
-      "reason": "Unsupported critical entity detected: 'ओपनएआय'. Query is out of Maharashtra regional news scope.",
-      "latency_ms": 0.222
+      "reason": "Unsupported critical entity(ies) detected: [ओपनएआय, ChatGPT, 5]. Query is out of Maharashtra regional news scope.",
+      "latency_ms": 0.2598
     },
     {
       "query": "ॲपल व्हिजन प्रो ची किंमत आणि फीचर्स सांगा",
       "category": "UNSUPPORTED",
       "should_block": true,
       "status": "TRUE_POSITIVE",
-      "reason": "Unsupported critical entity detected: 'ॲपल व्हिजन'. Query is out of Maharashtra regional news scope.",
-      "latency_ms": 0.2927
+      "reason": "Unsupported critical entity(ies) detected: [ॲपल व्हिजन]. Query is out of Maharashtra regional news scope.",
+      "latency_ms": 0.3614
     },
     {
       "query": "आयपीएल २०२६ च्या लिलावात सर्वात महागडा खेळाडू कोण?",
       "category": "UNSUPPORTED",
       "should_block": true,
       "status": "TRUE_POSITIVE",
-      "reason": "Unsupported critical entity detected: 'आयपीएल'. Query is out of Maharashtra regional news scope.",
-      "latency_ms": 0.3545
+      "reason": "Unsupported critical entity(ies) detected: [आयपीएल]. Query is out of Maharashtra regional news scope.",
+      "latency_ms": 0.3969
     },
     {
       "query": "बिटकॉइन आणि क्रिप्टो करन्सीचे आजचे जागतिक दर काय आहेत?",
       "category": "UNSUPPORTED",
       "should_block": true,
       "status": "TRUE_POSITIVE",
-      "reason": "Unsupported critical entity detected: 'बिटकॉइन'. Query is out of Maharashtra regional news scope.",
-      "latency_ms": 0.4102
+      "reason": "Unsupported critical entity(ies) detected: [बिटकॉइन]. Query is out of Maharashtra regional news scope.",
+      "latency_ms": 0.4322
     },
     {
       "query": "कमला हॅरिस यांच्या निवडणुकीतील प्रचाराची बातमी",
       "category": "UNSUPPORTED",
       "should_block": true,
       "status": "TRUE_POSITIVE",
-      "reason": "Unsupported critical entity detected: 'कमला हॅरिस'. Query is out of Maharashtra regional news scope.",
-      "latency_ms": 0.2265
+      "reason": "Unsupported critical entity(ies) detected: [कमला हॅरिस]. Query is out of Maharashtra regional news scope.",
+      "latency_ms": 0.3597
     },
     {
       "query": "व्लादिमीर पुतिन यांचा मॉस्को येथील विशेष संदेश",
       "category": "UNSUPPORTED",
       "should_block": true,
       "status": "TRUE_POSITIVE",
-      "reason": "Unsupported critical entity detected: 'व्लादिमीर पुतिन'. Query is out of Maharashtra regional news scope.",
-      "latency_ms": 0.2339
+      "reason": "Unsupported critical entity(ies) detected: [व्लादिमीर पुतिन]. Query is out of Maharashtra regional news scope.",
+      "latency_ms": 0.3697
     },
     {
       "query": "व्होलोडिमिर झेलेंस्की यांची वॉशिंग्टन भेट",
       "category": "UNSUPPORTED",
       "should_block": true,
       "status": "TRUE_POSITIVE",
-      "reason": "Unsupported critical entity detected: 'वॉशिंग्टन'. Query is out of Maharashtra regional news scope.",
-      "latency_ms": 0.4003
+      "reason": "Unsupported critical entity(ies) detected: [वॉशिंग्टन]. Query is out of Maharashtra regional news scope.",
+      "latency_ms": 0.33
     },
     {
       "query": "ऋषी सुनक यांनी ब्रिटन संसदेत काय भाषण दिले?",
       "category": "UNSUPPORTED",
       "should_block": true,
       "status": "TRUE_POSITIVE",
-      "reason": "Unsupported critical entity detected: 'ऋषी सुनक'. Query is out of Maharashtra regional news scope.",
-      "latency_ms": 0.2611
+      "reason": "Unsupported critical entity(ies) detected: [ऋषी सुनक]. Query is out of Maharashtra regional news scope.",
+      "latency_ms": 0.3566
     },
     {
       "query": "इमॅन्युएल मॅक्रॉन यांचा पॅरिस येथील कार्यक्रम",
       "category": "UNSUPPORTED",
       "should_block": true,
       "status": "TRUE_POSITIVE",
-      "reason": "Unsupported critical entity detected: 'इमॅन्युएल मॅक्रॉन'. Query is out of Maharashtra regional news scope.",
-      "latency_ms": 0.2407
+      "reason": "Unsupported critical entity(ies) detected: [इमॅन्युएल मॅक्रॉन, पॅरिस]. Query is out of Maharashtra regional news scope.",
+      "latency_ms": 0.3964
     },
     {
       "query": "बेंजामिन नेतान्याहू यांनी इस्रायल सैन्याला काय आदेश दिले?",
       "category": "UNSUPPORTED",
       "should_block": true,
       "status": "TRUE_POSITIVE",
-      "reason": "Unsupported critical entity detected: 'इस्रायल'. Query is out of Maharashtra regional news scope.",
-      "latency_ms": 0.3369
+      "reason": "Unsupported critical entity(ies) detected: [इस्रायल]. Query is out of Maharashtra regional news scope.",
+      "latency_ms": 0.6054
     },
     {
       "query": "जस्टिन ट्रुडो यांनी कॅनडा संसदेत दिलेले स्पष्टीकरण",
@@ -546,87 +546,87 @@
       "should_block": false,
       "status": "FALSE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.3906
+      "latency_ms": 0.4416
     },
     {
       "query": "शी जिनपिंग यांच्या चीनमधील आर्थिक धोरणांबद्दल बातमी",
       "category": "UNSUPPORTED",
       "should_block": true,
       "status": "TRUE_POSITIVE",
-      "reason": "Unsupported critical entity detected: 'शी जिनपिंग'. Query is out of Maharashtra regional news scope.",
-      "latency_ms": 0.2823
+      "reason": "Unsupported critical entity(ies) detected: [शी जिनपिंग]. Query is out of Maharashtra regional news scope.",
+      "latency_ms": 0.4131
     },
     {
       "query": "टोकियो ऑलिम्पिकमध्ये नीरज चोप्राने सुवर्णपदक कसे जिंकले?",
       "category": "UNSUPPORTED",
       "should_block": true,
       "status": "TRUE_POSITIVE",
-      "reason": "Unsupported critical entity detected: 'नीरज चोप्रा'. Query is out of Maharashtra regional news scope.",
-      "latency_ms": 0.3854
+      "reason": "Unsupported critical entity(ies) detected: [नीरज चोप्रा]. Query is out of Maharashtra regional news scope.",
+      "latency_ms": 0.4245
     },
     {
       "query": "लिओनेल मेस्सीच्या इंटर मियामी संघाचा सामना निकाल",
       "category": "UNSUPPORTED",
       "should_block": true,
       "status": "TRUE_POSITIVE",
-      "reason": "Unsupported critical entity detected: 'लिओनेल मेस्सी'. Query is out of Maharashtra regional news scope.",
-      "latency_ms": 0.3323
+      "reason": "Unsupported critical entity(ies) detected: [लिओनेल मेस्सी]. Query is out of Maharashtra regional news scope.",
+      "latency_ms": 0.3775
     },
     {
       "query": "फीफा वर्ल्ड कप २०२६ चे यजमान देश कोणते आहेत?",
       "category": "UNSUPPORTED",
       "should_block": true,
       "status": "TRUE_POSITIVE",
-      "reason": "Unsupported critical entity detected: 'फीफा वर्ल्ड कप'. Query is out of Maharashtra regional news scope.",
-      "latency_ms": 0.3407
+      "reason": "Unsupported critical entity(ies) detected: [फीफा वर्ल्ड कप]. Query is out of Maharashtra regional news scope.",
+      "latency_ms": 0.3724
     },
     {
       "query": "ऑस्कर अवॉर्ड्स २०२६ चे विजेते कोण ठरले?",
       "category": "UNSUPPORTED",
       "should_block": true,
       "status": "TRUE_POSITIVE",
-      "reason": "Unsupported critical entity detected: 'ऑस्कर अवॉर्ड्स'. Query is out of Maharashtra regional news scope.",
-      "latency_ms": 0.2934
+      "reason": "Unsupported critical entity(ies) detected: [ऑस्कर अवॉर्ड्स]. Query is out of Maharashtra regional news scope.",
+      "latency_ms": 0.321
     },
     {
       "query": "ग्रॅमी अवॉर्ड्स २०२६ मधील सर्वोत्कृष्ट गाणे",
       "category": "UNSUPPORTED",
       "should_block": true,
       "status": "TRUE_POSITIVE",
-      "reason": "Unsupported critical entity detected: 'ग्रॅमी अवॉर्ड्स'. Query is out of Maharashtra regional news scope.",
-      "latency_ms": 0.309
+      "reason": "Unsupported critical entity(ies) detected: [ग्रॅमी अवॉर्ड्स]. Query is out of Maharashtra regional news scope.",
+      "latency_ms": 0.343
     },
     {
       "query": "सुपर बाऊल फायनलचा निकाल काय लागला?",
       "category": "UNSUPPORTED",
       "should_block": true,
       "status": "TRUE_POSITIVE",
-      "reason": "Unsupported critical entity detected: 'सुपर बाऊल'. Query is out of Maharashtra regional news scope.",
-      "latency_ms": 0.2621
+      "reason": "Unsupported critical entity(ies) detected: [सुपर बाऊल]. Query is out of Maharashtra regional news scope.",
+      "latency_ms": 0.2842
     },
     {
       "query": "विम्बल्डन टेनिस स्पर्धेतील अंतिम सामना निकाल",
       "category": "UNSUPPORTED",
       "should_block": true,
       "status": "TRUE_POSITIVE",
-      "reason": "Unsupported critical entity detected: 'विम्बल्डन'. Query is out of Maharashtra regional news scope.",
-      "latency_ms": 0.3355
+      "reason": "Unsupported critical entity(ies) detected: [विम्बल्डन]. Query is out of Maharashtra regional news scope.",
+      "latency_ms": 0.3545
     },
     {
       "query": "फॉर्म्युला १ कार रेस मध्ये ल्युईस हॅमिल्टनचा विजय",
       "category": "UNSUPPORTED",
       "should_block": true,
       "status": "TRUE_POSITIVE",
-      "reason": "Unsupported critical entity detected: 'फॉर्म्युला १'. Query is out of Maharashtra regional news scope.",
-      "latency_ms": 0.3849
+      "reason": "Unsupported critical entity(ies) detected: [फॉर्म्युला १]. Query is out of Maharashtra regional news scope.",
+      "latency_ms": 0.4101
     },
     {
       "query": "एनबीए बास्केटबॉल फायनल चॅम्पियन कोण?",
       "category": "UNSUPPORTED",
       "should_block": true,
       "status": "TRUE_POSITIVE",
-      "reason": "Unsupported critical entity detected: 'एनबीए'. Query is out of Maharashtra regional news scope.",
-      "latency_ms": 0.2813
+      "reason": "Unsupported critical entity(ies) detected: [एनबीए]. Query is out of Maharashtra regional news scope.",
+      "latency_ms": 0.2848
     },
     {
       "query": "युएफसी मिक्स्ड मार्शल आर्ट्स चॅम्पियनशिप बातमी",
@@ -634,31 +634,31 @@
       "should_block": false,
       "status": "FALSE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.3553
+      "latency_ms": 0.3571
     },
     {
       "query": "इथेरियम क्रिप्टो गॅस फी अपडेट्स",
       "category": "UNSUPPORTED",
       "should_block": true,
       "status": "TRUE_POSITIVE",
-      "reason": "Unsupported critical entity detected: 'इथेरियम'. Query is out of Maharashtra regional news scope.",
-      "latency_ms": 0.249
+      "reason": "Unsupported critical entity(ies) detected: [इथेरियम]. Query is out of Maharashtra regional news scope.",
+      "latency_ms": 0.2655
     },
     {
       "query": "फेडरल रिझर्व्ह कडून अमेरिकेत व्याजदर कपात घोषणा",
       "category": "UNSUPPORTED",
       "should_block": true,
       "status": "TRUE_POSITIVE",
-      "reason": "Unsupported critical entity detected: 'अमेरिकेत'. Query is out of Maharashtra regional news scope.",
-      "latency_ms": 0.2732
+      "reason": "Unsupported critical entity(ies) detected: [अमेरिकेत, फेडरल रिझर्व्ह]. Query is out of Maharashtra regional news scope.",
+      "latency_ms": 0.3721
     },
     {
       "query": "वॉल स्ट्रीट शेअर बाजारात मोठी घसरण",
       "category": "UNSUPPORTED",
       "should_block": true,
       "status": "TRUE_POSITIVE",
-      "reason": "Unsupported critical entity detected: 'वॉल स्ट्रीट'. Query is out of Maharashtra regional news scope.",
-      "latency_ms": 0.2847
+      "reason": "Unsupported critical entity(ies) detected: [वॉल स्ट्रीट]. Query is out of Maharashtra regional news scope.",
+      "latency_ms": 0.2899
     },
     {
       "query": "जागतिक बाजारात कच्च्या तेलाचे आजचे दर",
@@ -666,87 +666,87 @@
       "should_block": false,
       "status": "FALSE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.3065
+      "latency_ms": 0.308
     },
     {
       "query": "नासाच्या आर्टेमिस मून मिशन बद्दल माहिती",
       "category": "UNSUPPORTED",
       "should_block": true,
       "status": "TRUE_POSITIVE",
-      "reason": "Unsupported critical entity detected: 'नासा'. Query is out of Maharashtra regional news scope.",
-      "latency_ms": 0.3125
+      "reason": "Unsupported critical entity(ies) detected: [नासा]. Query is out of Maharashtra regional news scope.",
+      "latency_ms": 0.3149
     },
     {
       "query": "स्टारलिंक सॅटेलाइट इंटरनेट सेवा भारतात कधी येणार?",
       "category": "UNSUPPORTED",
       "should_block": true,
       "status": "TRUE_POSITIVE",
-      "reason": "Unsupported critical entity detected: 'स्टारलिंक'. Query is out of Maharashtra regional news scope.",
-      "latency_ms": 0.3203
+      "reason": "Unsupported critical entity(ies) detected: [स्टारलिंक]. Query is out of Maharashtra regional news scope.",
+      "latency_ms": 0.3831
     },
     {
       "query": "स्पेसएक्स स्टारशिप रॉकेटचे यशस्वी उड्डाण",
       "category": "UNSUPPORTED",
       "should_block": true,
       "status": "TRUE_POSITIVE",
-      "reason": "Unsupported critical entity detected: 'स्पेसएक्स'. Query is out of Maharashtra regional news scope.",
-      "latency_ms": 0.2599
+      "reason": "Unsupported critical entity(ies) detected: [स्पेसएक्स]. Query is out of Maharashtra regional news scope.",
+      "latency_ms": 0.3136
     },
     {
       "query": "एनव्हिडिया च्या AI चिप्स ची बाजारातील मागणी",
       "category": "UNSUPPORTED",
       "should_block": true,
       "status": "TRUE_POSITIVE",
-      "reason": "Unsupported critical entity detected: 'AI'. Query is out of Maharashtra regional news scope.",
-      "latency_ms": 0.3577
+      "reason": "Unsupported critical entity(ies) detected: [AI]. Query is out of Maharashtra regional news scope.",
+      "latency_ms": 0.4576
     },
     {
       "query": "मायक्रोसॉफ्ट विंडोज ११ चा नवीन अपडेट",
       "category": "UNSUPPORTED",
       "should_block": true,
       "status": "TRUE_POSITIVE",
-      "reason": "Unsupported critical entity detected: 'मायक्रोसॉफ्ट विंडोज'. Query is out of Maharashtra regional news scope.",
-      "latency_ms": 0.2542
+      "reason": "Unsupported critical entity(ies) detected: [मायक्रोसॉफ्ट विंडोज]. Query is out of Maharashtra regional news scope.",
+      "latency_ms": 0.335
     },
     {
       "query": "अ‍ॅमेझॉन एडब्ल्यूएस क्लाउड सर्व्हर डाऊन बातमी",
       "category": "UNSUPPORTED",
       "should_block": true,
       "status": "TRUE_POSITIVE",
-      "reason": "Unsupported critical entity detected: 'अ‍ॅमेझॉन एडब्ल्यूएस'. Query is out of Maharashtra regional news scope.",
-      "latency_ms": 0.3018
+      "reason": "Unsupported critical entity(ies) detected: [अ‍ॅमेझॉन एडब्ल्यूएस]. Query is out of Maharashtra regional news scope.",
+      "latency_ms": 0.3598
     },
     {
       "query": "मेटा थ्रेड्स ॲपचे नवीन प्रायव्हसी अपडेट",
       "category": "UNSUPPORTED",
       "should_block": true,
       "status": "TRUE_POSITIVE",
-      "reason": "Unsupported critical entity detected: 'मेटा थ्रेड्स'. Query is out of Maharashtra regional news scope.",
-      "latency_ms": 0.2585
+      "reason": "Unsupported critical entity(ies) detected: [मेटा थ्रेड्स]. Query is out of Maharashtra regional news scope.",
+      "latency_ms": 0.3111
     },
     {
       "query": "सॅमसंग गॅलक्सी S26 अल्ट्रा ची किंमत किती?",
       "category": "UNSUPPORTED",
       "should_block": true,
       "status": "TRUE_POSITIVE",
-      "reason": "Unsupported critical entity detected: 'सॅमसंग'. Query is out of Maharashtra regional news scope.",
-      "latency_ms": 0.2888
+      "reason": "Unsupported critical entity(ies) detected: [सॅमसंग, S26]. Query is out of Maharashtra regional news scope.",
+      "latency_ms": 0.3368
     },
     {
       "query": "सोनी प्लेस्टेशन ६ ची अधिकृत रिलीज डेट",
       "category": "UNSUPPORTED",
       "should_block": true,
       "status": "TRUE_POSITIVE",
-      "reason": "Unsupported critical entity detected: 'सोनी प्लेस्टेशन'. Query is out of Maharashtra regional news scope.",
-      "latency_ms": 0.2848
+      "reason": "Unsupported critical entity(ies) detected: [सोनी प्लेस्टेशन]. Query is out of Maharashtra regional news scope.",
+      "latency_ms": 0.3404
     },
     {
       "query": "युरोपियन युनियन कडून टेक कंपन्यांना दंड",
       "category": "UNSUPPORTED",
       "should_block": true,
       "status": "TRUE_POSITIVE",
-      "reason": "Unsupported critical entity detected: 'युरोपियन युनियन'. Query is out of Maharashtra regional news scope.",
-      "latency_ms": 0.3076
+      "reason": "Unsupported critical entity(ies) detected: [युरोपियन युनियन]. Query is out of Maharashtra regional news scope.",
+      "latency_ms": 0.318
     },
     {
       "query": "नाटो सैन्याची पूर्व युरोपमध्ये तैनाती",
@@ -754,7 +754,7 @@
       "should_block": false,
       "status": "FALSE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.2951
+      "latency_ms": 0.2978
     },
     {
       "query": "सोन्याचे आंतरराष्ट्रीय बाजारातील दर आज काय आहेत?",
@@ -762,23 +762,23 @@
       "should_block": false,
       "status": "FALSE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.3871
+      "latency_ms": 0.3879
     },
     {
       "query": "डब्ल्यूएचओ कडून नवीन साथीच्या रोगाबाबत इशारा",
       "category": "UNSUPPORTED",
       "should_block": true,
       "status": "TRUE_POSITIVE",
-      "reason": "Unsupported critical entity detected: 'डब्ल्यूएचओ'. Query is out of Maharashtra regional news scope.",
-      "latency_ms": 0.3419
+      "reason": "Unsupported critical entity(ies) detected: [डब्ल्यूएचओ]. Query is out of Maharashtra regional news scope.",
+      "latency_ms": 0.3445
     },
     {
       "query": "जी२० शिखर परिषदेचे पुढील अध्यक्षपद कोणाकडे?",
       "category": "UNSUPPORTED",
       "should_block": true,
       "status": "TRUE_POSITIVE",
-      "reason": "Unsupported critical entity detected: 'जी२०'. Query is out of Maharashtra regional news scope.",
-      "latency_ms": 0.3255
+      "reason": "Unsupported critical entity(ies) detected: [जी२०]. Query is out of Maharashtra regional news scope.",
+      "latency_ms": 0.3317
     },
     {
       "query": "अँटार्टिका मधील हिमनग वितळण्याबाबत वैज्ञानिकांचा इशारा",
@@ -786,15 +786,15 @@
       "should_block": false,
       "status": "FALSE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.405
+      "latency_ms": 0.4132
     },
     {
       "query": "दुबई आंतरराष्ट्रीय विमानतळावर पूरस्थिती",
       "category": "UNSUPPORTED",
       "should_block": true,
       "status": "TRUE_POSITIVE",
-      "reason": "Unsupported critical entity detected: 'दुबई'. Query is out of Maharashtra regional news scope.",
-      "latency_ms": 0.2287
+      "reason": "Unsupported critical entity(ies) detected: [दुबई]. Query is out of Maharashtra regional news scope.",
+      "latency_ms": 0.2949
     },
     {
       "query": "सिडनी ऑपेरा हाऊस येथील सांस्कृतिक महोत्सव",
@@ -802,7 +802,7 @@
       "should_block": false,
       "status": "FALSE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.3249
+      "latency_ms": 0.3272
     },
     {
       "query": "लंडनमध्ये अंडरग्राउंड ट्रेन संप",
@@ -810,7 +810,7 @@
       "should_block": false,
       "status": "FALSE_NEGATIVE",
       "reason": "All critical entities are supported within Maharashtra regional scope.",
-      "latency_ms": 0.2448
+      "latency_ms": 0.2454
     }
   ]
 }

@@ -1,0 +1,70 @@
+{
+  "foreign_leaders": [
+    { "name": "Joe Biden", "patterns": ["(जो|ज्यो|अध्यक्ष)?\\s*(बायडेन|बायडन|biden)"] },
+    { "name": "Donald Trump", "patterns": ["(डोनाल्ड)?\\s*(ट्रम्प|trump)"] },
+    { "name": "Kamala Harris", "patterns": ["(कमला)?\\s*(हॅरिस|harris)"] },
+    { "name": "Vladimir Putin", "patterns": ["(व्लादिमीर|पुतीन)?\\s*(पुतिन|putin)"] },
+    { "name": "Volodymyr Zelenskyy", "patterns": ["(व्होलोडिमिर)?\\s*(झेलेंस्की|zelenskyy|zelensky)"] },
+    { "name": "Rishi Sunak", "patterns": ["(ऋषी|रिशी)?\\s*(सुनक|sunak)"] },
+    { "name": "Emmanuel Macron", "patterns": ["(इमॅन्युएल)?\\s*(मॅक्रॉन|macron)"] },
+    { "name": "Benjamin Netanyahu", "patterns": ["(बेंजामिन)?\\s*(नेतान्याहू|नेतान्याहु|netanyahu)"] },
+    { "name": "Justin Trudeau", "patterns": ["(जस्टिन)?\\s*(ट्रुडो|ट्रूडो|trudeau)"] },
+    { "name": "Xi Jinping", "patterns": ["(शी)?\\s*(जिनपिंग|jinping)"] },
+    { "name": "Elon Musk", "patterns": ["(इलॉन|एलोन)?\\s*(मस्क|musk)"] }
+  ],
+  "international_locations": [
+    { "name": "USA", "patterns": ["(अमेरिका|अमेरिकेचे|अमेरिकेत|usa|us|america)"] },
+    { "name": "Russia", "patterns": ["(रशिया|रशियातील|russia)"] },
+    { "name": "Ukraine", "patterns": ["(युक्रेन|युक्रेनियन|ukraine)"] },
+    { "name": "Canada", "patterns": ["(कॅनडा|कॅनडात|कॅनडातील|canada)"] },
+    { "name": "Israel", "patterns": ["(इस्रायल|इस्राईल|israel)"] },
+    { "name": "Tokyo", "patterns": ["(टोकियो|tokyo)"] },
+    { "name": "London", "patterns": ["(लंडन|लंडनमध्ये|london)"] },
+    { "name": "Paris", "patterns": ["(पॅरिस|paris)"] },
+    { "name": "Washington", "patterns": ["(वॉशिंग्टन|washington)"] },
+    { "name": "Dubai", "patterns": ["(दुबई|dubai)"] },
+    { "name": "Sydney", "patterns": ["(सिडनी|sydney)"] },
+    { "name": "Antarctica", "patterns": ["(अँटार्टिका|अंटार्टिका|antarctica)"] },
+    { "name": "Moon", "patterns": ["(चंद्रावर|चंद्र|moon)"] }
+  ],
+  "tech_companies_and_products": [
+    { "name": "Google / Gemini", "patterns": ["(गुगल|गूगल|google)\\s*(gemini)?"] },
+    { "name": "Tesla", "patterns": ["(टेस्ला|tesla)"] },
+    { "name": "OpenAI / ChatGPT", "patterns": ["(ओपनएआय|openai|chatgpt)"] },
+    { "name": "Apple / Vision Pro", "patterns": ["(ॲपल|अ‍ॅपल|apple)\\s*(व्हिजन|vision)?\\s*(प्रो|pro)?"] },
+    { "name": "Microsoft / Windows", "patterns": ["(मायक्रोसॉफ्ट|microsoft)\\s*(विंडोज|windows)?"] },
+    { "name": "Meta / Threads", "patterns": ["(मेटा|meta)\\s*(थ्रेड्स|threads)?"] },
+    { "name": "Amazon / AWS", "patterns": ["(अ‍ॅमेझॉन|ॲमेझॉन|amazon)\\s*(एडब्ल्यूएस|aws)?"] },
+    { "name": "Starlink", "patterns": ["(स्टारलिंक|starlink)"] },
+    { "name": "SpaceX", "patterns": ["(स्पेसएक्स|spacex)"] },
+    { "name": "Nvidia", "patterns": ["(एनव्हिडिया|nvidia)"] },
+    { "name": "Samsung", "patterns": ["(सॅमसंग|samsung)"] },
+    { "name": "Sony / PlayStation", "patterns": ["(सोनी|sony)\\s*(प्लेस्टेशन|playstation)?"] }
+  ],
+  "sports_and_entertainment": [
+    { "name": "Cristiano Ronaldo", "patterns": ["(क्रिस्टियानो)?\\s*(रोनाल्डो|ronaldo)"] },
+    { "name": "Lionel Messi", "patterns": ["(लिओनेल)?\\s*(मेस्सी|messi)"] },
+    { "name": "Neeraj Chopra", "patterns": ["(नीरज)?\\s*(चोप्रा|chopra)"] },
+    { "name": "IPL Auction", "patterns": ["(आयपीएल|ipl)\\s*(लिलाव|auction)?"] },
+    { "name": "Olympics", "patterns": ["(ऑलिम्पिक|ऑलिंपिक|olympics)"] },
+    { "name": "FIFA World Cup", "patterns": ["(फीफा|fifa)\\s*(वर्ल्ड|world)?\\s*(कप|cup)?"] },
+    { "name": "Oscars", "patterns": ["(ऑस्कर|oscar)\\s*(अवॉर्ड्स|awards)?"] },
+    { "name": "Grammys", "patterns": ["(ग्रॅमी|grammy)\\s*(अवॉर्ड्स|awards)?"] },
+    { "name": "Super Bowl", "patterns": ["(सुपर\\s*बाऊल|super\\s*bowl)"] },
+    { "name": "Wimbledon", "patterns": ["(विम्बल्डन|wimbledon)"] },
+    { "name": "Formula 1", "patterns": ["(फॉर्म्युला\\s*१|formula\\s*1|f1)"] },
+    { "name": "NBA", "patterns": ["(एनबीए|nba)"] },
+    { "name": "UFC", "patterns": ["(युएफसी|ufc)"] }
+  ],
+  "crypto_and_global_affairs": [
+    { "name": "Bitcoin / Crypto", "patterns": ["(बिटकॉइन|बिटकॉईन|bitcoin|crypto)"] },
+    { "name": "Ethereum", "patterns": ["(इथेरियम|ethereum)"] },
+    { "name": "Federal Reserve", "patterns": ["(फेडरल\\s*रिझर्व्ह|federal\\s*reserve)"] },
+    { "name": "Wall Street", "patterns": ["(वॉल\\s*स्ट्रीट|wall\\s*street)"] },
+    { "name": "NATO", "patterns": ["(नाटो|nato)"] },
+    { "name": "European Union", "patterns": ["(युरोपियन\\s*युनियन|european\\s*union|eu)"] },
+    { "name": "WHO", "patterns": ["(डब्ल्यूएचओ|who)"] },
+    { "name": "G20", "patterns": ["(जी२०|g20)"] },
+    { "name": "NASA", "patterns": ["(नासा|nasa)"] }
+  ]
+}
