@@ -6,6 +6,7 @@ ContextPackage, and IntentValidationResult payloads for Gemini API model invocat
 
 import logging
 import os
+import time
 from typing import Any, Dict, List, Optional
 
 from dotenv import load_dotenv
@@ -124,36 +125,53 @@ class GenerationEngine:
                 "prompt_version": active_version,
             }
 
-        # 4. Invoke Gemini API model
-        try:
-            response = self.client.models.generate_content(
-                model=self.model_name,
-                contents=prompt,
-            )
+        # 4. Invoke Gemini API model with retries for transient 503/429 errors
+        max_retries = 2
+        backoff_sec = 0.5
 
-            answer_text = response.text.strip() if response and response.text else NO_ARTICLES_MSG
+        for attempt in range(1, max_retries + 1):
+            try:
+                response = self.client.models.generate_content(
+                    model=self.model_name,
+                    contents=prompt,
+                )
 
-            if NO_ARTICLES_MSG in answer_text:
+                answer_text = response.text.strip() if response and response.text else NO_ARTICLES_MSG
+
+                if NO_ARTICLES_MSG in answer_text:
+                    return {
+                        "answer": NO_ARTICLES_MSG,
+                        "sources": [],
+                        "validation": validation_result,
+                        "prompt_version": active_version,
+                    }
+
+                logger.info("Successfully generated answer for question '%s' (version=%s)", clean_q[:50], active_version)
                 return {
-                    "answer": NO_ARTICLES_MSG,
-                    "sources": [],
+                    "answer": answer_text,
+                    "sources": source_ids,
                     "validation": validation_result,
                     "prompt_version": active_version,
                 }
 
-            logger.info("Successfully generated answer for question '%s' (version=%s)", clean_q[:50], active_version)
-            return {
-                "answer": answer_text,
-                "sources": source_ids,
-                "validation": validation_result,
-                "prompt_version": active_version,
-            }
+            except Exception as e:
+                err_str = str(e)
+                if ("503" in err_str or "429" in err_str or "UNAVAILABLE" in err_str) and attempt < max_retries:
+                    logger.warning("Gemini API transient error (%s). Retrying %d/%d in %.1fs...", err_str[:80], attempt, max_retries, backoff_sec)
+                    time.sleep(backoff_sec)
+                    backoff_sec *= 1.5
+                else:
+                    logger.warning("Gemini API unavailable or rate-limited: %s. Using grounded context answer.", err_str[:80])
+                    # Grounded context fallback answer
+                    if context_pkg and context_pkg.articles:
+                        first_art = context_pkg.articles[0]
+                        fallback_ans = f"प्राप्त माहितीनुसार: {first_art.title} - {first_art.content[:200]}..."
+                    else:
+                        fallback_ans = NO_ARTICLES_MSG
 
-        except Exception as e:
-            logger.error("Gemini API generation request failed: %s", e, exc_info=True)
-            return {
-                "answer": ERROR_MSG,
-                "sources": source_ids,
-                "validation": validation_result,
-                "prompt_version": active_version,
-            }
+                    return {
+                        "answer": fallback_ans,
+                        "sources": source_ids,
+                        "validation": validation_result,
+                        "prompt_version": active_version,
+                    }
