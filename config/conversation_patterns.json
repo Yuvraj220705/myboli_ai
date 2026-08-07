@@ -1,0 +1,79 @@
+{
+  "greetings": {
+    "intent": "GREETING",
+    "exact_phrases": [
+      "hi", "hello", "hey", "hii", "hiii", "heyy", "hie",
+      "हाय", "नमस्कार", "नमस्ते", "हॅलो", "हेलो",
+      "good morning", "good evening", "good afternoon", "gm", "ge"
+    ],
+    "patterns": [
+      "^(hi|hello|hey|hii+)(\\s+there|\\s+bot|\\s+ai)?$",
+      "^(नमस्कार|नमस्ते|हाय|हॅलो)$",
+      "^(good\\s+(morning|evening|afternoon))$"
+    ]
+  },
+  "gratitude": {
+    "intent": "GRATITUDE",
+    "exact_phrases": [
+      "thanks", "thank you", "thank u", "thx", "thnx",
+      "धन्यवाद", "खूप धन्यवाद", "मनापासून धन्यवाद", "खूप मनापासून धन्यवाद", "थँक्यू", "थँक्स",
+      "thank you so much", "thanks a lot", "dhanyawad"
+    ],
+    "patterns": [
+      "^(thanks|thank\\s+you(\\s+so\\s+much|\\s+a\\s+lot)?|thx)$",
+      "^(धन्यवाद|(खूप\\s+)?(मनापासून\\s+)?धन्यवाद|थँक्यू|थँक्स)$"
+    ]
+  },
+  "farewell": {
+    "intent": "FAREWELL",
+    "exact_phrases": [
+      "bye", "goodbye", "byee", "bye bye", "see you", "cya",
+      "बाय", "निघतो", "पुन्हा भेटू", "बाय बाय", "शुभ रात्री", "good night"
+    ],
+    "patterns": [
+      "^(bye|goodbye|bye\\s+bye|see\\s+you)$",
+      "^(बाय|बाय\\s+बाय|निघतो|पुन्हा\\s+भेटू)$"
+    ]
+  },
+  "identity": {
+    "intent": "IDENTITY",
+    "exact_phrases": [
+      "who are you", "who are u", "who made you", "what is your name",
+      "तू कोण आहेस", "तुमचे नाव काय आहे", "तुझे नाव काय आहे", "तू कोण आहेस?",
+      "who created you", "who developed you"
+    ],
+    "patterns": [
+      "who\\s+(are\\s+you|made\\s+you|created\\s+you)",
+      "what\\s+is\\s+your\\s+name",
+      "तू\\s+कोण\\s+(आहेस|आहे)",
+      "(तुमचे|तुझे)\\s+नाव\\s+काय"
+    ]
+  },
+  "capability": {
+    "intent": "CAPABILITY",
+    "exact_phrases": [
+      "what can you do", "which news do you provide", "what news do you have",
+      "तू काय काय करू शकतोस", "तू काय करू शकतोस", "कोणत्या बातम्या मिळतील",
+      "what topics do you cover", "what capabilities do you have"
+    ],
+    "patterns": [
+      "what\\s+can\\s+you\\s+do",
+      "which\\s+news\\s+do\\s+you\\s+(provide|have)",
+      "तू\\s+काय\\s+(काय\\s+)?करू\\s+शकतोस",
+      "कोणत्या\\s+बातम्या"
+    ]
+  },
+  "help": {
+    "intent": "HELP",
+    "exact_phrases": [
+      "help", "help me", "मदत", "मदत करा", "मला मदत हवी आहे",
+      "तुझी मदत कशी मिळेल", "how can you help", "how to use",
+      "how to search news", "मदत कशी घ्यावी"
+    ],
+    "patterns": [
+      "^(help|मदत|मदत\\s+करा)$",
+      "how\\s+(can|do)\\s+you\\s+help",
+      "(तुझी|तुमची)\\s+मदत\\s+कशी"
+    ]
+  }
+}

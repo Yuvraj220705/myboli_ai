@@ -1,0 +1,800 @@
+{
+  "timestamp": "2026-08-07 16:01:00",
+  "total_conversational_inputs": 48,
+  "total_news_queries": 50,
+  "correctly_routed_conversational": 48,
+  "correctly_routed_news_queries": 50,
+  "false_positives_news_as_conversational": 0,
+  "false_negatives_conversational_as_news": 0,
+  "classification_accuracy_pct": 100.0,
+  "precision_pct": 100.0,
+  "recall_pct": 100.0,
+  "f1_score": 100.0,
+  "average_latency_ms": 0.0073,
+  "detailed_results": [
+    {
+      "message": "Hi",
+      "category": "CONVERSATIONAL",
+      "detected_intent": "GREETING",
+      "should_use_rag": false,
+      "status": "TRUE_CONVERSATIONAL",
+      "latency_ms": 0.0081
+    },
+    {
+      "message": "Hello",
+      "category": "CONVERSATIONAL",
+      "detected_intent": "GREETING",
+      "should_use_rag": false,
+      "status": "TRUE_CONVERSATIONAL",
+      "latency_ms": 0.0056
+    },
+    {
+      "message": "Hey",
+      "category": "CONVERSATIONAL",
+      "detected_intent": "GREETING",
+      "should_use_rag": false,
+      "status": "TRUE_CONVERSATIONAL",
+      "latency_ms": 0.0027
+    },
+    {
+      "message": "hii",
+      "category": "CONVERSATIONAL",
+      "detected_intent": "GREETING",
+      "should_use_rag": false,
+      "status": "TRUE_CONVERSATIONAL",
+      "latency_ms": 0.0027
+    },
+    {
+      "message": "हाय",
+      "category": "CONVERSATIONAL",
+      "detected_intent": "GREETING",
+      "should_use_rag": false,
+      "status": "TRUE_CONVERSATIONAL",
+      "latency_ms": 0.0027
+    },
+    {
+      "message": "नमस्कार",
+      "category": "CONVERSATIONAL",
+      "detected_intent": "GREETING",
+      "should_use_rag": false,
+      "status": "TRUE_CONVERSATIONAL",
+      "latency_ms": 0.0042
+    },
+    {
+      "message": "नमस्ते",
+      "category": "CONVERSATIONAL",
+      "detected_intent": "GREETING",
+      "should_use_rag": false,
+      "status": "TRUE_CONVERSATIONAL",
+      "latency_ms": 0.0018
+    },
+    {
+      "message": "Good Morning",
+      "category": "CONVERSATIONAL",
+      "detected_intent": "GREETING",
+      "should_use_rag": false,
+      "status": "TRUE_CONVERSATIONAL",
+      "latency_ms": 0.0016
+    },
+    {
+      "message": "Good Evening",
+      "category": "CONVERSATIONAL",
+      "detected_intent": "GREETING",
+      "should_use_rag": false,
+      "status": "TRUE_CONVERSATIONAL",
+      "latency_ms": 0.0014
+    },
+    {
+      "message": "Good Afternoon",
+      "category": "CONVERSATIONAL",
+      "detected_intent": "GREETING",
+      "should_use_rag": false,
+      "status": "TRUE_CONVERSATIONAL",
+      "latency_ms": 0.0014
+    },
+    {
+      "message": "Thanks",
+      "category": "CONVERSATIONAL",
+      "detected_intent": "GRATITUDE",
+      "should_use_rag": false,
+      "status": "TRUE_CONVERSATIONAL",
+      "latency_ms": 0.0058
+    },
+    {
+      "message": "Thank you",
+      "category": "CONVERSATIONAL",
+      "detected_intent": "GRATITUDE",
+      "should_use_rag": false,
+      "status": "TRUE_CONVERSATIONAL",
+      "latency_ms": 0.003
+    },
+    {
+      "message": "धन्यवाद",
+      "category": "CONVERSATIONAL",
+      "detected_intent": "GRATITUDE",
+      "should_use_rag": false,
+      "status": "TRUE_CONVERSATIONAL",
+      "latency_ms": 0.0059
+    },
+    {
+      "message": "खूप धन्यवाद",
+      "category": "CONVERSATIONAL",
+      "detected_intent": "GRATITUDE",
+      "should_use_rag": false,
+      "status": "TRUE_CONVERSATIONAL",
+      "latency_ms": 0.0029
+    },
+    {
+      "message": "Thank you so much",
+      "category": "CONVERSATIONAL",
+      "detected_intent": "GRATITUDE",
+      "should_use_rag": false,
+      "status": "TRUE_CONVERSATIONAL",
+      "latency_ms": 0.0026
+    },
+    {
+      "message": "thx",
+      "category": "CONVERSATIONAL",
+      "detected_intent": "GRATITUDE",
+      "should_use_rag": false,
+      "status": "TRUE_CONVERSATIONAL",
+      "latency_ms": 0.0025
+    },
+    {
+      "message": "थँक्यू",
+      "category": "CONVERSATIONAL",
+      "detected_intent": "GRATITUDE",
+      "should_use_rag": false,
+      "status": "TRUE_CONVERSATIONAL",
+      "latency_ms": 0.0027
+    },
+    {
+      "message": "थँक्स",
+      "category": "CONVERSATIONAL",
+      "detected_intent": "GRATITUDE",
+      "should_use_rag": false,
+      "status": "TRUE_CONVERSATIONAL",
+      "latency_ms": 0.0027
+    },
+    {
+      "message": "खूप मनापासून धन्यवाद",
+      "category": "CONVERSATIONAL",
+      "detected_intent": "GRATITUDE",
+      "should_use_rag": false,
+      "status": "TRUE_CONVERSATIONAL",
+      "latency_ms": 0.0029
+    },
+    {
+      "message": "thanks a lot",
+      "category": "CONVERSATIONAL",
+      "detected_intent": "GRATITUDE",
+      "should_use_rag": false,
+      "status": "TRUE_CONVERSATIONAL",
+      "latency_ms": 0.0027
+    },
+    {
+      "message": "Bye",
+      "category": "CONVERSATIONAL",
+      "detected_intent": "FAREWELL",
+      "should_use_rag": false,
+      "status": "TRUE_CONVERSATIONAL",
+      "latency_ms": 0.0031
+    },
+    {
+      "message": "Goodbye",
+      "category": "CONVERSATIONAL",
+      "detected_intent": "FAREWELL",
+      "should_use_rag": false,
+      "status": "TRUE_CONVERSATIONAL",
+      "latency_ms": 0.0037
+    },
+    {
+      "message": "See you",
+      "category": "CONVERSATIONAL",
+      "detected_intent": "FAREWELL",
+      "should_use_rag": false,
+      "status": "TRUE_CONVERSATIONAL",
+      "latency_ms": 0.0035
+    },
+    {
+      "message": "बाय",
+      "category": "CONVERSATIONAL",
+      "detected_intent": "FAREWELL",
+      "should_use_rag": false,
+      "status": "TRUE_CONVERSATIONAL",
+      "latency_ms": 0.0033
+    },
+    {
+      "message": "निघतो",
+      "category": "CONVERSATIONAL",
+      "detected_intent": "FAREWELL",
+      "should_use_rag": false,
+      "status": "TRUE_CONVERSATIONAL",
+      "latency_ms": 0.0097
+    },
+    {
+      "message": "पुन्हा भेटू",
+      "category": "CONVERSATIONAL",
+      "detected_intent": "FAREWELL",
+      "should_use_rag": false,
+      "status": "TRUE_CONVERSATIONAL",
+      "latency_ms": 0.0039
+    },
+    {
+      "message": "बाय बाय",
+      "category": "CONVERSATIONAL",
+      "detected_intent": "FAREWELL",
+      "should_use_rag": false,
+      "status": "TRUE_CONVERSATIONAL",
+      "latency_ms": 0.0035
+    },
+    {
+      "message": "शुभ रात्री",
+      "category": "CONVERSATIONAL",
+      "detected_intent": "FAREWELL",
+      "should_use_rag": false,
+      "status": "TRUE_CONVERSATIONAL",
+      "latency_ms": 0.0035
+    },
+    {
+      "message": "cya",
+      "category": "CONVERSATIONAL",
+      "detected_intent": "FAREWELL",
+      "should_use_rag": false,
+      "status": "TRUE_CONVERSATIONAL",
+      "latency_ms": 0.0029
+    },
+    {
+      "message": "bye bye",
+      "category": "CONVERSATIONAL",
+      "detected_intent": "FAREWELL",
+      "should_use_rag": false,
+      "status": "TRUE_CONVERSATIONAL",
+      "latency_ms": 0.0032
+    },
+    {
+      "message": "Who are you?",
+      "category": "CONVERSATIONAL",
+      "detected_intent": "IDENTITY",
+      "should_use_rag": false,
+      "status": "TRUE_CONVERSATIONAL",
+      "latency_ms": 0.0062
+    },
+    {
+      "message": "तू कोण आहेस?",
+      "category": "CONVERSATIONAL",
+      "detected_intent": "IDENTITY",
+      "should_use_rag": false,
+      "status": "TRUE_CONVERSATIONAL",
+      "latency_ms": 0.0049
+    },
+    {
+      "message": "Who made you?",
+      "category": "CONVERSATIONAL",
+      "detected_intent": "IDENTITY",
+      "should_use_rag": false,
+      "status": "TRUE_CONVERSATIONAL",
+      "latency_ms": 0.0055
+    },
+    {
+      "message": "तुझे नाव काय आहे?",
+      "category": "CONVERSATIONAL",
+      "detected_intent": "IDENTITY",
+      "should_use_rag": false,
+      "status": "TRUE_CONVERSATIONAL",
+      "latency_ms": 0.0072
+    },
+    {
+      "message": "who created you",
+      "category": "CONVERSATIONAL",
+      "detected_intent": "IDENTITY",
+      "should_use_rag": false,
+      "status": "TRUE_CONVERSATIONAL",
+      "latency_ms": 0.0044
+    },
+    {
+      "message": "who developed you",
+      "category": "CONVERSATIONAL",
+      "detected_intent": "IDENTITY",
+      "should_use_rag": false,
+      "status": "TRUE_CONVERSATIONAL",
+      "latency_ms": 0.0042
+    },
+    {
+      "message": "what is your name",
+      "category": "CONVERSATIONAL",
+      "detected_intent": "IDENTITY",
+      "should_use_rag": false,
+      "status": "TRUE_CONVERSATIONAL",
+      "latency_ms": 0.0042
+    },
+    {
+      "message": "What can you do?",
+      "category": "CONVERSATIONAL",
+      "detected_intent": "CAPABILITY",
+      "should_use_rag": false,
+      "status": "TRUE_CONVERSATIONAL",
+      "latency_ms": 0.0062
+    },
+    {
+      "message": "तू काय करू शकतोस?",
+      "category": "CONVERSATIONAL",
+      "detected_intent": "CAPABILITY",
+      "should_use_rag": false,
+      "status": "TRUE_CONVERSATIONAL",
+      "latency_ms": 0.0077
+    },
+    {
+      "message": "Which news do you provide?",
+      "category": "CONVERSATIONAL",
+      "detected_intent": "CAPABILITY",
+      "should_use_rag": false,
+      "status": "TRUE_CONVERSATIONAL",
+      "latency_ms": 0.007
+    },
+    {
+      "message": "what news do you have",
+      "category": "CONVERSATIONAL",
+      "detected_intent": "CAPABILITY",
+      "should_use_rag": false,
+      "status": "TRUE_CONVERSATIONAL",
+      "latency_ms": 0.0056
+    },
+    {
+      "message": "तू काय काय करू शकतोस",
+      "category": "CONVERSATIONAL",
+      "detected_intent": "CAPABILITY",
+      "should_use_rag": false,
+      "status": "TRUE_CONVERSATIONAL",
+      "latency_ms": 0.0063
+    },
+    {
+      "message": "Help",
+      "category": "CONVERSATIONAL",
+      "detected_intent": "HELP",
+      "should_use_rag": false,
+      "status": "TRUE_CONVERSATIONAL",
+      "latency_ms": 0.0053
+    },
+    {
+      "message": "मदत",
+      "category": "CONVERSATIONAL",
+      "detected_intent": "HELP",
+      "should_use_rag": false,
+      "status": "TRUE_CONVERSATIONAL",
+      "latency_ms": 0.0051
+    },
+    {
+      "message": "तुझी मदत कशी मिळेल?",
+      "category": "CONVERSATIONAL",
+      "detected_intent": "HELP",
+      "should_use_rag": false,
+      "status": "TRUE_CONVERSATIONAL",
+      "latency_ms": 0.0104
+    },
+    {
+      "message": "How can you help?",
+      "category": "CONVERSATIONAL",
+      "detected_intent": "HELP",
+      "should_use_rag": false,
+      "status": "TRUE_CONVERSATIONAL",
+      "latency_ms": 0.0077
+    },
+    {
+      "message": "मदत करा",
+      "category": "CONVERSATIONAL",
+      "detected_intent": "HELP",
+      "should_use_rag": false,
+      "status": "TRUE_CONVERSATIONAL",
+      "latency_ms": 0.0056
+    },
+    {
+      "message": "मला मदत हवी आहे",
+      "category": "CONVERSATIONAL",
+      "detected_intent": "HELP",
+      "should_use_rag": false,
+      "status": "TRUE_CONVERSATIONAL",
+      "latency_ms": 0.0063
+    },
+    {
+      "message": "पुण्यात आज पावसाची काय स्थिती आहे?",
+      "category": "NEWS_QUERY",
+      "detected_intent": "NEWS_QUERY",
+      "should_use_rag": true,
+      "status": "TRUE_NEWS_QUERY",
+      "latency_ms": 0.0167
+    },
+    {
+      "message": "सिंधुदुर्ग जिल्ह्यात पर्यटन वाढीसाठी कोणते नवीन प्रकल्प सुरू झाले?",
+      "category": "NEWS_QUERY",
+      "detected_intent": "NEWS_QUERY",
+      "should_use_rag": true,
+      "status": "TRUE_NEWS_QUERY",
+      "latency_ms": 0.0126
+    },
+    {
+      "message": "कोल्हापूर जिल्ह्यातील पूर परिस्थिती अपडेट सांगा",
+      "category": "NEWS_QUERY",
+      "detected_intent": "NEWS_QUERY",
+      "should_use_rag": true,
+      "status": "TRUE_NEWS_QUERY",
+      "latency_ms": 0.01
+    },
+    {
+      "message": "अमित शाह यांनी नागपूर दौऱ्यात काय घोषणा केल्या?",
+      "category": "NEWS_QUERY",
+      "detected_intent": "NEWS_QUERY",
+      "should_use_rag": true,
+      "status": "TRUE_NEWS_QUERY",
+      "latency_ms": 0.0095
+    },
+    {
+      "message": "देवेंद्र फडणवीस आणि एकनाथ शिंदे यांची वर्षा बंगल्यावर बैठक",
+      "category": "NEWS_QUERY",
+      "detected_intent": "NEWS_QUERY",
+      "should_use_rag": true,
+      "status": "TRUE_NEWS_QUERY",
+      "latency_ms": 0.0101
+    },
+    {
+      "message": "शरद पवार यांनी बारामतीत पत्रकारांशी काय संवाद साधला?",
+      "category": "NEWS_QUERY",
+      "detected_intent": "NEWS_QUERY",
+      "should_use_rag": true,
+      "status": "TRUE_NEWS_QUERY",
+      "latency_ms": 0.0105
+    },
+    {
+      "message": "उद्धव ठाकरे यांची मुंबईतील शिवसेना भवन येथे सभा",
+      "category": "NEWS_QUERY",
+      "detected_intent": "NEWS_QUERY",
+      "should_use_rag": true,
+      "status": "TRUE_NEWS_QUERY",
+      "latency_ms": 0.0098
+    },
+    {
+      "message": "नितीन गडकरी यांनी समृद्धी महामार्गाबद्दल काय विधान केले?",
+      "category": "NEWS_QUERY",
+      "detected_intent": "NEWS_QUERY",
+      "should_use_rag": true,
+      "status": "TRUE_NEWS_QUERY",
+      "latency_ms": 0.0101
+    },
+    {
+      "message": "संजय राऊत यांची आजची पत्रकार परिषद काय होती?",
+      "category": "NEWS_QUERY",
+      "detected_intent": "NEWS_QUERY",
+      "should_use_rag": true,
+      "status": "TRUE_NEWS_QUERY",
+      "latency_ms": 0.0091
+    },
+    {
+      "message": "रत्नागिरी जिल्ह्यात काजू बागायतदारांसाठी नवीन योजना",
+      "category": "NEWS_QUERY",
+      "detected_intent": "NEWS_QUERY",
+      "should_use_rag": true,
+      "status": "TRUE_NEWS_QUERY",
+      "latency_ms": 0.0097
+    },
+    {
+      "message": "नाशिकमध्ये कुंभमेळा नियोजनाबाबत जिल्हाधिकाऱ्यांची बैठक",
+      "category": "NEWS_QUERY",
+      "detected_intent": "NEWS_QUERY",
+      "should_use_rag": true,
+      "status": "TRUE_NEWS_QUERY",
+      "latency_ms": 0.0098
+    },
+    {
+      "message": "महाराष्ट्रातील पुढील ४८ तासांचा हवामान अंदाज",
+      "category": "NEWS_QUERY",
+      "detected_intent": "NEWS_QUERY",
+      "should_use_rag": true,
+      "status": "TRUE_NEWS_QUERY",
+      "latency_ms": 0.0091
+    },
+    {
+      "message": "पुण्यातील मेट्रो विस्ताराबाबत महापालिकेचा निर्णय",
+      "category": "NEWS_QUERY",
+      "detected_intent": "NEWS_QUERY",
+      "should_use_rag": true,
+      "status": "TRUE_NEWS_QUERY",
+      "latency_ms": 0.0093
+    },
+    {
+      "message": "मुंबई-पुणे एक्सप्रेसवे वरील वाहतूक कोंडी बद्दल बातमी",
+      "category": "NEWS_QUERY",
+      "detected_intent": "NEWS_QUERY",
+      "should_use_rag": true,
+      "status": "TRUE_NEWS_QUERY",
+      "latency_ms": 0.0102
+    },
+    {
+      "message": "महाराष्ट्रातील शाळांना दिवाळी सुट्टीचे वेळापत्रक",
+      "category": "NEWS_QUERY",
+      "detected_intent": "NEWS_QUERY",
+      "should_use_rag": true,
+      "status": "TRUE_NEWS_QUERY",
+      "latency_ms": 0.0092
+    },
+    {
+      "message": "सोलापूर जिल्ह्यात शेतकरी आंदोलनाची सद्यस्थिती",
+      "category": "NEWS_QUERY",
+      "detected_intent": "NEWS_QUERY",
+      "should_use_rag": true,
+      "status": "TRUE_NEWS_QUERY",
+      "latency_ms": 0.0111
+    },
+    {
+      "message": "सातारा जिल्ह्यात बाजरी पिकाचे नुकसान",
+      "category": "NEWS_QUERY",
+      "detected_intent": "NEWS_QUERY",
+      "should_use_rag": true,
+      "status": "TRUE_NEWS_QUERY",
+      "latency_ms": 0.0104
+    },
+    {
+      "message": "सांगली शहर पाणी पुरवठा योजना अपडेट",
+      "category": "NEWS_QUERY",
+      "detected_intent": "NEWS_QUERY",
+      "should_use_rag": true,
+      "status": "TRUE_NEWS_QUERY",
+      "latency_ms": 0.0085
+    },
+    {
+      "message": "ठाणे जिल्ह्यात नवीन उड्डाणपुलाचे उद्घाटन",
+      "category": "NEWS_QUERY",
+      "detected_intent": "NEWS_QUERY",
+      "should_use_rag": true,
+      "status": "TRUE_NEWS_QUERY",
+      "latency_ms": 0.0088
+    },
+    {
+      "message": "पालघर जिल्ह्यात आरोग्य सेवा बळकटीकरणासाठी निधी",
+      "category": "NEWS_QUERY",
+      "detected_intent": "NEWS_QUERY",
+      "should_use_rag": true,
+      "status": "TRUE_NEWS_QUERY",
+      "latency_ms": 0.0092
+    },
+    {
+      "message": "रायगड जिल्ह्यातील किल्ल्यांच्या संवर्धनासाठी घोषणा",
+      "category": "NEWS_QUERY",
+      "detected_intent": "NEWS_QUERY",
+      "should_use_rag": true,
+      "status": "TRUE_NEWS_QUERY",
+      "latency_ms": 0.0094
+    },
+    {
+      "message": "जळगाव जिल्ह्यात केळी उत्पादकांसाठी अनुदान",
+      "category": "NEWS_QUERY",
+      "detected_intent": "NEWS_QUERY",
+      "should_use_rag": true,
+      "status": "TRUE_NEWS_QUERY",
+      "latency_ms": 0.0104
+    },
+    {
+      "message": "धुळे जिल्ह्यात पोलीस भरती प्रक्रिया",
+      "category": "NEWS_QUERY",
+      "detected_intent": "NEWS_QUERY",
+      "should_use_rag": true,
+      "status": "TRUE_NEWS_QUERY",
+      "latency_ms": 0.0087
+    },
+    {
+      "message": "नंदुरबार जिल्ह्यातील आदिवासी विकास प्रकल्प",
+      "category": "NEWS_QUERY",
+      "detected_intent": "NEWS_QUERY",
+      "should_use_rag": true,
+      "status": "TRUE_NEWS_QUERY",
+      "latency_ms": 0.009
+    },
+    {
+      "message": "जाडगाव जालना रेल्वे मार्ग अपडेट",
+      "category": "NEWS_QUERY",
+      "detected_intent": "NEWS_QUERY",
+      "should_use_rag": true,
+      "status": "TRUE_NEWS_QUERY",
+      "latency_ms": 0.0082
+    },
+    {
+      "message": "बीड जिल्ह्यातील दुष्काळ पाहणी दौरा",
+      "category": "NEWS_QUERY",
+      "detected_intent": "NEWS_QUERY",
+      "should_use_rag": true,
+      "status": "TRUE_NEWS_QUERY",
+      "latency_ms": 0.0085
+    },
+    {
+      "message": "लातूर शहरात नवीन वैद्यकीय महाविद्यालय",
+      "category": "NEWS_QUERY",
+      "detected_intent": "NEWS_QUERY",
+      "should_use_rag": true,
+      "status": "TRUE_NEWS_QUERY",
+      "latency_ms": 0.009
+    },
+    {
+      "message": "धाराशिव जिल्ह्यातील तुळजापूर मंदिर विकास आराखडा",
+      "category": "NEWS_QUERY",
+      "detected_intent": "NEWS_QUERY",
+      "should_use_rag": true,
+      "status": "TRUE_NEWS_QUERY",
+      "latency_ms": 0.0098
+    },
+    {
+      "message": "नांदेड जिल्ह्यात गुरुद्वारा परिसरात सुरक्षा व्यवस्था",
+      "category": "NEWS_QUERY",
+      "detected_intent": "NEWS_QUERY",
+      "should_use_rag": true,
+      "status": "TRUE_NEWS_QUERY",
+      "latency_ms": 0.0095
+    },
+    {
+      "message": "परभणी कृषी विद्यापीठाचा नवीन संशोधन प्रकल्प",
+      "category": "NEWS_QUERY",
+      "detected_intent": "NEWS_QUERY",
+      "should_use_rag": true,
+      "status": "TRUE_NEWS_QUERY",
+      "latency_ms": 0.0091
+    },
+    {
+      "message": "हिंगोली जिल्ह्यात हळद उत्पादनाला चालना",
+      "category": "NEWS_QUERY",
+      "detected_intent": "NEWS_QUERY",
+      "should_use_rag": true,
+      "status": "TRUE_NEWS_QUERY",
+      "latency_ms": 0.0088
+    },
+    {
+      "message": "अमरावती जिल्ह्यात नवीन औद्योगिक वसाहत",
+      "category": "NEWS_QUERY",
+      "detected_intent": "NEWS_QUERY",
+      "should_use_rag": true,
+      "status": "TRUE_NEWS_QUERY",
+      "latency_ms": 0.0086
+    },
+    {
+      "message": "अकोला शहरात रस्ते रुंदीकरण मोहीम",
+      "category": "NEWS_QUERY",
+      "detected_intent": "NEWS_QUERY",
+      "should_use_rag": true,
+      "status": "TRUE_NEWS_QUERY",
+      "latency_ms": 0.0084
+    },
+    {
+      "message": "वाशीम जिल्ह्यात सोयाबीन खरेदी केंद्र",
+      "category": "NEWS_QUERY",
+      "detected_intent": "NEWS_QUERY",
+      "should_use_rag": true,
+      "status": "TRUE_NEWS_QUERY",
+      "latency_ms": 0.0086
+    },
+    {
+      "message": "बुलढाणा जिल्ह्यात सिंचन प्रकल्पाचे काम वेगाने",
+      "category": "NEWS_QUERY",
+      "detected_intent": "NEWS_QUERY",
+      "should_use_rag": true,
+      "status": "TRUE_NEWS_QUERY",
+      "latency_ms": 0.0092
+    },
+    {
+      "message": "यवतमाळ जिल्ह्यात कापूस दराबाबत शेतकरी चिंताग्रस्त",
+      "category": "NEWS_QUERY",
+      "detected_intent": "NEWS_QUERY",
+      "should_use_rag": true,
+      "status": "TRUE_NEWS_QUERY",
+      "latency_ms": 0.0111
+    },
+    {
+      "message": "वर्धा जिल्ह्यात महात्मा गांधी सेवा आश्रम उपक्रम",
+      "category": "NEWS_QUERY",
+      "detected_intent": "NEWS_QUERY",
+      "should_use_rag": true,
+      "status": "TRUE_NEWS_QUERY",
+      "latency_ms": 0.0093
+    },
+    {
+      "message": "भंडारा जिल्ह्यात धान खरेदी प्रक्रिया सुरू",
+      "category": "NEWS_QUERY",
+      "detected_intent": "NEWS_QUERY",
+      "should_use_rag": true,
+      "status": "TRUE_NEWS_QUERY",
+      "latency_ms": 0.009
+    },
+    {
+      "message": "गोंदिया जिल्ह्यात वन्यजीव संरक्षणासाठी उपाययोजना",
+      "category": "NEWS_QUERY",
+      "detected_intent": "NEWS_QUERY",
+      "should_use_rag": true,
+      "status": "TRUE_NEWS_QUERY",
+      "latency_ms": 0.0092
+    },
+    {
+      "message": "चंद्रपूर जिल्ह्यात औष्णिक वीज केंद्र प्रकल्प",
+      "category": "NEWS_QUERY",
+      "detected_intent": "NEWS_QUERY",
+      "should_use_rag": true,
+      "status": "TRUE_NEWS_QUERY",
+      "latency_ms": 0.009
+    },
+    {
+      "message": "गडचिरोली जिल्ह्यात नक्षलविरोधी अभियान",
+      "category": "NEWS_QUERY",
+      "detected_intent": "NEWS_QUERY",
+      "should_use_rag": true,
+      "status": "TRUE_NEWS_QUERY",
+      "latency_ms": 0.0085
+    },
+    {
+      "message": "महाराष्ट्रातील यंदाचा मान्सून पाऊस कसा राहील?",
+      "category": "NEWS_QUERY",
+      "detected_intent": "NEWS_QUERY",
+      "should_use_rag": true,
+      "status": "TRUE_NEWS_QUERY",
+      "latency_ms": 0.0091
+    },
+    {
+      "message": "विधानसभा निवडणुकीच्या पार्श्वभूमीवर राजकीय घडामोडी",
+      "category": "NEWS_QUERY",
+      "detected_intent": "NEWS_QUERY",
+      "should_use_rag": true,
+      "status": "TRUE_NEWS_QUERY",
+      "latency_ms": 0.0093
+    },
+    {
+      "message": "महाराष्ट्रात एसटी बस प्रवाशांसाठी नवीन सवलती",
+      "category": "NEWS_QUERY",
+      "detected_intent": "NEWS_QUERY",
+      "should_use_rag": true,
+      "status": "TRUE_NEWS_QUERY",
+      "latency_ms": 0.0089
+    },
+    {
+      "message": "कोल्हापुरी चप्पल उद्योगाला प्रोत्साहन देणारा निर्णय",
+      "category": "NEWS_QUERY",
+      "detected_intent": "NEWS_QUERY",
+      "should_use_rag": true,
+      "status": "TRUE_NEWS_QUERY",
+      "latency_ms": 0.0321
+    },
+    {
+      "message": "सिंधुदुर्गातील चिपी विमानतळ उड्डाण वेळापत्रक",
+      "category": "NEWS_QUERY",
+      "detected_intent": "NEWS_QUERY",
+      "should_use_rag": true,
+      "status": "TRUE_NEWS_QUERY",
+      "latency_ms": 0.0093
+    },
+    {
+      "message": "आज महाराष्ट्रातील ताज्या मुख्य बातम्या कोणत्या?",
+      "category": "NEWS_QUERY",
+      "detected_intent": "NEWS_QUERY",
+      "should_use_rag": true,
+      "status": "TRUE_NEWS_QUERY",
+      "latency_ms": 0.0096
+    },
+    {
+      "message": "पुणे विद्यापीठाच्या परीक्षांचे वेळापत्रक जाहीर",
+      "category": "NEWS_QUERY",
+      "detected_intent": "NEWS_QUERY",
+      "should_use_rag": true,
+      "status": "TRUE_NEWS_QUERY",
+      "latency_ms": 0.0094
+    },
+    {
+      "message": "मुंबईत लोकल ट्रेन सेवा विस्कळीत",
+      "category": "NEWS_QUERY",
+      "detected_intent": "NEWS_QUERY",
+      "should_use_rag": true,
+      "status": "TRUE_NEWS_QUERY",
+      "latency_ms": 0.0084
+    },
+    {
+      "message": "महाराष्ट्रातील मराठा आरक्षण आंदोलनाची बातमी",
+      "category": "NEWS_QUERY",
+      "detected_intent": "NEWS_QUERY",
+      "should_use_rag": true,
+      "status": "TRUE_NEWS_QUERY",
+      "latency_ms": 0.0091
+    }
+  ]
+}

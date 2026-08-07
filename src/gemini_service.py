@@ -6,6 +6,7 @@ from typing import Any, Dict, List, Optional
 from dotenv import load_dotenv
 
 from context_builder import ContextBuilder, ContextPackage
+from conversation_router import ConversationRouter
 from generation_engine import GenerationEngine
 from intent_validator import IntentValidator, IntentValidationResult
 from prompt_manager import PromptManager
@@ -18,6 +19,7 @@ load_dotenv()
 logger = logging.getLogger(__name__)
 
 # Initialize pipeline singletons
+_conversation_router = ConversationRouter()
 _context_builder = ContextBuilder()
 _intent_validator = IntentValidator()
 _prompt_manager = PromptManager()
@@ -42,7 +44,7 @@ def generate_answer(question: str, top_k: int = 5) -> Dict[str, Any]:
     """Generate grounded answer using complete production RAG pipeline and Generation Engine.
 
     Pipeline Flow:
-    User Question ➔ QueryProcessor ➔ Retriever ➔ ContextBuilder ➔ IntentValidator ➔ GenerationEngine ➔ Grounded Answer
+    User Question ➔ ConversationRouter ➔ QueryProcessor ➔ Retriever ➔ ContextBuilder ➔ IntentValidator ➔ GenerationEngine ➔ Grounded Answer
 
     Args:
         question: User query string.
@@ -60,6 +62,17 @@ def generate_answer(question: str, top_k: int = 5) -> Dict[str, Any]:
         }
 
     clean_question = question.strip()
+
+    # 0. Conversation Routing check (Sprint 5.0.1)
+    route = _conversation_router.route_message(clean_question)
+    if not route.should_use_rag:
+        return {
+            "answer": route.response_text,
+            "sources": [],
+            "validation": None,
+            "prompt_version": "conversational_v1",
+            "intent_type": route.intent_type,
+        }
 
     # 1. Process query to extract metadata & normalized query string
     query_info = process_query(clean_question)

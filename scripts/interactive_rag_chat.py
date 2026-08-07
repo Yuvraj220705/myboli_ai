@@ -37,8 +37,14 @@ def main():
                 print("👋 Thank you for using Maayboli AI Chatbot!")
                 break
 
-            print("\n🔍 Querying Pipeline (Normalizing ➔ Retrieving ➔ Context Building ➔ Intent Validation ➔ Gemini)...")
             result = generate_answer(user_input)
+
+            if result.get("intent_type"):
+                print("\n" + "-" * 80)
+                print("🤖 उत्तर (Maayboli AI Response):")
+                print(result["answer"])
+                print("-" * 80 + "\n")
+                continue
 
             val = result.get("validation")
             if val:
