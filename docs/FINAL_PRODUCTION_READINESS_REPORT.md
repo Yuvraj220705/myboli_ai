@@ -27,6 +27,76 @@ Maayboli AI is a specialized **Marathi Retrieval-Augmented Generation (RAG) Chat
 
 ---
 
+# 📈 PROJECT EVOLUTION TIMELINE
+
+The system underwent systematic engineering iterations to evolve from a basic keyword query script into an enterprise-grade production RAG pipeline:
+
+```
+58% Benchmark Accuracy (Initial Basic MySQL Retrieval)
+  │
+  ▼
+District Normalizer Implemented
+  │
+  ▼
+68% Benchmark Accuracy (District Keyword & Alias Mapping)
+  │
+  ▼
+Database Repair & Metadata Cleanup
+  │
+  ▼
+85% Benchmark Accuracy (Standardized Corpus Metadata & Encoding)
+  │
+  ▼
+Person Normalizer Implemented
+  │
+  ▼
+91% Benchmark Accuracy (Full Person Alias & Honorific Mapping)
+  │
+  ▼
+Word Normalizer & Typo System Implemented
+  │
+  ▼
+100% Benchmark Accuracy (Frozen Retrieval Layer)
+  │
+  ▼
+Production Framework Rollout (Context Builder + Intent Validator + Response Strategy Engine + Generation Engine)
+  │
+  ▼
+Final Independent Production Capability Audit & Scoped Deployment
+```
+
+---
+
+# 🏛️ ARCHITECTURE EVOLUTION COMPARISON
+
+### 1. Initial Baseline Architecture
+In the initial project phase, the pipeline was an unstructured, single-step prompt injection wrapper:
+
+```mermaid
+flowchart LR
+    User([User Query]) --> Retriever[Basic MySQL Retriever]
+    Retriever --> Gemini[Gemini LLM]
+    Gemini --> Answer([Final Response])
+```
+
+### 2. Final Production Architecture (Sprint 3.0.2)
+The current production architecture implements strict separation of concerns, multi-stage intent validation, and deterministic response strategy selection:
+
+```mermaid
+flowchart TD
+    User([User Query]) --> QP[1. Query Processor]
+    QP --> Ret[2. MySQL Retriever]
+    Ret --> CB[3. Context Builder]
+    CB --> IV[4. Intent Validator]
+    IV --> RSE[5. Response Strategy Engine]
+    RSE --> GE[6. Generation Engine]
+    GE --> PM[7. Prompt Manager]
+    PM --> Gem[8. Gemini API]
+    Gem --> Answer([Final Grounded Answer])
+```
+
+---
+
 # 📑 PART 1: SYSTEM CAPABILITY AUDIT
 
 | # | System Capability | Rating | Evidence / Execution Summary | Representative Example Query | Observed Pipeline Behavior | Known Limitations |
@@ -127,19 +197,44 @@ The 95 test queries were executed directly against the live backend pipeline. Be
 
 ---
 
-# ⚠️ PART 4: KNOWN LIMITATIONS & ROOT CAUSE ANALYSIS
+# ⚠️ PART 4: KNOWN LIMITATIONS & RISK ANALYSIS
 
-### 1. The FULLTEXT Over-Matching & Unmapped Entity Blindspot (Architectural Flaw)
-- **Root Cause**: MySQL `FULLTEXT` indexing operates on word tokens. When a query contains an unmapped foreign entity (*Joe Biden*, *Tesla*, *Bitcoin*), the entity is not in `PersonNormalizer`. The remaining generic words (*अध्यक्ष*, *गाडी*, *दर*) match local articles in the database.
-- **Architectural Status**: Requires an **Unrecognized Entity Safeguard** in the `QueryProcessor` or `IntentValidator` to reject queries containing unknown proper nouns before retrieval.
+The limitations of the system are explicitly divided into **Current Limitations** (existing behavior today) and **Future Enhancements** (planned post-launch upgrades), categorized by risk level (**HIGH**, **MEDIUM**, **LOW**).
 
-### 2. Lack of Vector Semantic Search (Retrieval Boundary)
-- **Root Cause**: The retriever strictly uses MySQL `MATCH() AGAINST() IN BOOLEAN MODE`. If an article uses synonyms (e.g., *मेघगर्जना* instead of *पाऊस*), lexical FULLTEXT will miss the article unless explicitly aliased.
-- **Architectural Status**: Known structural constraint of SQL FULLTEXT retrieval.
+### A. Current System Limitations (Active Today)
 
-### 3. Limited Entity Dictionary Scope
-- **Root Cause**: `PersonNormalizer` and `DistrictNormalizer` are static Python dictionaries containing ~20 top Maharashtrian leaders and 36 districts.
-- **Architectural Status**: Dictionary requires dynamic database/Redis backing for production scaling.
+#### 1. Foreign Entity Keyword Over-Matching
+- **Risk Level**: 🔴 **HIGH**
+- **Existing Behavior**: Queries containing unmapped global entities (*Joe Biden*, *Tesla*, *Bitcoin*) match generic Marathi words (*अध्यक्ष*, *गाडी*, *दर*) in local news articles. The `IntentValidator` falsely marks these as `EXACT_MATCH`, returning unrelated local news.
+- **Root Cause**: `PersonNormalizer` only tracks Maharashtrian leaders, so foreign proper nouns pass entity resolution unflagged.
+
+#### 2. Static Normalizer Dictionary Scope
+- **Risk Level**: 🟡 **MEDIUM**
+- **Existing Behavior**: Only configured Maharashtrian leaders (~20) and 36 districts are recognized as canonical entities. Unlisted local political candidates or minor towns rely on unmapped keyword searching.
+- **Root Cause**: Entity dictionaries are hardcoded in static Python files (`entity_normalizer.py`) rather than dynamic database tables.
+
+#### 3. Lexical FULLTEXT Synonym Boundary
+- **Risk Level**: 🔵 **LOW**
+- **Existing Behavior**: Articles using semantic synonyms (*मेघगर्जना* instead of *पाऊस*) without exact keyword overlap are not retrieved.
+- **Root Cause**: MySQL FULLTEXT operates strictly on Boolean lexical token matching.
+
+#### 4. Context Character Truncation Cap
+- **Risk Level**: 🔵 **LOW**
+- **Existing Behavior**: Total context provided to Gemini is capped at 8,000 characters (~2,000 tokens). Long queries retrieving 5 large articles truncate later articles.
+- **Root Cause**: Hardcoded safety cap `MAX_CONTEXT_CHARACTERS = 8000` in `context_builder.py`.
+
+---
+
+### B. Future Enhancements (Post-Launch Architectural Upgrades)
+
+#### 1. Unmapped Foreign Entity Guardrail (Target Risk: Mitigates 🔴 HIGH Risk)
+- **Planned Upgrade**: Update `IntentValidator` to recognize out-of-vocabulary proper nouns or script tokens that failed entity resolution. If unrecognized entity ratio is high, force `NO_MATCH` status before generation.
+
+#### 2. Dynamic Database/Redis Entity Registry (Target Risk: Mitigates 🟡 MEDIUM Risk)
+- **Planned Upgrade**: Move `PersonNormalizer` and `DistrictNormalizer` dictionary storage into MySQL / Redis tables managed via an administrative CMS panel.
+
+#### 3. Hybrid Dense Vector Search (Target Risk: Mitigates 🔵 LOW Risk)
+- **Planned Upgrade**: Integrate a vector embedding database (Qdrant or FAISS) alongside MySQL FULLTEXT for semantic similarity matching (*मेघगर्जना* ➔ *पाऊस*).
 
 ---
 
@@ -188,6 +283,10 @@ graph TD
 | **Overall Backend Architecture**| `8.8 / 10` | Clean enterprise RAG architecture built on solid engineering principles. |
 | **OVERALL PRODUCTION READINESS**| 🟢 **8.3 / 10** | **Ready for scoped regional deployment.** |
 
+> [!NOTE]
+> **Score Explanation (8.3 / 10)**:  
+> *The score reflects production readiness within the defined domain (Maharashtra regional news). It intentionally includes penalties for known out-of-domain limitations and lexical retrieval constraints.*
+
 ---
 
 # ⚖️ PART 7: FINAL VERDICT
@@ -207,16 +306,16 @@ However, because this is a **PAID CLIENT PROJECT**, deployment must be scoped wi
 # 🛠️ PART 8: AUDIT RECOMMENDATIONS
 
 ### 🔴 Critical Priority (Must Fix Before Open Public Release)
-1. **Unmapped Foreign Entity Guardrail**:
+1. **Unmapped Foreign Entity Guardrail** *(Risk: HIGH)*:
    - **Issue**: Queries containing foreign entities (*Joe Biden*, *Cristiano Ronaldo*) match generic keywords (*अध्यक्ष*, *सामना*) and serve incorrect local news.
    - **Fix**: Update `IntentValidator` to check if a query contains unrecognized script capitalized words or out-of-vocabulary nouns that failed entity resolution. If unrecognized entity ratio is high, force `NO_MATCH` status.
 
 ### 🟡 High Priority (Post-Launch Improvement)
-2. **Dynamic Entity Dictionary Storage**:
+2. **Dynamic Entity Dictionary Storage** *(Risk: MEDIUM)*:
    - Move `DistrictNormalizer` and `PersonNormalizer` dictionaries from static `.py` files into MySQL/Redis tables so non-technical team members can add new politicians without code redeployment.
 
 ### 🔵 Medium Priority (Future Architectural Scaling)
-3. **Hybrid Vector Search (MySQL + Qdrant/FAISS)**:
+3. **Hybrid Vector Search (MySQL + Qdrant/FAISS)** *(Risk: LOW)*:
    - Introduce dense vector embeddings alongside MySQL FULLTEXT to handle semantic synonyms (*मेघगर्जना* ➔ *पाऊस*).
 
 ---
@@ -227,4 +326,9 @@ However, because this is a **PAID CLIENT PROJECT**, deployment must be scoped wi
 - [x] Executed 95 realistic Marathi user queries across 8 categories.
 - [x] Documented empirical evidence for all strengths and weaknesses.
 - [x] Identified critical architectural limitation in out-of-domain query matching.
+- [x] Included explicit score justification note for 8.3/10 score.
+- [x] Added Project Evolution Timeline visual progression.
+- [x] Added Architecture Evolution comparison diagrams.
+- [x] Separated Known Limitations into Current Limitations vs Future Enhancements.
+- [x] Added Risk Levels (HIGH, MEDIUM, LOW) for all limitations.
 - [x] Rendered unequivocal final production decision.
