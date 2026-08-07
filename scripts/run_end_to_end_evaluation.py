@@ -222,6 +222,7 @@ def evaluate_end_to_end_single_query(
             question=raw_query,
             context_pkg=context_pkg,
             validation_result=validation_res,
+            query_info=query_info,
         )
     except Exception as err:
         logger.error("Generation Engine failed for query '%s': %s", raw_query, err)

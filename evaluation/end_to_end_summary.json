@@ -1,29 +1,29 @@
 {
   "total_queries_evaluated": 100,
-  "overall_success_rate_percent": 72.0,
+  "overall_success_rate_percent": 71.0,
   "groundedness_pass_percent": 100.0,
-  "intent_satisfaction_pass_percent": 72.0,
+  "intent_satisfaction_pass_percent": 71.0,
   "intent_satisfaction_partial_percent": 28.0,
   "completeness_pass_percent": 72.0,
   "hallucination_rate_percent": 0.0,
   "formatting_pass_percent": 100.0,
   "validator_behavior_pass_percent": 96.0,
-  "generation_behavior_pass_percent": 100.0,
+  "generation_behavior_pass_percent": 99.0,
   "latency_metrics": {
-    "avg_query_processing_ms": 1.29,
-    "avg_retrieval_ms": 77.08,
-    "avg_context_engineering_ms": 0.53,
-    "avg_intent_validation_ms": 0.36,
-    "avg_generation_ms": 1450.59,
-    "avg_total_pipeline_ms": 1529.86
+    "avg_query_processing_ms": 1.72,
+    "avg_retrieval_ms": 83.39,
+    "avg_context_engineering_ms": 0.56,
+    "avg_intent_validation_ms": 0.39,
+    "avg_generation_ms": 2141.03,
+    "avg_total_pipeline_ms": 2227.1
   },
   "token_metrics": {
     "avg_context_tokens": 1798.8,
-    "avg_prompt_tokens": 2210.5,
-    "avg_response_tokens": 84.6,
-    "avg_total_tokens": 2295.2,
-    "max_total_tokens": 2602,
-    "min_total_tokens": 425
+    "avg_prompt_tokens": 2247.7,
+    "avg_response_tokens": 85.5,
+    "avg_total_tokens": 2333.2,
+    "max_total_tokens": 2614,
+    "min_total_tokens": 462
   },
   "validation_status_distribution": {
     "EXACT_MATCH": 70,
@@ -32,8 +32,9 @@
     "NO_MATCH": 2
   },
   "root_cause_distribution": {
-    "None": 72,
+    "None": 71,
     "Context Builder": 27,
+    "Query Understanding": 1,
     "Database": 1
   }
 }
