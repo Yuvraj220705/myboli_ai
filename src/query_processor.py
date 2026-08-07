@@ -14,12 +14,14 @@ from entity_normalizer import (
     WordNormalizer,
 )
 from date_parser import extract_date, strip_date_from_query
+from unknown_entity_guard import UnknownEntityGuard, UnknownEntityResult
 
 logger = logging.getLogger(__name__)
 
 __all__ = [
     "QueryInfo",
     "process_query",
+    "UnknownEntityResult",
 ]
 
 
@@ -31,6 +33,7 @@ __all__ = [
 _DISTRICT_NORMALIZER = DistrictNormalizer()
 _PERSON_NORMALIZER = PersonNormalizer()
 _WORD_NORMALIZER = WordNormalizer()
+_UNKNOWN_ENTITY_GUARD = UnknownEntityGuard(_DISTRICT_NORMALIZER, _PERSON_NORMALIZER, _WORD_NORMALIZER)
 
 # Maps Canonical Marathi district name -> English name as stored in database
 DISTRICTS: Dict[str, str] = {
@@ -109,6 +112,7 @@ class QueryInfo:
         district: Extracted target district name if present, None otherwise.
         category: Extracted canonical category name if present, None otherwise.
         is_latest_news: Flag indicating if the query is a request for latest news.
+        unknown_entity_result: Output from UnknownEntityGuard inspection if evaluated.
     """
     original_query: str
     clean_query: str
@@ -116,6 +120,7 @@ class QueryInfo:
     district: Optional[str]
     category: Optional[str]
     is_latest_news: bool = False
+    unknown_entity_result: Optional[UnknownEntityResult] = None
 
 
 # ----------------------------
@@ -325,12 +330,16 @@ def process_query(question: str) -> QueryInfo:
     # Detect if query requests latest news summary
     is_latest_news = any(pattern in raw_query for pattern in LATEST_NEWS_PATTERNS)
 
+    # Step 7: Unknown Entity Guard inspection
+    unknown_guard_res = _UNKNOWN_ENTITY_GUARD.inspect_query(raw_query)
+
     logger.info(
-        "Processed query: date=%s, district=%s, category=%s, latest_news=%s, clean_query='%s'",
+        "Processed query: date=%s, district=%s, category=%s, latest_news=%s, blocked=%s, clean_query='%s'",
         detected_date,
         detected_district,
         detected_category,
         is_latest_news,
+        unknown_guard_res.should_block,
         cleaned[:50],
     )
 
@@ -341,4 +350,5 @@ def process_query(question: str) -> QueryInfo:
         district=detected_district,
         category=detected_category,
         is_latest_news=is_latest_news,
+        unknown_entity_result=unknown_guard_res,
     )

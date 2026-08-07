@@ -115,6 +115,23 @@ class IntentValidator:
         Returns:
             IntentValidationResult detailing quality scores and status.
         """
+        if query_info.unknown_entity_result and query_info.unknown_entity_result.should_block:
+            logger.info("Intent Validation: Blocked by UnknownEntityGuard reason='%s'", query_info.unknown_entity_result.reason)
+            return IntentValidationResult(
+                overall_match_score=0.0,
+                confidence="LOW",
+                retrieval_status="NO_MATCH",
+                validation_reason=f"Blocked by Unknown Entity Guard: {query_info.unknown_entity_result.reason}",
+                district_match=False,
+                person_match=False,
+                category_match=False,
+                date_match=False,
+                matched_entities=[],
+                missing_entities=query_info.unknown_entity_result.critical_entities,
+                matched_topics=[],
+                missing_topics=[],
+            )
+
         if not context_pkg or not hasattr(context_pkg, "articles") or not context_pkg.articles:
             return IntentValidationResult(
                 overall_match_score=0.0,

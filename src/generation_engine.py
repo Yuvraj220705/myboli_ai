@@ -22,6 +22,7 @@ from prompt_templates import (
     ERROR_MSG,
     INVALID_QUERY_MSG,
     NO_ARTICLES_MSG,
+    UNSUPPORTED_SCOPE_MSG,
 )
 
 load_dotenv()
@@ -148,19 +149,23 @@ class GenerationEngine:
             strategy.response_policy,
         )
 
-        # 2. Fast-path check: NO_INFORMATION strategy / empty context
-        if strategy.requires_fallback or not articles:
-            logger.info("Fast-path fallback triggered for question '%s' (Strategy=%s)", clean_q[:50], strategy.strategy_name)
+        # 2. Fast-path check: NO_INFORMATION strategy / empty context / unknown entity block
+        is_blocked_by_guard = hasattr(query_info, "unknown_entity_result") and query_info.unknown_entity_result and query_info.unknown_entity_result.should_block
+
+        if strategy.requires_fallback or not articles or is_blocked_by_guard:
+            logger.info("Fast-path fallback triggered for question '%s' (Strategy=%s, GuardBlocked=%s)", clean_q[:50], strategy.strategy_name, is_blocked_by_guard)
             
             # Construct polite policy-aware fallback response
-            if strategy.requires_related_news and articles:
+            if is_blocked_by_guard:
+                fallback_msg = UNSUPPORTED_SCOPE_MSG
+            elif strategy.requires_related_news and articles:
                 fallback_msg = f"माझ्याकडे या विशिष्ट विषयासंबंधी प्रकाशित बातमी उपलब्ध नाही. परंतु खालील संबंधित बातम्या उपलब्ध आहेत:\n\n{articles[0].title} - {articles[0].content[:200]}..."
             else:
                 fallback_msg = NO_ARTICLES_MSG
 
             return {
                 "answer": fallback_msg,
-                "sources": source_ids if strategy.requires_related_news else [],
+                "sources": source_ids if (strategy.requires_related_news and not is_blocked_by_guard) else [],
                 "validation": validation_result,
                 "strategy": strategy,
                 "prompt_version": active_version,
