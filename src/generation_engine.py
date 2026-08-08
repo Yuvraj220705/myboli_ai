@@ -13,6 +13,7 @@ from dotenv import load_dotenv
 from google import genai
 
 from context_builder import ContextPackage
+from conversation_router import ConversationRouter
 from intent_validator import IntentValidationResult
 from prompt_manager import PromptManager
 from response_strategy_engine import ResponseStrategy, ResponseStrategyEngine
@@ -41,6 +42,7 @@ class GenerationEngine:
         self,
         prompt_manager: Optional[PromptManager] = None,
         strategy_engine: Optional[ResponseStrategyEngine] = None,
+        conversation_router: Optional[ConversationRouter] = None,
         model_name: str = GEMINI_MODEL,
         api_key: Optional[str] = None,
         prompt_version: str = DEFAULT_PROMPT_VERSION,
@@ -50,12 +52,14 @@ class GenerationEngine:
         Args:
             prompt_manager: Optional PromptManager instance (creates default if None).
             strategy_engine: Optional ResponseStrategyEngine instance (creates default if None).
+            conversation_router: Optional ConversationRouter instance (creates default if None).
             model_name: Gemini model name string.
             api_key: Optional explicit Gemini API key (reads environment if None).
             prompt_version: Default prompt template version string (default: "v1.0").
         """
         self.prompt_manager = prompt_manager or PromptManager(default_version=prompt_version)
         self.strategy_engine = strategy_engine or ResponseStrategyEngine()
+        self.conversation_router = conversation_router or ConversationRouter()
         self.model_name = model_name
         self.prompt_version = prompt_version
 
@@ -79,7 +83,7 @@ class GenerationEngine:
         version: Optional[str] = None,
         query_info: Optional[Any] = None,
     ) -> Dict[str, Any]:
-        """Execute grounded answer generation workflow adhering to ResponseStrategy.
+        """Execute grounded answer generation workflow adhering to ResponseStrategy and Conversational Behavior.
 
         Args:
             question: Cleaned user question string.
@@ -92,7 +96,7 @@ class GenerationEngine:
 
         Returns:
             Dict[str, Any]: Dictionary containing:
-                - 'answer' (str): Generated grounded Marathi response.
+                - 'answer' (str): Generated grounded Marathi response or conversational output.
                 - 'sources' (List[int]): Source article database IDs.
                 - 'validation' (IntentValidationResult): Quality Gate audit result.
                 - 'strategy' (ResponseStrategy): Selected response strategy object.
@@ -115,7 +119,6 @@ class GenerationEngine:
 
         # 1. Determine ResponseStrategy via ResponseStrategyEngine if not provided
         if response_strategy is None:
-            # Reconstruct minimal QueryInfo wrapper if query_info is not provided
             if query_info is None:
                 class _QueryInfoWrapper:
                     def __init__(self, q: str):
@@ -149,32 +152,51 @@ class GenerationEngine:
             strategy.response_policy,
         )
 
-        # 2. Fast-path check: NO_INFORMATION strategy / empty context / unknown entity block
+        # 2. Fast-path check: Unknown Entity Guard
         is_blocked_by_guard = hasattr(query_info, "unknown_entity_result") and query_info.unknown_entity_result and query_info.unknown_entity_result.should_block
 
-        if strategy.requires_fallback or not articles or is_blocked_by_guard:
-            logger.info("Fast-path fallback triggered for question '%s' (Strategy=%s, GuardBlocked=%s)", clean_q[:50], strategy.strategy_name, is_blocked_by_guard)
-            
-            # Construct polite policy-aware fallback response
-            if is_blocked_by_guard:
-                fallback_msg = UNSUPPORTED_SCOPE_MSG
-            elif strategy.requires_related_news and articles:
-                fallback_msg = f"माझ्याकडे या विशिष्ट विषयासंबंधी प्रकाशित बातमी उपलब्ध नाही. परंतु खालील संबंधित बातम्या उपलब्ध आहेत:\n\n{articles[0].title} - {articles[0].content[:200]}..."
-            else:
-                fallback_msg = NO_ARTICLES_MSG
-
+        if is_blocked_by_guard:
+            logger.info("Unknown Entity Guard fast-path triggered for question '%s'", clean_q[:50])
             return {
-                "answer": fallback_msg,
-                "sources": source_ids if (strategy.requires_related_news and not is_blocked_by_guard) else [],
+                "answer": UNSUPPORTED_SCOPE_MSG,
+                "sources": [],
                 "validation": validation_result,
                 "strategy": strategy,
                 "prompt_version": active_version,
             }
 
-        # 3. Assemble modular prompt via PromptManager using ResponseStrategy
+        # 3. Check client initialization (Offline unit test fallback handling)
+        if self.client is None:
+            logger.warning("Gemini Client is not initialized in GenerationEngine.")
+            if not articles:
+                route = self.conversation_router.route_message(clean_q)
+                if not route.should_use_rag:
+                    return {
+                        "answer": route.response_text,
+                        "sources": [],
+                        "validation": validation_result,
+                        "strategy": strategy,
+                        "prompt_version": active_version,
+                    }
+                return {
+                    "answer": NO_ARTICLES_MSG,
+                    "sources": [],
+                    "validation": validation_result,
+                    "strategy": strategy,
+                    "prompt_version": active_version,
+                }
+            return {
+                "answer": ERROR_MSG,
+                "sources": source_ids,
+                "validation": validation_result,
+                "strategy": strategy,
+                "prompt_version": active_version,
+            }
+
+        # 4. Assemble modular prompt via PromptManager using Conversational Prompt System
         prompt = self.prompt_manager.build_prompt(
             question=clean_q,
-            formatted_context=context_pkg.formatted_context,
+            formatted_context=context_pkg.formatted_context if context_pkg else "",
             validation_result=validation_result,
             response_strategy=strategy,
             version=active_version,
@@ -231,8 +253,13 @@ class GenerationEngine:
                 else:
                     logger.warning("Gemini API unavailable or rate-limited: %s. Using grounded context answer.", err_str[:80])
                     # Grounded context fallback answer
-                    first_art = articles[0]
-                    fallback_ans = f"प्राप्त माहितीनुसार: {first_art.title} - {first_art.content[:200]}..."
+                    if articles:
+                        first_art = articles[0]
+                        title_str = first_art.get("title", "") if isinstance(first_art, dict) else getattr(first_art, "title", "")
+                        content_str = first_art.get("content", "") if isinstance(first_art, dict) else getattr(first_art, "content", "")
+                        fallback_ans = f"प्राप्त माहितीनुसार: {title_str} - {content_str[:200]}..."
+                    else:
+                        fallback_ans = NO_ARTICLES_MSG
                     return {
                         "answer": fallback_ans,
                         "sources": source_ids,

@@ -1,0 +1,195 @@
+{
+  "timestamp": "2026-08-08 18:48:07",
+  "total_queries_tested": 15,
+  "conversational_natural_responses": 0,
+  "grounded_news_responses": 8,
+  "news_fallback_responses": 0,
+  "guard_disclaimers": 7,
+  "avg_pipeline_latency_ms": 7296.37,
+  "additional_gemini_calls_per_query": 0,
+  "detailed_results": [
+    {
+      "query": "Hi",
+      "expected_type": "CONVERSATIONAL",
+      "description": "English Greeting",
+      "answer_snippet": "माझ्याकडे या विषयासंबंधी प्रकाशित माहिती उपलब्ध नाही. मायबोली AI सध्या महाराष्ट्रातील स्थानिक बातम्यांवर आधारित माहिती प",
+      "behavior_status": "GUARD_DISCLAIMER",
+      "sources": [],
+      "latency_ms": 379.92
+    },
+    {
+      "query": "Hello",
+      "expected_type": "CONVERSATIONAL",
+      "description": "English Greeting",
+      "answer_snippet": "माझ्याकडे या विषयासंबंधी प्रकाशित माहिती उपलब्ध नाही. मायबोली AI सध्या महाराष्ट्रातील स्थानिक बातम्यांवर आधारित माहिती प",
+      "behavior_status": "GUARD_DISCLAIMER",
+      "sources": [],
+      "latency_ms": 69.73
+    },
+    {
+      "query": "नमस्कार",
+      "expected_type": "CONVERSATIONAL",
+      "description": "Marathi Greeting",
+      "answer_snippet": "नमस्कार! 😊 मी मायबोली एआय (Maayboli AI) आहे. मी तुम्हाला महाराष्ट्रातील ताज्या बातम्या आणि विविध घडामोडींबद्दल माहिती मि",
+      "behavior_status": "GROUNDED_NEWS_ANSWER",
+      "sources": [
+        606,
+        46,
+        596,
+        673,
+        1007
+      ],
+      "latency_ms": 20060.05
+    },
+    {
+      "query": "Good Morning",
+      "expected_type": "CONVERSATIONAL",
+      "description": "Bilingual Greeting",
+      "answer_snippet": "माझ्याकडे या विषयासंबंधी प्रकाशित माहिती उपलब्ध नाही. मायबोली AI सध्या महाराष्ट्रातील स्थानिक बातम्यांवर आधारित माहिती प",
+      "behavior_status": "GUARD_DISCLAIMER",
+      "sources": [],
+      "latency_ms": 54.86
+    },
+    {
+      "query": "धन्यवाद",
+      "expected_type": "CONVERSATIONAL",
+      "description": "Marathi Gratitude",
+      "answer_snippet": "तुमचे स्वागत आहे! 😊 पुन्हा काही मदत लागली किंवा नवीन बातम्या जाणून घ्यायच्या असतील, तर नक्की विचारा. धन्यवाद! 🙏",
+      "behavior_status": "GROUNDED_NEWS_ANSWER",
+      "sources": [
+        172,
+        690,
+        59,
+        249,
+        150
+      ],
+      "latency_ms": 8625.88
+    },
+    {
+      "query": "Thanks",
+      "expected_type": "CONVERSATIONAL",
+      "description": "English Gratitude",
+      "answer_snippet": "माझ्याकडे या विषयासंबंधी प्रकाशित माहिती उपलब्ध नाही. मायबोली AI सध्या महाराष्ट्रातील स्थानिक बातम्यांवर आधारित माहिती प",
+      "behavior_status": "GUARD_DISCLAIMER",
+      "sources": [],
+      "latency_ms": 76.3
+    },
+    {
+      "query": "तू कोण आहेस?",
+      "expected_type": "IDENTITY",
+      "description": "Marathi Identity Query",
+      "answer_snippet": "नमस्कार! मी 'मायबोली AI' आहे, तुमचा फ्रेंडली आणि तज्ज्ञ मराठी न्यूज असिस्टंट. मी तुम्हाला 'मायबोली मालवणी न्यूज'च्या माध",
+      "behavior_status": "GROUNDED_NEWS_ANSWER",
+      "sources": [
+        591,
+        584,
+        576,
+        914,
+        761
+      ],
+      "latency_ms": 8965.99
+    },
+    {
+      "query": "Who are you?",
+      "expected_type": "IDENTITY",
+      "description": "English Identity Query",
+      "answer_snippet": "माझ्याकडे या विषयासंबंधी प्रकाशित माहिती उपलब्ध नाही. मायबोली AI सध्या महाराष्ट्रातील स्थानिक बातम्यांवर आधारित माहिती प",
+      "behavior_status": "GUARD_DISCLAIMER",
+      "sources": [],
+      "latency_ms": 67.97
+    },
+    {
+      "query": "तू काय करू शकतोस?",
+      "expected_type": "CAPABILITY",
+      "description": "Marathi Capability Query",
+      "answer_snippet": "नमस्कार! मी 'मायबोली AI' आहे, तुमचा लाडका आणि तज्ञ मराठी बातम्या सहाय्यक. 😊\n\nमी तुम्हाला खालील गोष्टींसाठी मदत करू शकतो:",
+      "behavior_status": "GROUNDED_NEWS_ANSWER",
+      "sources": [
+        591,
+        584,
+        576,
+        1039,
+        1006
+      ],
+      "latency_ms": 8303.62
+    },
+    {
+      "query": "What can you do?",
+      "expected_type": "CAPABILITY",
+      "description": "English Capability Query",
+      "answer_snippet": "माझ्याकडे या विषयासंबंधी प्रकाशित माहिती उपलब्ध नाही. मायबोली AI सध्या महाराष्ट्रातील स्थानिक बातम्यांवर आधारित माहिती प",
+      "behavior_status": "GUARD_DISCLAIMER",
+      "sources": [],
+      "latency_ms": 70.06
+    },
+    {
+      "query": "छान!",
+      "expected_type": "CONVERSATIONAL",
+      "description": "Casual Feedback",
+      "answer_snippet": "धन्यवाद! तुम्हाला माहिती आवडली याचा आम्हाला आनंद आहे. 😊 मी तुमची अजून काही मदत करू शकतो का? 🙏",
+      "behavior_status": "GROUNDED_NEWS_ANSWER",
+      "sources": [
+        230,
+        550,
+        546,
+        669,
+        433
+      ],
+      "latency_ms": 5228.89
+    },
+    {
+      "query": "हाय, आज पुण्यात काय झालं?",
+      "expected_type": "MIXED",
+      "description": "Mixed Greeting + News Query",
+      "answer_snippet": "नमस्कार! 😊 पुण्याच्या संदर्भातील आजच्या मुख्य घडामोडी खालीलप्रमाणे आहेत:\n\n*   **EPFO ची व्हॉट्सॲप सुविधा:** भविष्य निर्व",
+      "behavior_status": "GROUNDED_NEWS_ANSWER",
+      "sources": [
+        336,
+        73,
+        523,
+        673,
+        326
+      ],
+      "latency_ms": 19443.75
+    },
+    {
+      "query": "आज पुण्यात काय घडलं?",
+      "expected_type": "NEWS_QUERY",
+      "description": "Pure News Query",
+      "answer_snippet": "नमस्कार! 😊 पुण्यात आजच्या संदर्भात खालील काही महत्त्वाच्या बातम्या समोर आल्या आहेत:\n\n१. **पिंपरी-चिंचवडमधील धक्कादायक घट",
+      "behavior_status": "GROUNDED_NEWS_ANSWER",
+      "sources": [
+        683,
+        457,
+        468,
+        460,
+        554
+      ],
+      "latency_ms": 21556.09
+    },
+    {
+      "query": "अमित शाह नागपूर बातमी",
+      "expected_type": "NEWS_QUERY",
+      "description": "Person News Query",
+      "answer_snippet": "नमस्कार! अमित शाह यांच्या नागपूर दौऱ्याबाबत किंवा त्यांच्याशी संबंधित कोणतीही माहिती सध्या उपलब्ध असलेल्या बातम्यांमध्ये",
+      "behavior_status": "GROUNDED_NEWS_ANSWER",
+      "sources": [
+        735,
+        736,
+        733,
+        732,
+        734
+      ],
+      "latency_ms": 16421.36
+    },
+    {
+      "query": "जो बायडेन भारतात कधी येणार?",
+      "expected_type": "UNSUPPORTED_GUARD",
+      "description": "Unknown Entity Guard Query",
+      "answer_snippet": "माझ्याकडे या विषयासंबंधी प्रकाशित माहिती उपलब्ध नाही. मायबोली AI सध्या महाराष्ट्रातील स्थानिक बातम्यांवर आधारित माहिती प",
+      "behavior_status": "GUARD_DISCLAIMER",
+      "sources": [],
+      "latency_ms": 121.01
+    }
+  ]
+}

@@ -8,6 +8,7 @@ import logging
 from typing import Any, Dict, Optional
 
 from prompt_templates import (
+    CONVERSATIONAL_BEHAVIOR,
     DEFAULT_PROMPT_VERSION,
     INTENT_GUIDANCE_TEMPLATES,
     OUTPUT_FORMATTING_RULES,
@@ -94,7 +95,10 @@ class PromptManager:
         # 2. Strict Generation Rules
         rules = template.get("generation_rules", STRICT_GENERATION_RULES)
 
-        # 3. Strategy & Policy Guidance
+        # 3. Conversational Behavior Rules
+        conv_behavior = template.get("conversational_behavior", CONVERSATIONAL_BEHAVIOR)
+
+        # 4. Strategy & Policy Guidance
         strategy_name = getattr(response_strategy, "strategy_name", "TOPIC_SUMMARY") if response_strategy else "TOPIC_SUMMARY"
         policy_name = getattr(response_strategy, "response_policy", "BALANCED") if response_strategy else "BALANCED"
         confidence_level = getattr(response_strategy, "confidence_level", "HIGH") if response_strategy else "HIGH"
@@ -115,7 +119,7 @@ class PromptManager:
             f"Policy Instruction: {policy_instr}\n"
         )
 
-        # 4. Intent Quality Gate Audit Details
+        # 5. Intent Quality Gate Audit Details
         validation_details_block = ""
         if validation_result:
             retrieval_status = getattr(validation_result, "retrieval_status", "EXACT_MATCH")
@@ -129,13 +133,14 @@ class PromptManager:
                 f"- Audit Reason: {val_reason}\n"
             )
 
-        # 5. Output Formatting Rules
+        # 6. Output Formatting Rules
         fmt_rules = template.get("formatting_rules", OUTPUT_FORMATTING_RULES)
 
-        # 6. Assemble Sections into Final Prompt
+        # 7. Assemble Sections into Final Prompt Payload
         prompt_sections = [
             f"=== SYSTEM IDENTITY ===\n{system_id}",
             f"=== GENERATION RULES ===\n{rules}",
+            f"=== CONVERSATIONAL BEHAVIOR ===\n{conv_behavior}",
             f"{strategy_block}{validation_details_block}",
             f"=== RESPONSE FORMATTING RULES ===\n{fmt_rules}",
             f"=== RETRIEVED NEWS CONTEXT ===\n{formatted_context if formatted_context else '[No Relevant Articles]'}",
